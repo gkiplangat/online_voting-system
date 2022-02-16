@@ -18,6 +18,6 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    
+    <h1>Hello, this is our Online voting System</h1>
 </body>
 </html>
