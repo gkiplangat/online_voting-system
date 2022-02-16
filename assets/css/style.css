@@ -1,0 +1,20 @@
+/* ----------------------------------
+
+Name: main.css
+Version: 1.0.o
+
+-------------------------------------
+
+Table of contents
+        
+    01. Navbar
+    
+*/
+
+body {
+    font-family: 'Muli', sans-serif;
+    background: url(../images/bg-img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

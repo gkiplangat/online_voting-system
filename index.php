@@ -12,12 +12,42 @@
     <meta name="description" content="userinterface, voting system, voter,"/>
     <!-- Keywords  -->
     <meta name="keywords" content="form, container, header, footer">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Font-awesome Link -->
     <link rel="stylesheet" href="css/all.min.css">
     <!--CSS link -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/styl.css">
 </head>
-<body>
-    <h1>Hello, this is our Online voting System</h1>
+<body class="bg-dark">
+    <h1 class="text-info text-center p-3">Online Voting System</h1>
+    <p class="text-info text-center "><i>Your Vote, Your Voice</i></p>
+    <div class="bg-secondary">
+        <h2 class="text-center">Login</h2>
+        <div class="container bg-info w-60 m-auto">
+            <form action="" class="p-3">
+                <div class="mb-3">
+                    <input type="text" class="form-control w-50 m-auto" name="username" placeholder="Enter Your Username" required ="required" >
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control w-50 m-auto" name="mobile" placeholder="Enter Your Mobile No" required ="required" minlength="10" maxlength="10" >
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control w-50 m-auto" name="username" placeholder="Enter Your Username" required ="required" >
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control w-50 m-auto" name="username" placeholder="Enter Your Username" required ="required" >
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!--Javascript Libraries-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
 </body>
 </html>
