@@ -17,15 +17,15 @@
     <!-- Font-awesome Link -->
     <link rel="stylesheet" href="css/all.min.css">
     <!--CSS link -->
-    <link rel="stylesheet" href="assets/css/styl.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-dark">
     <h1 class="text-info text-center p-3">Online Voting System</h1>
     <p class="text-info text-center "><i>Your Vote, Your Voice</i></p>
     <div class="bg-secondary">
         <h2 class="text-center">Login</h2>
-        <div class="container bg-info w-60 m-auto">
-            <form action="" class="p-3">
+        <div class="container bg-info p-3">
+            <form action="" class="p-3 ">
                 <div class="mb-3">
                     <input type="text" class="form-control w-50 m-auto" name="username" placeholder="Enter Your Username" required ="required" >
                 </div>
@@ -33,10 +33,13 @@
                     <input type="tel" class="form-control w-50 m-auto" name="mobile" placeholder="Enter Your Mobile No" required ="required" minlength="10" maxlength="10" >
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control w-50 m-auto" name="username" placeholder="Enter Your Username" required ="required" >
+                    <input type="password" class="form-control w-50 m-auto" name="password" placeholder="Enter Your Password" required ="required" >
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control w-50 m-auto" name="username" placeholder="Enter Your Username" required ="required" >
+                    <select name="std">
+                        <option value="group">Group</option>
+                        <option value="voter">Voter</option>
+                    </select>
                 </div>
             </form>
         </div>

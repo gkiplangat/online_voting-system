@@ -11,10 +11,7 @@ Table of contents
     
 */
 
-body {
-    font-family: 'Muli', sans-serif;
-    background: url(../images/bg-img.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
+form input{
+    border-radius: 15px;
 }
