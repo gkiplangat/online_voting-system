@@ -11,7 +11,6 @@ Table of contents
     
 */
 
-
-form input{
-    border-radius: 15px;
+.container{
+    width: 400px;
 }
