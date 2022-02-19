@@ -27,7 +27,7 @@
     <div class="bg-secondary py-4">
         <div class="container rounded bg-info  text-center">
             <h2 class="text-center text-white">Login</h2>
-            <form action="" class="p-3 ">
+            <form action="actions/login.php" method="POST" class="p-3 ">
                 <div class="mb-3">
                     <input type="text" class="form-control w-80 m-auto" name="username"
                         placeholder="Enter Your Username" required="required">

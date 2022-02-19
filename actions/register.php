@@ -25,7 +25,7 @@ if($password!=$cpassword){
         window.location="../index.php";
         </script>';
     } else {
-        echo "Error";
+        die(mysqli_error($con));
     }
     
 }
