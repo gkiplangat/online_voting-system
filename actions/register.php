@@ -9,4 +9,10 @@ $image = $_POST['photo']['name'];
 $tmp_name = $_POST['photo']['tmp_name']; 
 $std = $_POST['std']; 
 
+if($password!=$cpassword){
+    echo '<script>
+    alert("Passwords did not match");
+    window.location="../partials/registration.php"
+    </script>';
+}
 ?>
