@@ -61,10 +61,6 @@ include ('../actions/connect.php');
                                     required="required" minlength="10" maxlength="10">
                             </div>
                             <div class="mb-3">
-                                <input type="number" class="form-control w-80 m-auto" name="cidno" placeholder="ID No"
-                                    required="required" minlength="10" maxlength="10">
-                            </div>
-                            <div class="mb-3">
                                 <input type="email" class="form-control w-80 m-auto" name="email"
                                     placeholder="Email Address" required="required">
                             </div>
@@ -89,7 +85,7 @@ include ('../actions/connect.php');
             </div>
         </form>
         <!-- Modal For Editing Data -->
-        <form action="" method="POST" enctype="multipart/form-data" lass="p-3">
+        <form action="#" method="POST" enctype="multipart/form-data" lass="p-3">
             <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -106,10 +102,6 @@ include ('../actions/connect.php');
                             </div>
                             <div class="mb-3">
                                 <input type="number" class="form-control w-80 m-auto" name="idno" required="required"
-                                    minlength="10" maxlength="10">
-                            </div>
-                            <div class="mb-3">
-                                <input type="number" class="form-control w-80 m-auto" name="cidno" required="required"
                                     minlength="10" maxlength="10">
                             </div>
                             <div class="mb-3">
@@ -139,9 +131,9 @@ include ('../actions/connect.php');
             <thead>
                 <tr>
                     <th scope="col">username</th>
-                    <th scope="col">moileb</th>
+                    <th scope="col">mobile</th>
                     <th scope="col">password</th>
-                    <th scope="col">Photo</th>
+                    <th scope="col">photo</th>
                     <th scope="col">standard</th>
                     <th scope="col">status</th>
                     <th scope="col">votes</th>
