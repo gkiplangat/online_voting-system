@@ -7,7 +7,7 @@ include ('../actions/connect.php');
 
 <head>
     <!--Title-->
-    <title>Dashboard-Online Voting System</title>
+    <title>Candidates-Online Voting System</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,8 +24,63 @@ include ('../actions/connect.php');
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Table-->
     <div class="container-fluid bg-dark">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="text-center text-info my-3">Candidates</h2>
+            </div>
+            <div class="col-md-4">
+                <!--Add New Candidates Button-->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary my-3" data-toggle="modal"
+                    data-target="#exampleModalCenter">
+                    Add New
+                </button>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <table class="table bg-secondary">
             <thead>
                 <tr>
@@ -52,8 +107,11 @@ include ('../actions/connect.php');
                     <td><?php echo $row['phone'];?></td>
                     <td><?php echo $row['position'];?></td>
                     <td scope="col">
-                        <a href="#" class="btn btn-primary btn-lg active">Edit</a>
-                        <a href="#" class="btn btn-danger btn-lg active">Delete</a>
+                        <button type="button" class="btn btn-info" data-toggle="modal"
+                            data-target="#exampleModalCenter">
+                            Edit
+                        </button>
+                        <button type="button" class="btn btn-danger">Delete</button>
 
                     </td>
                 </tr>
