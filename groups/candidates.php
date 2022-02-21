@@ -24,34 +24,14 @@ include ('../actions/connect.php');
 </head>
 
 <body>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!--Table-->
     <div class="container-fluid bg-dark">
         <div class="row">
             <div class="col-md-8">
                 <h2 class="text-center text-info my-3">Candidates</h2>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 text-center">
                 <!--Add New Candidates Button-->
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#addnew">
@@ -59,7 +39,7 @@ include ('../actions/connect.php');
                 </button>
             </div>
         </div>
-        <!-- Modal -->
+        <!-- Modal  For Adding New Candidates-->
         <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -84,11 +64,15 @@ include ('../actions/connect.php');
                                 placeholder="Email Address" required="required">
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control w-80 m-auto" name="cpassword"
-                                placeholder="Confirm Password" required="required">
+                            <input type="tel" class="form-control w-80 m-auto" name="phone" placeholder="Phone No"
+                                required="required">
                         </div>
                         <div class="mb-3">
                             <input type="file" class="form-control w-80 m-auto" name="photo">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control w-80 m-auto" name="phone" placeholder="Position"
+                                required="required">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -98,6 +82,47 @@ include ('../actions/connect.php');
                 </div>
             </div>
         </div>
+        <!-- Modal For Editing Data -->
+        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <input type="text" class="form-control w-80 m-auto" name="fullname" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control w-80 m-auto" name="idno" required="required"
+                                minlength="10" maxlength="10">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control w-80 m-auto" name="email" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control w-80 m-auto" name="phone" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="file" class="form-control w-80 m-auto" name="photo">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control w-80 m-auto" name="phone" required="required">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <table class="table bg-secondary">
             <thead>
                 <tr>
@@ -110,32 +135,9 @@ include ('../actions/connect.php');
                 </tr>
             </thead>
             <tbody>
-                <!--SQL QUERY START HERE-->
                 <?php
-                $sql ="SELECT *FROM candidates";
-                $query =$con->query($sql);
-                WHILE($row=$query->fetch_assoc())
-                {
+               require_once('partials/i_candidates.php');
                 ?>
-                <tr>
-                    <td><?php echo $row['fullname'];?></td>
-                    <td><?php echo $row['idno'];?></td>
-                    <td><?php echo $row['email'];?></td>
-                    <td><?php echo $row['phone'];?></td>
-                    <td><?php echo $row['position'];?></td>
-                    <td scope="col">
-                        <button type="button" class="btn btn-info" data-toggle="modal"
-                            data-target="#exampleModalCenter">
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-danger">Delete</button>
-
-                    </td>
-                </tr>
-                <?php
-                }
-                ?>
-
             </tbody>
         </table>
     </div>

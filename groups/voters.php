@@ -7,7 +7,7 @@ include ('../actions/connect.php');
 
 <head>
     <!--Title-->
-    <title>Dashboard-Online Voting System</title>
+    <title>Voters-Online Voting System</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,8 +24,98 @@ include ('../actions/connect.php');
 </head>
 
 <body>
+
     <!--Table-->
     <div class="container-fluid bg-dark">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="text-center text-info my-3">Voters</h2>
+            </div>
+            <div class="col-md-4 text-center">
+                <!--Add New Candidates Button-->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#addnew">
+                    Add New
+                </button>
+            </div>
+        </div>
+        <!-- Modal  For Adding New Candidates-->
+        <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add New Voter</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <input type="text" class="form-control w-80 m-auto" name="fullname" placeholder="Full Name"
+                                required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control w-80 m-auto" name="idno" placeholder="Mobile No"
+                                required="required" minlength="10" maxlength="10">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control w-80 m-auto" name="email"
+                                placeholder="Email Address" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control w-80 m-auto" name="phone" placeholder="Phone No"
+                                required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="file" class="form-control w-80 m-auto" name="photo">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal For Editing Data -->
+        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Edit Voter</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <input type="text" class="form-control w-80 m-auto" name="fullname" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control w-80 m-auto" name="idno" required="required"
+                                minlength="10" maxlength="10">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control w-80 m-auto" name="email" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control w-80 m-auto" name="phone" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="file" class="form-control w-80 m-auto" name="photo">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <table class="table bg-secondary">
             <thead>
                 <tr>
@@ -37,28 +127,9 @@ include ('../actions/connect.php');
                 </tr>
             </thead>
             <tbody>
-                <!--SQL QUERY START HERE-->
                 <?php
-                $sql ="SELECT *FROM voters";
-                $query =$con->query($sql);
-                WHILE($row=$query->fetch_assoc())
-                {
+               require_once('partials/i_voters.php');
                 ?>
-                <tr>
-                    <td><?php echo $row['fullname'];?></td>
-                    <td><?php echo $row['idno'];?></td>
-                    <td><?php echo $row['email'];?></td>
-                    <td><?php echo $row['phone'];?></td>
-                    <td scope="col">
-                        <a href="#" class="btn btn-primary btn-lg active">Edit</a>
-                        <a href="#" class="btn btn-danger btn-lg active">Delete</a>
-
-                    </td>
-                </tr>
-                <?php
-                }
-                ?>
-
             </tbody>
         </table>
     </div>
