@@ -130,6 +130,7 @@ include ('../actions/connect.php');
                     <th scope="col">ID NO</th>
                     <th scope="col">Email Address</th>
                     <th scope="col">Phone No</th>
+                    <th scope="col">Photo</th>
                     <th scope="col">Position</th>
                     <th scope="col">Action</th>
                 </tr>
