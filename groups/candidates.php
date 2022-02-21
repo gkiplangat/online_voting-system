@@ -54,25 +54,42 @@ include ('../actions/connect.php');
             <div class="col-md-4">
                 <!--Add New Candidates Button-->
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary my-3" data-toggle="modal"
-                    data-target="#exampleModalCenter">
+                <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#addnew">
                     Add New
                 </button>
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add New Candidate</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <div class="mb-3">
+                            <input type="text" class="form-control w-80 m-auto" name="fullname" placeholder="Full Name"
+                                required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control w-80 m-auto" name="idno" placeholder="Mobile No"
+                                required="required" minlength="10" maxlength="10">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control w-80 m-auto" name="email"
+                                placeholder="Email Address" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control w-80 m-auto" name="cpassword"
+                                placeholder="Confirm Password" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <input type="file" class="form-control w-80 m-auto" name="photo">
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
