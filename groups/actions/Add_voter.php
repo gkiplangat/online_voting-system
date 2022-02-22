@@ -1,5 +1,5 @@
 <?php
-include ('connect.php');
+include ('../../actions/connect.php');
 
 $fullname = $_POST['fullname'];
 $idno = $_POST['idno'];
@@ -11,18 +11,18 @@ $age = $_POST['age'];
 if($age<18){
     echo '<script>
     alert("The citizen is under_age");
-    window.location="../groups/voters.php"
+    window.location="../voters.php"
     </script>';
 }else{
 
-move_uploaded_file($tmp_name, "../uploads/voters/$image");
+    move_uploaded_file($tmp_name, "../uploads/$image");
     $sql = "INSERT INTO voters (fullname,idno,email,phone,photo,age)VALUES ('$fullname','$idno','$email','$phone','$image','$age')";
 
     $result = mysqli_query($con, $sql);
     if ($result) {
         echo '<script>
         alert("Wooow! Registration Successfully");
-        window.location="../groups/voters.php";
+        window.location="../voters.php";
         </script>';
     } else {
         die(mysqli_error($con));

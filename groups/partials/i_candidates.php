@@ -10,10 +10,12 @@
     <td><?php echo $row['idno'];?></td>
     <td><?php echo $row['email'];?></td>
     <td><?php echo $row['phone'];?></td>
-    <td><?php echo $row['photo'];?></td>
+    <td>
+        <img src="<?php echo"../uploads/". $row['photo'];?>" width="100px" class="img-circle" alt="image">
+    </td>
     <td><?php echo $row['position'];?></td>
     <td><?php echo $row['age'];?></td>
-    <td scope="col">
+    <td scope=" col">
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit">
             Edit
         </button>
