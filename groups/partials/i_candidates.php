@@ -19,8 +19,8 @@
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit">
             Edit
         </button>
-        <button type="button" class="btn btn-danger">Delete</button>
 
+        <a href="../actions/cand_delete.php"><button type="button" class="btn btn-danger">Delete</button></a>
     </td>
 </tr>
 <?php
