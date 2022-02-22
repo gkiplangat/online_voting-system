@@ -61,10 +61,6 @@ include ('../actions/connect.php');
                                     required="required" minlength="10" maxlength="10">
                             </div>
                             <div class="mb-3">
-                                <input type="number" class="form-control w-80 m-auto" name="cidno" placeholder="ID No"
-                                    required="required" minlength="10" maxlength="10">
-                            </div>
-                            <div class="mb-3">
                                 <input type="email" class="form-control w-80 m-auto" name="email"
                                     placeholder="Email Address" required="required">
                             </div>
@@ -76,8 +72,15 @@ include ('../actions/connect.php');
                                 <input type="file" class="form-control w-80 m-auto" name="photo">
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control w-80 m-auto" name="position"
-                                    placeholder="Position" required="required">
+                                <select name="position" class="form-control w-80 m-auto">
+                                    <option value="President">President</option>
+                                    <option value="Secretary General">Secretary General</option>
+                                    <option value="Treasurerr">Treasurer</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control w-80 m-auto" name="age" placeholder="Age"
+                                    required="required">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -109,10 +112,6 @@ include ('../actions/connect.php');
                                     minlength="10" maxlength="10">
                             </div>
                             <div class="mb-3">
-                                <input type="number" class="form-control w-80 m-auto" name="cidno" required="required"
-                                    minlength="10" maxlength="10">
-                            </div>
-                            <div class="mb-3">
                                 <input type="email" class="form-control w-80 m-auto" name="email" required="required">
                             </div>
                             <div class="mb-3">
@@ -122,7 +121,13 @@ include ('../actions/connect.php');
                                 <input type="file" class="form-control w-80 m-auto" name="photo">
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control w-80 m-auto" name="phone" required="required">
+                                <select name="std" class="form-control w-80 m-auto">
+                                    <option value="group">Group</option>
+                                    <option value="voter">Voter</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control w-80 m-auto" name="age" required="required">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -138,13 +143,13 @@ include ('../actions/connect.php');
         <table class="table bg-secondary">
             <thead>
                 <tr>
-                    <th scope="col">username</th>
-                    <th scope="col">moileb</th>
-                    <th scope="col">password</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Id No</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
                     <th scope="col">Photo</th>
-                    <th scope="col">standard</th>
-                    <th scope="col">status</th>
-                    <th scope="col">votes</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Age</th>
                 </tr>
             </thead>
             <tbody>

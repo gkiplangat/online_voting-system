@@ -1,18 +1,18 @@
 <!--SQL QUERY START HERE-->
 <?php
-                $sql ="SELECT *FROM userdata";
+                $sql ="SELECT *FROM candidates";
                 $query =$con->query($sql);
                 WHILE($row=$query->fetch_assoc())
                 {
                 ?>
 <tr>
-    <td><?php echo $row['username'];?></td>
-    <td><?php echo $row['mobile'];?></td>
-    <td><?php echo $row['password'];?></td>
+    <td><?php echo $row['fullname'];?></td>
+    <td><?php echo $row['idno'];?></td>
+    <td><?php echo $row['email'];?></td>
+    <td><?php echo $row['phone'];?></td>
     <td><?php echo $row['photo'];?></td>
-    <td><?php echo $row['standard'];?></td>
-    <td><?php echo $row['status'];?></td>
-    <td><?php echo $row['votes'];?></td>
+    <td><?php echo $row['position'];?></td>
+    <td><?php echo $row['age'];?></td>
     <td scope="col">
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit">
             Edit

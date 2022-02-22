@@ -40,44 +40,49 @@ include ('../actions/connect.php');
             </div>
         </div>
         <!-- Modal  For Adding New Candidates-->
-        <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Add New Voter</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <input type="text" class="form-control w-80 m-auto" name="fullname" placeholder="Full Name"
-                                required="required">
+        <form action="../actions/Add_voter.php" method="POST" enctype="multipart/form-data" lass="p-3">
+            <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Add New Voter</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <div class="mb-3">
-                            <input type="number" class="form-control w-80 m-auto" name="idno" placeholder="Mobile No"
-                                required="required" minlength="10" maxlength="10">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <input type="text" class="form-control w-80 m-auto" name="fullname"
+                                    placeholder="Full Name" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" class="form-control w-80 m-auto" name="idno" placeholder="Id No"
+                                    required="required" minlength="10" maxlength="10">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control w-80 m-auto" name="email"
+                                    placeholder="Email Address" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control w-80 m-auto" name="phone" placeholder="Phone No"
+                                    required="required">
+                            </div>
+                            <div class="mb-3">
+                                <input type="file" class="form-control w-80 m-auto" name="photo">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" class="form-control w-80 m-auto" name="age" placeholder="Age">
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control w-80 m-auto" name="email"
-                                placeholder="Email Address" required="required">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control w-80 m-auto" name="phone" placeholder="Phone No"
-                                required="required">
-                        </div>
-                        <div class="mb-3">
-                            <input type="file" class="form-control w-80 m-auto" name="photo">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
         <!-- Modal For Editing Data -->
         <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
             aria-hidden="true">
@@ -109,7 +114,7 @@ include ('../actions/connect.php');
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
 
@@ -124,6 +129,7 @@ include ('../actions/connect.php');
                     <th scope="col">Email Address</th>
                     <th scope="col">Phone No</th>
                     <th scope="col">Photo</th>
+                    <th scope="col">Age</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
