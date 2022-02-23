@@ -172,10 +172,10 @@
     </div>
     <!--offcanvas-->
 
-    <main class="mt-5 pt-3">
-        <div class="container-fluid">
+    <main class="mt-5">
+        <div class="container-fluid" style="background-color: darkgray;">
             <div class="row">
-                <div class="col-md-12 fw-bold fs-3">Dashboard</div>
+                <div class="col-md-12 fw-bold fs-3 p-3">Dashboard</div>
             </div>
             <div class="row">
                 <div class="col-md-3 mb-3">
@@ -221,6 +221,7 @@
                 </div>
             </div>
 
+            <?php include '../groups/voters.php';?>
 
 
         </div>
