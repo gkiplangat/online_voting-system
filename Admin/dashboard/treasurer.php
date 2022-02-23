@@ -142,19 +142,19 @@
                             <div>
                                 <ul class="navbar-nav ps-3">
                                     <li>
-                                        <a href="president.php" class="nav-link px-3">
+                                        <a href="#" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>President</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="secretary.php" class="nav-link px-3">
+                                        <a href="#" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>Secretary General</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="treasurer.php" class="nav-link px-3">
+                                        <a href="#" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>Treasurer</span>
                                         </a>
@@ -172,10 +172,10 @@
     </div>
     <!--offcanvas-->
 
-    <main class="mt-5 pt-3">
-        <div class="container-fluid">
+    <main class="mt-5">
+        <div class="container-fluid" style="background-color: darkgray;">
             <div class="row">
-                <div class="col-md-12 fw-bold fs-3">Dashboard</div>
+                <div class="col-md-12 fw-bold fs-3 p-3">Dashboard</div>
             </div>
             <div class="row">
                 <div class="col-md-3 mb-3">
@@ -220,28 +220,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            Charts
-                        </div>
-                        <div class="card-body">
-                            <canvas class="chart" width="400" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            Charts
-                        </div>
-                        <div class="card-body">
-                            <canvas class="chart" width="400" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <?php include '../positions/Tres.php';?>
 
 
         </div>
