@@ -25,7 +25,7 @@ include ('../../actions/connect.php');
 
 <body>
     <!--Table-->
-    <div class="container-fluid bg-dark">
+    <div class="container-fluid ">
         <table class="table bg-secondary">
             <thead>
                 <tr>
