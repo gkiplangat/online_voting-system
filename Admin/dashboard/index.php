@@ -189,16 +189,16 @@
         </div>
     </div>
     <!--offcanvas-->
-    
-    <main class="mt-5 pt-3">
-        <div class="container-fluid">
+
+    <main class="mt-5">
+        <div class="container-fluid bg-secondary">
             <div class="row">
                 <div class="col-md-12 fw-bold fs-3">Dashboard</div>
             </div>
             <div class="row">
                 <div class="col-md-3 mb-3">
                     <div class="card text-white bg-primary h-100">
-                        <div class="card-header">BBA</div>
+                        <div class="card-header">Total No. of Candidates</div>
                         <div class="card-body">
                             <h5 class="card-title">School Of Business</h5>
                             <p class="card-text">This is Riara university School of Business and Economics</p>
@@ -206,8 +206,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <div class="card text-white bg-warning h-100">
-                        <div class="card-header">BSC</div>
+                    <div class="card text-white bg-info h-100">
+                        <div class="card-header">Registered Voters</div>
                         <div class="card-body">
                             <h5 class="card-title">School Of Computing</h5>
                             <p class="card-text">This is Riara University School of Computing.</p>
@@ -215,8 +215,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <div class="card text-white bg-success h-100">
-                        <div class="card-header">BIRD</div>
+                    <div class="card text-white bg-primary h-100">
+                        <div class="card-header">Voted</div>
                         <div class="card-body">
                             <h5 class="card-title">School Of International Relations and Diplomacy</h5>
                             <p class="card-text"> This is Riara University School of International Relations and
@@ -226,7 +226,7 @@
                 </div>
                 <div class="col-md-3 mb-3">
                     <div class="card text-white bg-danger h-100">
-                        <div class="card-header">LLB</div>
+                        <div class="card-header">Not Vote</div>
                         <div class="card-body">
                             <h5 class="card-title">School Of Law</h5>
                             <p class="card-text">This is Riara University School of Law.</p>
