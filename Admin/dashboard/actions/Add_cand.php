@@ -1,5 +1,5 @@
 <?php
-include ('../../actions/connect.php');
+include ('../../../actions/connect.php');
 
 $fullname = $_POST['fullname'];
 $idno = $_POST['idno'];
