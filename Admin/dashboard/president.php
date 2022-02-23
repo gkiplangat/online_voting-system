@@ -221,7 +221,7 @@
                 </div>
             </div>
 
-            <?php include '../groups/candidates.php';?>
+            <?php include '../positions/pres.php';?>
 
 
         </div>

@@ -113,13 +113,13 @@
                             <div>
                                 <ul class="navbar-nav ps-3">
                                     <li>
-                                        <a href="#" class="nav-link px-3">
+                                        <a href="candidates.php" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-people"></i></span>
                                             <span>Candidates</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="nav-link px-3">
+                                        <a href="voters.php" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-people-fill"></i></span>
                                             <span>Voters</span>
                                         </a>

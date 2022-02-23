@@ -1,5 +1,5 @@
 <?php
-include ('../actions/connect.php');
+include ('../../actions/connect.php');
 ?>
 
 <!DOCTYPE html>
@@ -26,10 +26,10 @@ include ('../actions/connect.php');
 <body>
 
     <!--Table-->
-    <div class="container-fluid bg-dark">
+    <div class="container-fluid my-3">
         <div class="row">
             <div class="col-md-8">
-                <h2 class="text-center text-info my-3">Voters</h2>
+                <h2 class="text-dark my-3" style="font-weight: 600;">Voters</h2>
             </div>
             <div class="col-md-4 text-center">
                 <!--Add New Candidates Button-->

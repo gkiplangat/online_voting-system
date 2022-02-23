@@ -1,5 +1,5 @@
 <?php
-include ('../actions/connect.php');
+include ('../../actions/connect.php');
 ?>
 
 <!DOCTYPE html>
@@ -30,10 +30,12 @@ include ('../actions/connect.php');
             <thead>
                 <tr>
                     <th scope="col">Full Name</th>
-                    <th scope="col">ID NO</th>
-                    <th scope="col">Email Address</th>
-                    <th scope="col">Phone No</th>
+                    <th scope="col">Id No</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Photo</th>
                     <th scope="col">Position</th>
+                    <th scope="col">Age</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -50,7 +52,12 @@ include ('../actions/connect.php');
                     <td><?php echo $row['idno'];?></td>
                     <td><?php echo $row['email'];?></td>
                     <td><?php echo $row['phone'];?></td>
+                    <td>
+                        <img src="<?php echo"../uploads/". $row['photo'];?>" width="100px" class="img-circle"
+                            alt="image">
+                    </td>
                     <td><?php echo $row['position'];?></td>
+                    <td><?php echo $row['age'];?></td>
                     <td scope="col">
                         <a href="#" class="btn btn-primary btn-lg active">Edit</a>
                         <a href="#" class="btn btn-danger btn-lg active">Delete</a>
