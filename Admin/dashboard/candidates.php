@@ -142,19 +142,19 @@
                             <div>
                                 <ul class="navbar-nav ps-3">
                                     <li>
-                                        <a href="#" class="nav-link px-3">
+                                        <a href="president.php" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>President</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="nav-link px-3">
+                                        <a href="secretary.php" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>Secretary General</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="nav-link px-3">
+                                        <a href="treasurer.php" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>Treasurer</span>
                                         </a>
