@@ -37,3 +37,6 @@ button {
       }
 
 }
+.container-fluid .card-body span i{
+    font-size: 2rem;
+}

@@ -10,6 +10,9 @@
     <!--Styling the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,file-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <!-- font-awesome icon -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css" />
 
@@ -79,7 +82,7 @@
 
                     </li>
                     <li>
-                        <a href="#" class="nav-link px-3 active">
+                        <a href="index.php" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="bi bi-speedometer2"></i>
                             </span>
@@ -98,31 +101,9 @@
 
                     </li>
                     <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample"
-                            role="button" aria-expanded="false" aria-controls="collapseExample">
-                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
-                            <span>layouts</span>
-                            <span class="right-icon ms-auto">
-                                <i class="bi bi-chevron-down"></i>
-                            </span>
-                        </a>
-                        <div class="collapse" id="collapseExample">
-                            <div>
-                                <ul class="navbar-nav ps-3">
-                                    <li>
-                                        <a href="#" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
-                                            <span>Nested Links</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#groups" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
-                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                            <span class="me-2"><i class="fa fa-users"></i></span>
                             <span>Groups</span>
                             <span class="right-icon ms-auto">
                                 <i class="bi bi-chevron-down"></i>
@@ -133,13 +114,13 @@
                                 <ul class="navbar-nav ps-3">
                                     <li>
                                         <a href="#" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                                            <span class="me-2"><i class="bi bi-people"></i></span>
                                             <span>Candidates</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                                            <span class="me-2"><i class="bi bi-people-fill"></i></span>
                                             <span>Voters</span>
                                         </a>
                                     </li>
@@ -150,7 +131,8 @@
                     <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#positions" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
-                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                            <span class="me-2"><i class="fa fa-user-plus" aria-hidden="true"></i></span>
+                            <i class="fa-solid fa-user-group-crown"></i>
                             <span>Positions</span>
                             <span class="right-icon ms-auto">
                                 <i class="bi bi-chevron-down"></i>
@@ -161,19 +143,19 @@
                                 <ul class="navbar-nav ps-3">
                                     <li>
                                         <a href="#" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>President</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>Secretary General</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>Treasurer</span>
                                         </a>
                                     </li>
@@ -190,8 +172,8 @@
     </div>
     <!--offcanvas-->
 
-    <main class="mt-5">
-        <div class="container-fluid bg-secondary">
+    <main class="mt-5 pt-3">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 fw-bold fs-3">Dashboard</div>
             </div>
@@ -200,8 +182,10 @@
                     <div class="card text-white bg-primary h-100">
                         <div class="card-header">Total No. of Candidates</div>
                         <div class="card-body">
-                            <h5 class="card-title">School Of Business</h5>
-                            <p class="card-text">This is Riara university School of Business and Economics</p>
+                            <span class="text-center">
+                                <i class="bi bi-people"  style="font-size: 2.5rem;"></i>
+                            </span>
+
                         </div>
                     </div>
                 </div>
@@ -209,8 +193,9 @@
                     <div class="card text-white bg-info h-100">
                         <div class="card-header">Registered Voters</div>
                         <div class="card-body">
-                            <h5 class="card-title">School Of Computing</h5>
-                            <p class="card-text">This is Riara University School of Computing.</p>
+                            <span class="text-center">
+                                <i class=" bi bi-people-fill"  style="font-size: 2.5rem;"></i>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -218,9 +203,9 @@
                     <div class="card text-white bg-primary h-100">
                         <div class="card-header">Voted</div>
                         <div class="card-body">
-                            <h5 class="card-title">School Of International Relations and Diplomacy</h5>
-                            <p class="card-text"> This is Riara University School of International Relations and
-                                Diplomacy.</p>
+                            <span class="text-center">
+                                <i  class="fa fa-check-square-o" aria-hidden="true" style="font-size: 2.5rem;"></i>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -228,8 +213,9 @@
                     <div class="card text-white bg-danger h-100">
                         <div class="card-header">Not Vote</div>
                         <div class="card-body">
-                            <h5 class="card-title">School Of Law</h5>
-                            <p class="card-text">This is Riara University School of Law.</p>
+                            <span class="text-center">
+                                <i class="fa fa-times" aria-hidden="true" style="font-size: 2.5rem;"   ></i>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -256,145 +242,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col md-12">
-                    <div class="card">
-                        <div class="card-header">
-                            Data Tables
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table id="example" class="table table-striped data-table" style="width:100%">
-                                    <thread>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start Date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                        <var><var><var><var><var>v</var></var></var></var></var>
-                                        <tr>
-                                            <td>Gideon Kiplangat</td>
-                                            <td>Sofware Engineer</td>
-                                            <td>Israel</td>
-                                            <td>23</td>
-                                            <td>22-03-2023</td>
-                                            <td>$9600</td>
-                                        </tr>
-                                    </thread>
 
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </main>
     <!--adding js ...................................files-->
