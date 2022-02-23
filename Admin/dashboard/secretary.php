@@ -173,8 +173,8 @@
     <!--offcanvas-->
 
     <main class="mt-5">
-        <div class="container-fluid" style="background-color: darkgray;">
-            <div class="row">
+        <div class="container-fluid">
+            <div class=" row">
                 <div class="col-md-12 fw-bold fs-3 p-3">Dashboard</div>
             </div>
             <div class="row">
