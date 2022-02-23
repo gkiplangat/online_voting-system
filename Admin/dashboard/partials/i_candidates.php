@@ -11,7 +11,7 @@
     <td><?php echo $row['email'];?></td>
     <td><?php echo $row['phone'];?></td>
     <td>
-        <img src="<?php echo"../uploads/". $row['photo'];?>" width="100px" class="img-circle" alt="image">
+        <img src="<?php echo"uploads/".$row['photo'];?>" width="100px" class="img-circle" alt="image">
     </td>
     <td><?php echo $row['position'];?></td>
     <td><?php echo $row['age'];?></td>
