@@ -76,7 +76,7 @@ include ('../../actions/connect.php');
                                 <select name="position" class="form-control w-80 m-auto">
                                     <option value="President">President</option>
                                     <option value="Secretary General">Secretary General</option>
-                                    <option value="Treasurerr">Treasurer</option>
+                                    <option value="Treasurer">Treasurer</option>
                                 </select>
                             </div>
                             <div class="mb-3">
