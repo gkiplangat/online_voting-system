@@ -33,12 +33,12 @@
                         placeholder="Enter Your Username" required="required">
                 </div>
                 <div class="mb-3">
-                    <input type="tel" class="form-control w-80 m-auto" name="mobile" placeholder="Enter Your Mobile No"
+                    <input type="tel" class="form-control w-80 m-auto" name="email" placeholder="Email Address"
                         required="required" minlength="10" maxlength="10">
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="form-control w-80 m-auto" name="password"
-                        placeholder="Enter Your Password" required="required">
+                    <input type="password" class="form-control w-80 m-auto" name="password" placeholder="Password"
+                        required="required">
                 </div>
                 <div class="mb-3">
                     <input type="password" class="form-control w-80 m-auto" name="cpassword"

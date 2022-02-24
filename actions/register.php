@@ -2,7 +2,7 @@
 include ('connect.php');
 
 $username = $_POST['username'];
-$mobile = $_POST['mobile'];
+$email = $_POST['email'];
 $password = $_POST['password'];
 $cpassword = $_POST['cpassword'];
 $image = $_FILES['photo']['name'];
@@ -16,7 +16,7 @@ if($password!=$cpassword){
     </script>';
 } else {
     move_uploaded_file($tmp_name, "../uploads/$image");
-    $sql = "INSERT INTO userdata (username,mobile,password,photo,standard,status,votes)VALUES ('$username','$mobile','$password','$image','$std',0,0)";
+    $sql = "INSERT INTO userdata (username,email,password,photo,standard)VALUES ('$username','$email','$password','$image','$std')";
 
     $result = mysqli_query($con, $sql);
     if ($result) {

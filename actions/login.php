@@ -7,8 +7,7 @@ $mobile = $_POST['mobile'];
 $password = $_POST['password'];
 $std = $_POST['std'];
 
-$sql = "SELECT * FROM userdata WHERE username='$username'AND
-mobile='$mobile' AND password='$password' AND standard='$std'";
+$sql = "SELECT * FROM userdata WHERE email='$email' AND password='$password'";
 
 $result=mysqli_query($con, $sql);
 if(mysqli_num_rows($result)>0){
@@ -24,12 +23,12 @@ if(mysqli_num_rows($result)>0){
     $_SESSION['data'] = $data;
 
     echo '<script>
-        window.location="../partials/dashboard.php";
+        window.location="dashboard/index.php";
         </script>';
 }else{
     echo '<script>
         alert("Invalid Credentials");
-        window.location="../index.php";
+        window.location="../Admin/index.php";
         </script>';
 }
 

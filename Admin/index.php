@@ -25,7 +25,7 @@
     <div class=" my-5 py-4">
         <div class="container bg-info  text-center">
             <h2 class="text-center text-dark">Login</h2>
-            <form action="actions/login.php" method="POST" class="p-3 ">
+            <form action="../actions/login.php" method="POST" class="p-3 ">
                 <div class="mb-3">
                     <input type="email" class="form-control w-80 m-auto" name="email" placeholder="Email Address"
                         required="required">
