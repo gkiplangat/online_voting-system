@@ -22,32 +22,19 @@
 </head>
 
 <body class="bg-secondary">
-    <h1 class="text-info text-center p-3">Online Voting System</h1>
-    <p class="text-info text-center "><i>Your Vote, Your Voice</i></p>
     <div class=" my-5 py-4">
-        <div class="container rounded bg-info  text-center">
-            <h2 class="text-center text-white">Login</h2>
+        <div class="container bg-info  text-center">
+            <h2 class="text-center text-dark">Login</h2>
             <form action="actions/login.php" method="POST" class="p-3 ">
                 <div class="mb-3">
-                    <input type="text" class="form-control w-80 m-auto" name="username"
-                        placeholder="Enter Your Username" required="required">
+                    <input type="email" class="form-control w-80 m-auto" name="email" placeholder="Email Address"
+                        required="required">
                 </div>
                 <div class="mb-3">
-                    <input type="tel" class="form-control w-80 m-auto" name="mobile" placeholder="Enter Your Mobile No"
-                        required="required" minlength="10" maxlength="10">
+                    <input type="password" class="form-control w-80 m-auto" name="password" placeholder="Password"
+                        required="required">
                 </div>
-                <div class="mb-3">
-                    <input type="password" class="form-control w-80 m-auto" name="password"
-                        placeholder="Enter Your Password" required="required">
-                </div>
-                <div class="mb-3">
-                    <select name="std" class="form-control w-80 m-auto">
-                        <option value="group">Group</option>
-                        <option value="voter">Voter</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-dark my-4">Login</button>
-                <p>Don't have an Account <a href="partials/registration.php" class="text-white">Register Here</a> </p>
+                <button type="submit" class="btn btn-secondary my-4">Login</button>
             </form>
         </div>
     </div>
