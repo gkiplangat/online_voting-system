@@ -1,5 +1,5 @@
 <?php
-include ('../actions/connect.php');
+include ('../../actions/connect.php');
 //session_start();
 //if(!isset($_SESSION['username'])){
     //header("Location:index.php");
@@ -16,13 +16,13 @@ include ('../actions/connect.php');
 
     <title>Admin-Dashboard</title>
     <!--Styling the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,file-->
-    <link rel="stylesheet" href="../Admin/dashboard/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../Admin/dashboard/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="../../Admin/dashboard/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../Admin/dashboard/css/dataTables.bootstrap5.min.css" />
     <!-- font-awesome icon -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../Admin/dashboard/css/style.css" />
+    <link rel="stylesheet" href="../../Admin/dashboard/css/style.css" />
 
 </head>
 
@@ -79,7 +79,7 @@ include ('../actions/connect.php');
 
                     </li>
                     <li>
-                        <a href="s_admin.php" class="nav-link px-3 active">
+                        <a href="index.php" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="bi bi-speedometer2"></i>
                             </span>
@@ -98,9 +98,8 @@ include ('../actions/connect.php');
 
                     </li>
                     <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse"
-                            href="includes/users_include.php" role="button" aria-expanded="false"
-                            aria-controls="collapseExample">
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="users.php" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
                             <span class="me-2"><i class="fa fa-users"></i></span>
                             <span>Users</span>
                         </a>
@@ -143,6 +142,9 @@ include ('../actions/connect.php');
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <?php include '../users.php';?>
             </div>
         </div>
     </main>
