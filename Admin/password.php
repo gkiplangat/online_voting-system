@@ -1,5 +1,5 @@
 <?php
-include '../actions/connect.php';
+include 'config.php';
 session_start();
 error_reporting(0);
 if(isset($_SESSION['username'])){
@@ -9,13 +9,11 @@ if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $password = md5($_POST['password']);
     $sql = "SELECT * FROM users WHERE email ='$email' AND password='$password'";
-    $result = mysqli_query($con, $sql);
+    $result = mysqli_query($conn, $sql);
     if($result-> num_rows >0){
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['username'];
-        header("Location:dashboard/index.php");
+        
     }else {
-        echo "<script>alert('Woops! Email or password is wrong.')</script>";
+       
     }
 }
 ?>
@@ -27,25 +25,25 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form - Baba System</title>
-    <link rel="stylesheet" href="dashboard/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-<body class="bg-dark">
-    <div class="container text-center">
+<body>
+    <div class="container">
         <form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight:800;">Login</p>
+            <p class="login-text" style="font-size: 2rem; font-weight:800;">Reset Password</p>
             <div class="input-group">
-                <input type="email" placeholder="Email" name="email" value="<?php echo $_POST['email'];?>" required>
+                <input type="password" placeholder=" New Password" name="npassword"
+                    value="<?php echo $_POST['password']; ?>" required>
             </div>
             <div class="input-group">
-                <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password'];?>"
-                    required>
+                <input type="password" placeholder="Confirm Password" name="cpassword"
+                    value="<?php echo $_POST['password']; ?>" required>
             </div>
             <div class="input-group">
-                <button name="submit" class="btn">Login</button>
+                <button name="submit" class="btn">Reset</button>
             </div>
+            <p class="login-register-text">Remebered your password ? <a href="index.php">login Here</a></p>
         </form>
     </div>
 </body>

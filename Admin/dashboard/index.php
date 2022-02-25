@@ -1,5 +1,10 @@
 <?php
 include ('../../actions/connect.php');
+session_start();
+if(!isset($_SESSION['username'])){
+    header("Location:index.php");
+}
+?>
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +36,8 @@ include ('../../actions/connect.php');
                 <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
             </button>
             <!--offcanvas trigger-->
-            <a class="navbar-brand fw-bold text-uppercase me-auto" href="#">Gid</a>
+
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -56,7 +62,7 @@ include ('../../actions/connect.php');
                             <i class="bi bi-person-fill"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <a href="../logout.php">Logout</a>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -74,7 +80,7 @@ include ('../../actions/connect.php');
 
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
-
+        <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
         <div class="offcanvas-body p-0 ">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
