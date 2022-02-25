@@ -3,7 +3,7 @@ include '../actions/connect.php';
 session_start();
 error_reporting(0);
 if(isset($_SESSION['username'])){
-    header("Location: Welcome.php");
+    header("Location: index.php");
 }
 if(isset($_POST['submit'])){
     $email = $_POST['email'];

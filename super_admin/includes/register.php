@@ -3,8 +3,8 @@ include ('../../actions/connect.php');
 
 $username = $_POST['username'];
 $email = $_POST['email'];
-$password = $_POST['password']; 
-$cpassword = $_POST['cpassword']; 
+$password = md5($_POST['password']); 
+$cpassword = md5($_POST['cpassword']); 
 if($password==$cpassword){
     echo '<script>
     alert("Password did not Match");
