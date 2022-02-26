@@ -237,9 +237,21 @@ if(!isset($_SESSION['username'])){
                     <div class="card text-white bg-primary h-100">
                         <div class="card-header">Voted</div>
                         <div class="card-body">
-                            <span class="text-center">
-                                <i class="fa fa-check-square-o" aria-hidden="true" style="font-size: 2.5rem;"></i>
-                            </span>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span>
+                                        <i class="fa fa-check-square-o" style="font-size: 2.5rem;"></i>
+                                    </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <?php
+                                    $query ="SELECT  id FROM voters WHERE status = '1' ORDER BY id";
+                                    $query_run =mysqli_query($con, $query);
+                                    $row = mysqli_num_rows($query_run);
+                                    echo '<h2>'.$row.'</h2>';
+                                    ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -247,9 +259,21 @@ if(!isset($_SESSION['username'])){
                     <div class="card text-white bg-danger h-100">
                         <div class="card-header">Not Vote</div>
                         <div class="card-body">
-                            <span class="text-center">
-                                <i class="fa fa-times" aria-hidden="true" style="font-size: 2.5rem;"></i>
-                            </span>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span>
+                                        <i class="fa fa-times" style="font-size: 2.5rem;"></i>
+                                    </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <?php
+                                    $query ="SELECT  id FROM voters WHERE status = '0' ORDER BY id";
+                                    $query_run =mysqli_query($con, $query);
+                                    $row = mysqli_num_rows($query_run);
+                                    echo '<h2>'.$row.'</h2>';
+                                    ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
