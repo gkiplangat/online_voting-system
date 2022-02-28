@@ -124,6 +124,7 @@ include ('../../actions/connect.php');
         <table class="table bg-secondary">
             <thead>
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Full Name</th>
                     <th scope="col">ID NO</th>
                     <th scope="col">Email Address</th>
