@@ -19,7 +19,8 @@
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit">
             <i class="bi bi-pencil-square"></i> Edit
         </button>
-
+    </td>
+    <td scope=" col">
         <a href="#"><button type="button" class="btn btn-danger deletebtn"> <i
                     class="bi bi-trash"></i>Delete</button></a>
     </td>

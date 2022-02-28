@@ -152,7 +152,8 @@ include ('../../actions/connect.php');
                         <th scope="col">Photo</th>
                         <th scope="col">Position</th>
                         <th scope="col">Age</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
