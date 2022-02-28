@@ -94,7 +94,7 @@ include ('../../actions/connect.php');
         </form>
         <!-- Modal For Editing Data -->
         <form action="" method="POST" enctype="multipart/form-data" lass="p-3">
-            <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            <div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -106,30 +106,32 @@ include ('../../actions/connect.php');
                             </button>
                         </div>
                         <div class="modal-body">
+                            <input type="hidden"class="update_id" id="update_id" >
                             <div class="mb-3">
-                                <input type="text" class="form-control w-80 m-auto" name="fullname" required="required">
+                                <input type="text" id="fullname" class="form-control w-80 m-auto" name="fullname" required="required">
                             </div>
                             <div class="mb-3">
-                                <input type="number" class="form-control w-80 m-auto" name="idno" required="required"
+                                <input type="number"id="idno" class="form-control w-80 m-auto" name="idno" required="required"
                                     minlength="10" maxlength="10">
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control w-80 m-auto" name="email" required="required">
+                                <input type="email" id="email"class="form-control w-80 m-auto" name="email" required="required">
                             </div>
                             <div class="mb-3">
-                                <input type="tel" class="form-control w-80 m-auto" name="phone" required="required">
+                                <input type="tel" id="phone"class="form-control w-80 m-auto" name="phone" required="required">
                             </div>
                             <div class="mb-3">
-                                <input type="file" class="form-control w-80 m-auto" name="photo">
+                                <input type="file" id="photo"class="form-control w-80 m-auto" name="photo">
                             </div>
                             <div class="mb-3">
-                                <select name="std" class="form-control w-80 m-auto">
-                                    <option value="group">Group</option>
-                                    <option value="voter">Voter</option>
+                                <select name="position"  id="position" class="form-control w-80 m-auto">
+                                    <option value="President">President</option>
+                                    <option value="Secretary General">Secretary General</option>
+                                    <option value="Treasurer">Treasurer</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control w-80 m-auto" name="age" required="required">
+                                <input type="number" id="age"class="form-control w-80 m-auto" name="age" required="required">
                             </div>
                         </div>
                         <div class="modal-footer">

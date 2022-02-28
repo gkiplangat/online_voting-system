@@ -10,18 +10,25 @@ include ('../actions/connect.php');
 <html lang="en">
 
 <head>
+    <!--Title---->
+    <title>Admin-Dashboard</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Admin-Dashboard</title>
-    <!--Styling the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,file-->
+    <meta name="author" content="Gideon Kiplangat" />
+    
+    <!--  Description  -->
+    <meta name="description" content="userinterface, voting system, voter," />
+    <!-- Keywords  -->
+    <meta name="keywords" content="form, container, header, footer">
+    <!--Bootstrap Files--------->
     <link rel="stylesheet" href="../Admin/dashboard/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../Admin/dashboard/css/dataTables.bootstrap5.min.css" />
     <!-- font-awesome icon -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--Custom css-->
     <link rel="stylesheet" href="../Admin/dashboard/css/style.css" />
 
 </head>
@@ -73,10 +80,7 @@ include ('../actions/connect.php');
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
                     <li>
-                        <div class="text-muted small fw-bold text-uppercase px-3"> CORE
-
-                        </div>
-
+                        <div class="text-muted small fw-bold text-uppercase px-3"> CORE</div>
                     </li>
                     <li>
                         <a href="s_admin.php" class="nav-link px-3 active">
@@ -84,37 +88,27 @@ include ('../actions/connect.php');
                                 <i class="bi bi-speedometer2"></i>
                             </span>
                             <span>Dashboard</span>
-
                         </a>
-
                     </li>
                     <li class="my">
                         <hr class="dropdown-divider" />
                     </li>
                     <li>
-                        <div class="text-muted small fw-bold text-uppercase px-3"> interface
-
-                        </div>
-
+                        <div class="text-muted small fw-bold text-uppercase px-3"> interface </div>
                     </li>
-                    <li>
+                    <li?>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse"
                             href="includes/users_include.php" role="button" aria-expanded="false"
                             aria-controls="collapseExample">
                             <span class="me-2"><i class="fa fa-users"></i></span>
                             <span>Users</span>
                         </a>
-                    </li>
-
+                        </li>
                 </ul>
-
             </nav>
-
-
         </div>
     </div>
     <!--offcanvas-->
-
     <main class="mt-5 pt-3">
         <div class="container-fluid">
             <div class="row">
@@ -154,8 +148,6 @@ include ('../actions/connect.php');
     <script src="./js/jquery.dataTables.min.js"></script>
     <script src="./js/dataTables.bootstrap5.min.js"></script>
     <script src="./js/script.js"></script>
-
-
 </body>
 
 </html>
