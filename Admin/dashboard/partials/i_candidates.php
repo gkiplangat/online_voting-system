@@ -11,7 +11,7 @@
     <td><?php echo $row['email'];?></td>
     <td><?php echo $row['phone'];?></td>
     <td>
-        <img src="<?php echo"uploads/".$row['photo'];?>" width="100px" class="img-circle" alt="image">
+        <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
     </td>
     <td><?php echo $row['position'];?></td>
     <td><?php echo $row['age'];?></td>
@@ -20,10 +20,25 @@
             <i class="bi bi-pencil-square"></i> Edit
         </button>
 
-        <a href="../actions/cand_delete.php"><button type="button" class="btn btn-danger"> <i
+        <a href="#"><button type="button" class="btn btn-danger deletebtn"> <i
                     class="bi bi-trash"></i>Delete</button></a>
     </td>
 </tr>
 <?php
                 }
                 ?>
+<script>
+$(document).ready(function() {
+
+    $('deletebtn').on(click, function() {
+        $('#deletemodal').modal('show');
+        //$tr = $(this).closest('tr');
+        //var data = $tr.children("td").map(function() {
+
+        //return $(this).text();
+        //}).get();
+        //console.log(data);
+        // $('update_id').var(data[0]);
+    });
+});
+</script>

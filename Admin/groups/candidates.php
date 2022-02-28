@@ -141,26 +141,28 @@ include ('../../actions/connect.php');
                 </div>
             </div>
         </form>
-
-        <table class="table  table-sm table-responsive bg-secondary">
-            <thead>
-                <tr>
-                    <th scope="col">Full Name</th>
-                    <th scope="col">Id No</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Photo</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+        <div class="table-responsive">
+            <table class="table  table-sm bg-secondary">
+                <thead>
+                    <tr>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Id No</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
                require_once('partials/i_candidates.php');
                 ?>
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 
 
