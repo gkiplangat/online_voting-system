@@ -36,7 +36,7 @@ include ('../../actions/connect.php');
                 <!--Add New Candidates Button-->
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#addnew">
-            <i class="bi bi-person-plus"></i> Add New
+                    <i class="bi bi-person-plus"></i> Add New
                 </button>
             </div>
         </div>
@@ -102,7 +102,7 @@ include ('../../actions/connect.php');
                             <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
-                               
+
                             </button>
                         </div>
                         <div class="modal-body">
@@ -142,7 +142,7 @@ include ('../../actions/connect.php');
             </div>
         </form>
 
-        <table class="table bg-secondary">
+        <table class="table  table-sm table-responsive bg-secondary">
             <thead>
                 <tr>
                     <th scope="col">Full Name</th>
