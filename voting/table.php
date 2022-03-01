@@ -1,6 +1,6 @@
 <?php session_start();
-
 include ('../actions/connect.php');
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
