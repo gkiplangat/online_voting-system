@@ -18,7 +18,7 @@ include ('../../actions/connect.php');
     <!-- Keywords  -->
     <meta name="keywords" content="form, container, header, footer">
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dashboard/css/bootstrap.min.css">
     <!--CSS link -->
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
