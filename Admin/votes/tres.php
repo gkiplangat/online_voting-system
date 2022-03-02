@@ -23,6 +23,9 @@ include ('../../actions/connect.php');
     <!--Table-->
     <div class="container-fluid table-responsive">
         <div class="card bg-info">
+             <div class="card-header text-center">
+                <h2>Votes-Treasurer</h2>
+             </div>
  <table class="table">
             <thead>
                 <tr>

@@ -35,8 +35,9 @@ if(!isset($_SESSION['username'])){
                 <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
             </button>
             <!--offcanvas trigger-->
-
-
+<!---Logo------------------------->
+ <img src="images/logo.png" alt="logo" width ="50" height="50">
+<!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">

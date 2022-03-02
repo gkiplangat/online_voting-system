@@ -31,7 +31,9 @@ include ('../../actions/connect.php');
                 <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
             </button>
             <!--offcanvas trigger-->
-            <a class="navbar-brand fw-bold text-uppercase me-auto" href="#">Gid</a>
+<!---Logo------------------------->
+ <img src="images/logo.png" alt="logo" width ="50" height="50">
+<!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -165,6 +167,41 @@ include ('../../actions/connect.php');
                                 </ul>
                             </div>
                         </div>
+                          <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                           
+                            <span>Votes</span>
+                            <span class="right-icon ms-auto">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="collapse" id="votes">
+                            <div>
+                                <ul class="navbar-nav ps-3">
+                                    <li>
+                                        <a href="pres_votes.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span>President</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sec_votes.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span>Secretary General</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tres_votes.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span>Treasurer</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                     </li>
                 </ul>
 
@@ -271,9 +308,6 @@ include ('../../actions/connect.php');
                     </div>
                 </div>
             </div>
-
-          
-
         </div>
         <?php include '../votes/sec.php';?>
 
