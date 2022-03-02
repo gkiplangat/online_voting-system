@@ -83,7 +83,9 @@ if(!isset($_SESSION['username'])){
 
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
-
+<!-----------------User Name-------------------->
+ <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
+<!-----------------User Name-------------------->
         <div class="offcanvas-body p-0 ">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
