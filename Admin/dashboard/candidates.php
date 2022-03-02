@@ -225,12 +225,15 @@ if(!isset($_SESSION['username'])){
         </div>
     </div>
 <!--offcanvas======= Ends===========================================-->
+<!--Main============================================================-->
     <main class="mt-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 fw-bold fs-3 p-3 text-light">Dashboard</div>
             </div>
+           
             <div class="row">
+                 <!--====Card 1- Total No of Candidates Registered===-->
                 <div class="col-md-3 mb-3">
                     <div class="card bg-primary h-100 rounded">
                         <div class="card-header text-light fw-bold">
@@ -256,6 +259,8 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
+                 <!--====Card 1- Total No of Candidates Registered===-->
+                <!--====Card 2- Total No of Voters Registered===-->
                 <div class="col-md-3 mb-3">
                     <div class="card  bg-info h-100 rounded">
                         <div class="card-header text-light fw-bold">
@@ -280,6 +285,8 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
+                <!--====Card 2- Total No of Voters Registered===-->
+                <!--====Card 3- Total No of Voters who Voted===-->
                 <div class="col-md-3 mb-3">
                     <div class="card bg-success h-100 rounded">
                         <div class="card-header text-light fw-bold">Voted</div>
@@ -302,6 +309,8 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
+                 <!--====Card 3- Total No of Voters who Voted===-->
+                <!--====Card 4- Total No of Voters who didn't Vote===-->
                 <div class="col-md-3 mb-3">
                     <div class="card bg-danger h-100 rounded">
                         <div class="card-header text-light fw-bold">Not Vote</div>
@@ -324,13 +333,12 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
+                <!--====Card 4- Total No of Voters who didn't Vote===-->
             </div>
-
             <?php include '../groups/candidates.php';?>
-
-
         </div>
     </main>
+    <!--Main============================================================-->
     <!--adding js ...................................files-->
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery-3.5.1.js"></script>

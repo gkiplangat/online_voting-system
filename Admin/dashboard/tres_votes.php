@@ -227,12 +227,13 @@ if(!isset($_SESSION['username'])){
                 <div class="col-md-12 fw-bold fs-3 p-3 text-light">Dashboard</div>
             </div>
             <div class="row">
+                 <!--====Card 1- Total No of Candidates Registered===-->
                 <div class="col-md-3 mb-3">
-                    <div class="card text-white bg-primary h-100">
-                        <div class="card-header fw-bold">
+                    <div class="card bg-primary h-100 rounded">
+                        <div class="card-header text-light fw-bold">
                             Total No. of Candidates
                         </div>
-                        <div class="card-body">
+                        <div class="card-body bg-light text-primary">
                             <div class="row">
                                 <div class="col-md-6">
                                     <span>
@@ -252,12 +253,14 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
+                 <!--====Card 1- Total No of Candidates Registered===-->
+                <!--====Card 2- Total No of Voters Registered===-->
                 <div class="col-md-3 mb-3">
-                    <div class="card text-white bg-info h-100">
-                        <div class="card-header fw-bold">
+                    <div class="card  bg-info h-100 rounded">
+                        <div class="card-header text-light fw-bold">
                             Registered Voters
                         </div>
-                        <div class="card-body">
+                        <div class="card-body bg-light text-info">
                             <div class="row">
                                 <div class="col-md-6">
                                     <span>
@@ -276,10 +279,12 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
+                <!--====Card 2- Total No of Voters Registered===-->
+                <!--====Card 3- Total No of Voters who Voted===-->
                 <div class="col-md-3 mb-3">
-                    <div class="card text-white bg-primary h-100">
-                        <div class="card-header">Voted</div>
-                        <div class="card-body">
+                    <div class="card bg-success h-100 rounded">
+                        <div class="card-header text-light fw-bold">Voted</div>
+                        <div class="card-body bg-light text-success">
                             <div class="row">
                                 <div class="col-md-6">
                                     <span>
@@ -298,10 +303,12 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
+                 <!--====Card 3- Total No of Voters who Voted===-->
+                <!--====Card 4- Total No of Voters who didn't Vote===-->
                 <div class="col-md-3 mb-3">
-                    <div class="card text-white bg-danger h-100">
-                        <div class="card-header">Not Vote</div>
-                        <div class="card-body">
+                    <div class="card bg-danger h-100 rounded">
+                        <div class="card-header text-light fw-bold">Not Vote</div>
+                        <div class="card-body bg-light text-danger">
                             <div class="row">
                                 <div class="col-md-6">
                                     <span>
@@ -320,6 +327,7 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
+                <!--====Card 4- Total No of Voters who didn't Vote===-->
             </div>
         </div>
        <?php include '../votes/tres.php';?>
