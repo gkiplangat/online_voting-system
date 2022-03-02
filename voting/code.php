@@ -9,7 +9,7 @@ if(isset($_POST['submit']))
     $treasurer  = $_POST['secretary'];
     $secretary  = $_POST['treasurer'];
 
-    $query = "INSERT INTO demo (president,secretary,treasurer) VALUES ('$president','$secretary','$treasurer')";
+    $query = "INSERT INTO votes (president,secretary,treasurer) VALUES ('$president','$secretary','$treasurer')";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)

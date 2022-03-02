@@ -9,7 +9,7 @@ include ('../../actions/connect.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Admin-Dashboard</title>
+    <title>Votes-Dashboard</title>
     <!--Styling the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,file-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
@@ -272,7 +272,7 @@ include ('../../actions/connect.php');
                 </div>
             </div>
 
-            <?php include '../positions/Tres.php';?>
+            <?php include '../votes/tres.php';?>
 
 
         </div>

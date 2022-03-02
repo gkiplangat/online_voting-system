@@ -2,7 +2,7 @@
 include ('../../actions/connect.php');
 session_start();
 if(!isset($_SESSION['username'])){
-    header("Location:index.php");
+ header("Location:index.php");
 }
 ?>
 ?>
@@ -26,7 +26,7 @@ if(!isset($_SESSION['username'])){
 
 </head>
 
-<body>
+<body style="background:#7C6E7F;">
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
@@ -173,7 +173,7 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </li>
                      <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#positions" role="button"
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
                             <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
                            
@@ -182,7 +182,7 @@ if(!isset($_SESSION['username'])){
                                 <i class="bi bi-chevron-down"></i>
                             </span>
                         </a>
-                        <div class="collapse" id="positions">
+                        <div class="collapse" id="votes">
                             <div>
                                 <ul class="navbar-nav ps-3">
                                     <li>
@@ -192,13 +192,13 @@ if(!isset($_SESSION['username'])){
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="secretary.php" class="nav-link px-3">
+                                        <a href="sec_votes.php" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>Secretary General</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="treasurer.php" class="nav-link px-3">
+                                        <a href="tres_votes.php" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
                                             <span>Treasurer</span>
                                         </a>

@@ -23,10 +23,10 @@ include ('../../actions/connect.php');
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
-<body>
+<body style ="background:lightgray;">
     <!--Table-->
-    <div class="container-fluid table-responsive">
-        <table class="table bg-secondary">
+    <div class="container-fluid table-responsive rounded">
+        <table class="table bg-info">
             <thead>
                 <tr>
                     <th scope="col">Name</th>
@@ -36,14 +36,14 @@ include ('../../actions/connect.php');
             <tbody>
                 <!--SQL QUERY START HERE-->
                 <?php
-                $sql ="SELECT  president, COUNT(*) FROM votes Group by president ORDER BY COUNT(*) DESC;";
+                $sql ="SELECT  secretary, COUNT(*) FROM votes Group by secretary ORDER BY COUNT(*) DESC;";
                 $query =$con->query($sql);
                 WHILE($row=$query->fetch_assoc())
                 {
                 ?>
-                <tr>
-                    <td><?php echo $row['president'];?></td>
-                    <td><?php echo $row['COUNT(*)'];?></td>
+                <tr class="text-light" style="font-weight:bold;">
+                    <td><?php echo $row['secretary'];?></td>
+                    <td ><?php echo $row['COUNT(*)'];?></td>
                 </tr>
                 <?php
                 }

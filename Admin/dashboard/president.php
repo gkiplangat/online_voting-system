@@ -21,7 +21,7 @@ include ('../../actions/connect.php');
 
 </head>
 
-<body>
+<body style="background:#7C6E7F;">
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">

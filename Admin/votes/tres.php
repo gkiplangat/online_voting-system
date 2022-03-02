@@ -36,13 +36,13 @@ include ('../../actions/connect.php');
             <tbody>
                 <!--SQL QUERY START HERE-->
                 <?php
-                $sql ="SELECT  president, COUNT(*) FROM votes Group by president ORDER BY COUNT(*) DESC;";
+                $sql ="SELECT  treasurer, COUNT(*) FROM votes Group by treasurer ORDER BY COUNT(*) DESC;";
                 $query =$con->query($sql);
                 WHILE($row=$query->fetch_assoc())
                 {
                 ?>
                 <tr>
-                    <td><?php echo $row['president'];?></td>
+                    <td><?php echo $row['treasurer'];?></td>
                     <td><?php echo $row['COUNT(*)'];?></td>
                 </tr>
                 <?php
