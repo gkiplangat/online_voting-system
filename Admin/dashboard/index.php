@@ -254,7 +254,9 @@ if(!isset($_SESSION['username'])){
                 </div>
                 <div class="col-md-3 mb-3">
                     <div class="card text-white bg-info h-100">
-                        <div class="card-header">Registered Voters</div>
+                       <div class="card-header fw-bold">
+                            Registered Voters
+                        </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
