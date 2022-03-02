@@ -17,16 +17,13 @@ include ('../../actions/connect.php');
     <meta name="description" content="userinterface, voting system, voter," />
     <!-- Keywords  -->
     <meta name="keywords" content="form, container, header, footer">
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-    <!--CSS link -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
     <!--Table-->
     <div class="container-fluid table-responsive">
-        <table class="table bg-secondary">
+        <div class="card">
+ <table class="table bg-light">
             <thead>
                 <tr>
                     <th scope="col">Name</th>
@@ -51,6 +48,8 @@ include ('../../actions/connect.php');
 
             </tbody>
         </table>
+        </div>
+       
     </div>
     
 
