@@ -19,10 +19,11 @@ include ('../../actions/connect.php');
     <meta name="keywords" content="form, container, header, footer">
 </head>
 
-<body style ="background:lightgray;">
+<body>
     <!--Table-->
-    <div class="container-fluid table-responsive rounded">
-        <table class="table bg-info">
+    <div class="container-fluid table-responsive">
+         <div class="card bg-info">
+            <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Name</th>
@@ -46,7 +47,8 @@ include ('../../actions/connect.php');
                 ?>
 
             </tbody>
-        </table>
+           </table>
+          </div>
     </div>
     
 

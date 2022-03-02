@@ -20,7 +20,8 @@ include ('../../actions/connect.php');
 <body>
     <!--Table-->
     <div class="container-fluid table-responsive">
-        <table class="table bg-secondary">
+         <div class="card bg-info">
+           <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Name</th>
@@ -35,7 +36,7 @@ include ('../../actions/connect.php');
                 WHILE($row=$query->fetch_assoc())
                 {
                 ?>
-                <tr>
+                <tr class="text-light" style="font-weight:bold;">
                     <td><?php echo $row['president'];?></td>
                     <td><?php echo $row['COUNT(*)'];?></td>
                 </tr>
@@ -44,7 +45,8 @@ include ('../../actions/connect.php');
                 ?>
 
             </tbody>
-        </table>
+          </table>
+        </div>
     </div>
     
 

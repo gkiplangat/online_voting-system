@@ -275,7 +275,7 @@ include ('../../actions/connect.php');
           
 
         </div>
-          <?php include '../votes/sec.php';?>
+        <?php include '../votes/sec.php';?>
 
     </main>
     <!--adding js ...................................files-->

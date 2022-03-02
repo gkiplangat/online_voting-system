@@ -272,10 +272,11 @@ include ('../../actions/connect.php');
                 </div>
             </div>
 
-            <?php include '../votes/pres.php';?>
+            
 
 
         </div>
+        <?php include '../votes/pres.php';?>
     </main>
     <!--adding js ...................................files-->
     <script src="./js/bootstrap.bundle.min.js"></script>
