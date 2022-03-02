@@ -335,8 +335,9 @@ if(!isset($_SESSION['username'])){
                 </div>
                 <!--====Card 4- Total No of Voters who didn't Vote===-->
             </div>
-            <?php include '../groups/candidates.php';?>
+           
         </div>
+         <?php include '../groups/candidates.php';?>
     </main>
     <!--Main============================================================-->
     <!--adding js ...................................files-->

@@ -21,10 +21,10 @@ include ('../../actions/connect.php');
 
 <body>
     <!--Table-->
-    <div class="container-fluid table-responsive">
+    <div class="container-fluid">
         <div class="card bg-info">
              <div class="card-header text-center">
-                <h2>Votes-Treasurer</h2>
+                <h3>Votes-Treasurer</h3>
              </div>
  <table class="table">
             <thead>

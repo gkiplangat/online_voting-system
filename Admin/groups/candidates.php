@@ -28,18 +28,6 @@ include ('../../actions/connect.php');
 
     <!--Table-->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8">
-                <h2 class="text-dark my-3" style="font-weight: 600;">Candidates</h2>
-            </div>
-            <div class="col-md-4 text-center">
-                <!--Add New Candidates Button-->
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#addnew">
-                    <i class="bi bi-person-plus"></i> Add New
-                </button>
-            </div>
-        </div>
         <!-- Modal  For Adding New Candidates-->
         <form action="actions/Add_cand.php" method="POST" enctype="multipart/form-data" lass="p-3">
             <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -144,7 +132,23 @@ include ('../../actions/connect.php');
             </div>
         </form>
         <div class="table-responsive">
-            <table class="table  table-sm bg-secondary">
+            <div class="card bg-info my-3">
+                <div class="card-header fw-bold">
+                     <div class="row">
+                         <div class="col-md-8">
+                             <h3>Registered candidates</h3>
+                        </div> 
+                        <div class="col-md-4 text-center">
+                <!--Add New Candidates Button-->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#addnew">
+                    <i class="bi bi-person-plus"></i> Add New
+                </button>
+            </div>
+        </div>
+                </div>
+
+                <table class="table  table-sm">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -165,6 +169,8 @@ include ('../../actions/connect.php');
                 ?>
                 </tbody>
             </table>
+            </div>
+            
         </div>
 
     </div>

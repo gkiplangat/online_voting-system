@@ -22,7 +22,7 @@ include ('../../actions/connect.php');
     <div class="container-fluid table-responsive">
          <div class="card bg-info">
              <div class="card-header text-center">
-                <h2>Votes-President</h2>
+                <h3>Votes-President</h3>
              </div>
            <table class="table">
             <thead>
