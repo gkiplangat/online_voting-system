@@ -223,12 +223,14 @@ if(!isset($_SESSION['username'])){
     <main class="mt-5 pt-3">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12 fw-bold fs-3">Dashboard</div>
+                <div class="col-md-12 fw-bold fs-3 text-light">Dashboard</div>
             </div>
             <div class="row">
                 <div class="col-md-3 mb-3">
                     <div class="card text-white bg-primary h-100">
-                        <div class="card-header">Total No. of Candidates</div>
+                        <div class="card-header fw-bold">
+                            Total No. of Candidates
+                        </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
