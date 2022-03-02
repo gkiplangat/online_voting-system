@@ -1,10 +1,5 @@
 <?php
 include ('../../actions/connect.php');
-session_start();
-if(!isset($_SESSION['username'])){
-    header("Location:index.php");
-}
-?>
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +9,7 @@ if(!isset($_SESSION['username'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Admin-Dashboard</title>
+    <title>Votes-Dashboard</title>
     <!--Styling the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,file-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
@@ -36,8 +31,7 @@ if(!isset($_SESSION['username'])){
                 <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
             </button>
             <!--offcanvas trigger-->
-
-
+            <a class="navbar-brand fw-bold text-uppercase me-auto" href="#">Gid</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -62,7 +56,7 @@ if(!isset($_SESSION['username'])){
                             <i class="bi bi-person-fill"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a href="../logout.php">Logout</a>
+                            <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -80,7 +74,7 @@ if(!isset($_SESSION['username'])){
 
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
-        <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
+
         <div class="offcanvas-body p-0 ">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
@@ -172,41 +166,6 @@ if(!isset($_SESSION['username'])){
                             </div>
                         </div>
                     </li>
-                     <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#positions" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
-                           
-                            <span>Votes</span>
-                            <span class="right-icon ms-auto">
-                                <i class="bi bi-chevron-down"></i>
-                            </span>
-                        </a>
-                        <div class="collapse" id="positions">
-                            <div>
-                                <ul class="navbar-nav ps-3">
-                                    <li>
-                                        <a href="pres_votes.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>President</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="secretary.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>Secretary General</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="treasurer.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>Treasurer</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
                 </ul>
 
             </nav>
@@ -216,10 +175,10 @@ if(!isset($_SESSION['username'])){
     </div>
     <!--offcanvas-->
 
-    <main class="mt-5 pt-3">
+    <main class="mt-5">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12 fw-bold fs-3">Dashboard</div>
+                <div class="col-md-12 fw-bold fs-3 p-3">Dashboard</div>
             </div>
             <div class="row">
                 <div class="col-md-3 mb-3">
@@ -241,7 +200,6 @@ if(!isset($_SESSION['username'])){
                                     ?>
                                 </div>
                             </div>
-
 
                         </div>
                     </div>
@@ -314,28 +272,7 @@ if(!isset($_SESSION['username'])){
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            Charts
-                        </div>
-                        <div class="card-body">
-                            <canvas class="chart" width="400" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            Charts
-                        </div>
-                        <div class="card-body">
-                            <canvas class="chart" width="400" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php include '../votes/pres.php';?>
 
 
         </div>

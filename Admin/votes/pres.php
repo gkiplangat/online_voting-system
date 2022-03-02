@@ -25,7 +25,7 @@ include ('../../actions/connect.php');
 
 <body>
     <!--Table-->
-    <div class="container-fluid">
+    <div class="container-fluid table-responsive">
         <table class="table bg-secondary">
             <thead>
                 <tr>
@@ -51,6 +51,11 @@ include ('../../actions/connect.php');
 
             </tbody>
         </table>
+    </div>
+    <div class="charts">
+        <?php
+        require_once('../../voting/test.php')
+        ?>
     </div>
 
 
