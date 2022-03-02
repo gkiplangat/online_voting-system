@@ -10,19 +10,20 @@ include ('../../actions/connect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Admin-Dashboard</title>
-    <!--Styling the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,file-->
+    <!--Bootstrap files-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
     <!-- font-awesome icon -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--Custom CSS File-->
     <link rel="stylesheet" href="css/style.css" />
 
 </head>
 
 <body style="background:#7C6E7F;">
-    <!--navbar-->
+<!--Navbar======= Start===========================================-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <!--offcanvas trigger-->
@@ -69,8 +70,8 @@ include ('../../actions/connect.php');
             </div>
         </div>
     </nav>
-    <!--navbar-->
-    <!--offcanvas-->
+<!--Navbar======= Ends===========================================-->
+<!--Offcanvas==== Start===========================================-->
 
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
@@ -112,6 +113,7 @@ include ('../../actions/connect.php');
                                 <i class="bi bi-chevron-down"></i>
                             </span>
                         </a>
+                          <!--===Dropdown Menu Start==-->
                         <div class="collapse" id="groups">
                             <div>
                                 <ul class="navbar-nav ps-3">
@@ -130,6 +132,7 @@ include ('../../actions/connect.php');
                                 </ul>
                             </div>
                         </div>
+                         <!--===Dropdown Menu Ends==-->
                     </li>
                     <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#positions" role="button"
@@ -141,6 +144,7 @@ include ('../../actions/connect.php');
                                 <i class="bi bi-chevron-down"></i>
                             </span>
                         </a>
+                        <!--===Dropdown Menu Start==-->
                         <div class="collapse" id="positions">
                             <div>
                                 <ul class="navbar-nav ps-3">
@@ -165,6 +169,7 @@ include ('../../actions/connect.php');
                                 </ul>
                             </div>
                         </div>
+                         <!--===Dropdown Menu Ends==-->
                     </li>
                 </ul>
 
@@ -173,8 +178,7 @@ include ('../../actions/connect.php');
 
         </div>
     </div>
-    <!--offcanvas-->
-
+<!--offcanvas======= Ends===========================================-->
     <main class="mt-5">
         <div class="container-fluid">
             <div class="row">
