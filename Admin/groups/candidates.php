@@ -94,32 +94,36 @@ include ('../../actions/connect.php');
                             </button>
                         </div>
                         <div class="modal-body">
-                            <input type="hidden"class="update_id" id="update_id" >
+                            <input type="hidden" class="update_id" id="update_id">
                             <div class="mb-3">
-                                <input type="text" id="fullname" class="form-control w-80 m-auto" name="fullname" required="required">
+                                <input type="text" id="fullname" class="form-control w-80 m-auto" name="fullname"
+                                    required="required">
                             </div>
                             <div class="mb-3">
-                                <input type="number"id="idno" class="form-control w-80 m-auto" name="idno" required="required"
-                                    minlength="10" maxlength="10">
+                                <input type="number" id="idno" class="form-control w-80 m-auto" name="idno"
+                                    required="required" minlength="10" maxlength="10">
                             </div>
                             <div class="mb-3">
-                                <input type="email" id="email"class="form-control w-80 m-auto" name="email" required="required">
+                                <input type="email" id="email" class="form-control w-80 m-auto" name="email"
+                                    required="required">
                             </div>
                             <div class="mb-3">
-                                <input type="tel" id="phone"class="form-control w-80 m-auto" name="phone" required="required">
+                                <input type="tel" id="phone" class="form-control w-80 m-auto" name="phone"
+                                    required="required">
                             </div>
                             <div class="mb-3">
-                                <input type="file" id="photo"class="form-control w-80 m-auto" name="photo">
+                                <input type="file" id="photo" class="form-control w-80 m-auto" name="photo">
                             </div>
                             <div class="mb-3">
-                                <select name="position"  id="position" class="form-control w-80 m-auto">
+                                <select name="position" id="position" class="form-control w-80 m-auto">
                                     <option value="President">President</option>
                                     <option value="Secretary General">Secretary General</option>
                                     <option value="Treasurer">Treasurer</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <input type="number" id="age"class="form-control w-80 m-auto" name="age" required="required">
+                                <input type="number" id="age" class="form-control w-80 m-auto" name="age"
+                                    required="required">
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -134,43 +138,44 @@ include ('../../actions/connect.php');
         <div class="table-responsive">
             <div class="card bg-info my-3">
                 <div class="card-header fw-bold">
-                     <div class="row">
-                         <div class="col-md-8">
-                             <h3>Registered candidates</h3>
-                        </div> 
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3>Registered candidates</h3>
+                        </div>
                         <div class="col-md-4 text-center">
-                <!--Add New Candidates Button-->
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#addnew">
-                    <i class="bi bi-person-plus"></i> Add New
-                </button>
-            </div>
-        </div>
+                            <!--Add New Candidates Button-->
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary my-3" data-toggle="modal"
+                                data-target="#addnew">
+                                <i class="bi bi-person-plus"></i> Add New
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
                 <table class="table  table-sm">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Full Name</th>
-                        <th scope="col">Id No</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Id No</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Photo</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
                require_once('partials/i_candidates.php');
                 ?>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
             </div>
-            
+
         </div>
 
     </div>

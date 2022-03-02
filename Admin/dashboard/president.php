@@ -330,11 +330,8 @@ if(!isset($_SESSION['username'])){
                 <!--====Card 4- Total No of Voters who didn't Vote===-->
             </div>
             </div>
-
-            <?php include '../positions/pres.php';?>
-
-
         </div>
+          <?php include '../positions/pres.php';?>
     </main>
     <!--adding js ...................................files-->
     <script src="./js/bootstrap.bundle.min.js"></script>

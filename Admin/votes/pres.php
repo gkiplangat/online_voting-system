@@ -17,41 +17,42 @@ include ('../../actions/connect.php');
     <meta name="description" content="userinterface, voting system, voter," />
     <!-- Keywords  -->
     <meta name="keywords" content="form, container, header, footer">
+
 <body>
     <!--Table-->
     <div class="container-fluid table-responsive">
-         <div class="card bg-info">
-             <div class="card-header text-center">
+        <div class="card bg-info">
+            <div class="card-header text-center">
                 <h3>Votes-President</h3>
-             </div>
-           <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Votes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!--SQL QUERY START HERE-->
-                <?php
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Votes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--SQL QUERY START HERE-->
+                    <?php
                 $sql ="SELECT  president, COUNT(*) FROM votes Group by president ORDER BY COUNT(*) DESC;";
                 $query =$con->query($sql);
                 WHILE($row=$query->fetch_assoc())
                 {
                 ?>
-                <tr class="text-light" style="font-weight:bold;">
-                    <td><?php echo $row['president'];?></td>
-                    <td><?php echo $row['COUNT(*)'];?></td>
-                </tr>
-                <?php
+                    <tr class="text-light" style="font-weight:bold;">
+                        <td><?php echo $row['president'];?></td>
+                        <td><?php echo $row['COUNT(*)'];?></td>
+                    </tr>
+                    <?php
                 }
                 ?>
 
-            </tbody>
-          </table>
+                </tbody>
+            </table>
         </div>
     </div>
-    
+
 
 
     <!--Javascript Libraries-->
