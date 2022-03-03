@@ -1,19 +1,19 @@
 <?php
 include 'actions/connect.php';
 //session_start();
-//error_reporting(0);
-//if(isset($_SESSION['fullname'])){
-   // header("Location: index.php");
-//}
+error_reporting(0);
+if(isset($_SESSION['username'])){
+    header("Location: index.php");
+}
 if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $password = md5($_POST['password']);
     $sql = "SELECT * FROM voters WHERE email ='$email' AND password='$password'";
     $result = mysqli_query($con, $sql);
     if($result-> num_rows >0){
-        //$row = mysqli_fetch_assoc($result);
-       // $_SESSION['fullname'] = $row['fullname'];
-        header("Location:home.php");
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+        header("Location:Admin/dashboard/main.php");
     }else {
         echo "<script>alert('Woops! Email or password is wrong.')</script>";
     }
@@ -33,24 +33,21 @@ if(isset($_POST['submit'])){
 </head>
 
 <body class="bg-dark">
-    <div class="card">
-        <div class="container text-center">
-            <form action="" method="POST" class="login-email">
-                <p class="login-text" style="font-size: 2rem; font-weight:800;">Voter Login</p>
-                <div class="input-group">
-                    <input type="email" placeholder="Email" name="email" value="<?php echo $_POST['email'];?>" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" placeholder="Password" name="password"
-                        value="<?php echo $_POST['password'];?>" required>
-                </div>
-                <div class="input-group">
-                    <button name="submit" class="btn btn-primary">Login</button>
-                </div>
-            </form>
-        </div>
+    <div class="container text-center">
+        <form action="" method="POST" class="login-email">
+            <p class="login-text" style="font-size: 2rem; font-weight:800;">Login</p>
+            <div class="input-group">
+                <input type="email" placeholder="Email" name="email" value="<?php echo $_POST['email'];?>" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password'];?>"
+                    required>
+            </div>
+            <div class="input-group">
+                <button name="submit" class="btn">Login</button>
+            </div>
+        </form>
     </div>
-
 </body>
 
 </html>

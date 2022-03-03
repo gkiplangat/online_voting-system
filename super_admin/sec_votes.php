@@ -2,9 +2,9 @@
 //===Connection to the Database====================
 include ('../../actions/connect.php');
 //===============Session Start====================
-//session_start();
+session_start();
 if(!isset($_SESSION['username'])){
-header("Location:index.php");
+ header("Location:index.php");
 }
 //===============Session Start====================
 ?>
@@ -16,12 +16,13 @@ header("Location:index.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Admin-Dashboard</title>
+    <title>Votes-Dashboard</title>
     <!--Styling the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,file-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
     <!-- font-awesome icon -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css" />
 
@@ -38,7 +39,7 @@ header("Location:index.php");
             </button>
             <!--offcanvas trigger-->
 <!---Logo------------------------->
- <img src="images/logo.png" alt="logo" width ="60" height="60">
+ <img src="images/logo.png" alt="logo" width ="50" height="50">
 <!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -64,7 +65,7 @@ header("Location:index.php");
                             <i class="bi bi-person-fill"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a href="../logout.php">Logout</a>
+                            <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -175,8 +176,7 @@ header("Location:index.php");
                                 </ul>
                             </div>
                         </div>
-                    </li>
-                     <li>
+                          <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
                             <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
@@ -211,6 +211,7 @@ header("Location:index.php");
                             </div>
                         </div>
                     </li>
+                    </li>
                 </ul>
 
             </nav>
@@ -220,12 +221,12 @@ header("Location:index.php");
     </div>
     <!--offcanvas-->
 
-    <main class="mt-5 pt-3">
-        <div class="container-fluid my-3">
+    <main class="mt-5">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12 fw-bold fs-3 text-light">Dashboard</div>
+                <div class="col-md-12 fw-bold fs-3 p-3 text-light">Dashboard</div>
             </div>
-             <div class="row">
+            <div class="row">
                  <!--====Card 1- Total No of Candidates Registered===-->
                 <div class="col-md-3 mb-3">
                     <div class="card bg-primary h-100 rounded">
@@ -328,9 +329,9 @@ header("Location:index.php");
                 </div>
                 <!--====Card 4- Total No of Voters who didn't Vote===-->
             </div>
-
-
         </div>
+        <?php include '../votes/sec.php';?>
+
     </main>
     <!--adding js ...................................files-->
     <script src="./js/bootstrap.bundle.min.js"></script>

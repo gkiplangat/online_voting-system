@@ -2,9 +2,9 @@
 //===Connection to the Database====================
 include ('../../actions/connect.php');
 //===============Session Start====================
-//session_start();
+session_start();
 if(!isset($_SESSION['username'])){
-header("Location:index.php");
+ header("Location:index.php");
 }
 //===============Session Start====================
 ?>
@@ -22,6 +22,7 @@ header("Location:index.php");
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
     <!-- font-awesome icon -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css" />
 
@@ -37,9 +38,9 @@ header("Location:index.php");
                 <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
             </button>
             <!--offcanvas trigger-->
-<!---Logo------------------------->
- <img src="images/logo.png" alt="logo" width ="60" height="60">
-<!---Logo------------------------->
+            <!---Logo------------------------->
+            <img src="images/logo.png" alt="logo" width="50" height="50">
+            <!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -64,7 +65,7 @@ header("Location:index.php");
                             <i class="bi bi-person-fill"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a href="../logout.php">Logout</a>
+                            <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -82,9 +83,9 @@ header("Location:index.php");
 
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
-<!-----------------User Name-------------------->
- <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
-<!-----------------User Name-------------------->
+        <!-----------------User Name-------------------->
+        <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
+        <!-----------------User Name-------------------->
         <div class="offcanvas-body p-0 ">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
@@ -176,11 +177,11 @@ header("Location:index.php");
                             </div>
                         </div>
                     </li>
-                     <li>
+                    <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
                             <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
-                           
+
                             <span>Votes</span>
                             <span class="right-icon ms-auto">
                                 <i class="bi bi-chevron-down"></i>
@@ -220,13 +221,13 @@ header("Location:index.php");
     </div>
     <!--offcanvas-->
 
-    <main class="mt-5 pt-3">
-        <div class="container-fluid my-3">
-            <div class="row">
-                <div class="col-md-12 fw-bold fs-3 text-light">Dashboard</div>
+    <main class="mt-5">
+        <div class="container-fluid">
+            <div class=" row">
+                <div class="col-md-12 fw-bold fs-3 p-3 text-light">Dashboard</div>
             </div>
-             <div class="row">
-                 <!--====Card 1- Total No of Candidates Registered===-->
+            <div class="row">
+                <!--====Card 1- Total No of Candidates Registered===-->
                 <div class="col-md-3 mb-3">
                     <div class="card bg-primary h-100 rounded">
                         <div class="card-header text-light fw-bold">
@@ -252,7 +253,7 @@ header("Location:index.php");
                         </div>
                     </div>
                 </div>
-                 <!--====Card 1- Total No of Candidates Registered===-->
+                <!--====Card 1- Total No of Candidates Registered===-->
                 <!--====Card 2- Total No of Voters Registered===-->
                 <div class="col-md-3 mb-3">
                     <div class="card  bg-info h-100 rounded">
@@ -302,7 +303,7 @@ header("Location:index.php");
                         </div>
                     </div>
                 </div>
-                 <!--====Card 3- Total No of Voters who Voted===-->
+                <!--====Card 3- Total No of Voters who Voted===-->
                 <!--====Card 4- Total No of Voters who didn't Vote===-->
                 <div class="col-md-3 mb-3">
                     <div class="card bg-danger h-100 rounded">
@@ -328,9 +329,10 @@ header("Location:index.php");
                 </div>
                 <!--====Card 4- Total No of Voters who didn't Vote===-->
             </div>
-
+        </div>
 
         </div>
+        <?php include '../positions/Sec.php';?>
     </main>
     <!--adding js ...................................files-->
     <script src="./js/bootstrap.bundle.min.js"></script>
