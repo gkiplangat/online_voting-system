@@ -38,7 +38,7 @@ header("Location:index.php");
             </button>
             <!--offcanvas trigger-->
 <!---Logo------------------------->
- <img src="images/logo.png" alt="logo" width ="60" height="60">
+ <img src="../Admin/dashboard/images/logo.png" alt="logo" width ="60" height="60">
 <!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -64,7 +64,7 @@ header("Location:index.php");
                             <i class="bi bi-person-fill"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a href="../logout.php">Logout</a>
+                            <a href="logout.php">Logout</a>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -83,7 +83,7 @@ header("Location:index.php");
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
 <!-----------------User Name-------------------->
- <?php// echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
+ <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
 <!-----------------User Name-------------------->
         <div class="offcanvas-body p-0 ">
             <nav class="navbar-dark">
