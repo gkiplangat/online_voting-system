@@ -136,7 +136,7 @@
             <div class="card-header fw-bold">
                 <div class="row">
                     <div class="col-md-4 text-center">
-                        <h3>Registered candidates</h3>
+                        <h3>Registered Admins</h3>
                     </div>
                      <div class="col-md-4 text-center">
                         <!--Notification Message upon submission-->
@@ -168,20 +168,16 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Full Name</th>
-                        <th scope="col">Id No</th>
+                        <th scope="col">Username</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Age</th>
+                        <th scope="col">Password</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-               require_once('partials/i_candidates.php');
+               require_once('partials/i_admins.php');
                 ?>
                 </tbody>
             </table>

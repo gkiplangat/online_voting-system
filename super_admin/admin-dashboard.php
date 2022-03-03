@@ -2,10 +2,10 @@
 //===Connection to the Database====================
 include ('../actions/connect.php');
 //===============Session Start====================
-//session_start();
-//if(!isset($_SESSION['username'])){
-//header("Location:index.php");
-//}
+session_start();
+if(!isset($_SESSION['username'])){
+header("Location:index.php");
+}
 //===============Session Start====================
 ?>
 <!DOCTYPE html>
@@ -95,7 +95,7 @@ include ('../actions/connect.php');
 
                     </li>
                     <li>
-                        <a href="index.php" class="nav-link px-3 active">
+                        <a href="admin-dashboard.php" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="bi bi-speedometer2"></i>
                             </span>
@@ -125,6 +125,12 @@ include ('../actions/connect.php');
                         <div class="collapse" id="groups">
                             <div>
                                 <ul class="navbar-nav ps-3">
+                                    <li>
+                                        <a href="admins.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-people"></i></span>
+                                            <span>Admins</span>
+                                        </a>
+                                    </li>
                                     <li>
                                         <a href="candidates.php" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-people"></i></span>

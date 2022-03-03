@@ -314,7 +314,7 @@ if(!isset($_SESSION['username'])){
 
 
         </div>
-         <?php include 'groups/candidates.php';?>
+         <?php include 'groups/admins.php';?>
     </main>
     <!--Main============================================================-->
     <!--adding js ...................................files-->
