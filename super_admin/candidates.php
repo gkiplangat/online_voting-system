@@ -129,6 +129,12 @@ if(!isset($_SESSION['username'])){
                             <div>
                                 <ul class="navbar-nav ps-3">
                                     <li>
+                                        <a href="admins.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-people"></i></span>
+                                            <span>Admins</span>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="candidates.php" class="nav-link px-3">
                                             <span class="me-2"><i class="bi bi-people"></i></span>
                                             <span>Candidates</span>
