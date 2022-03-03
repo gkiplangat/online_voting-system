@@ -1,6 +1,6 @@
 <?php
 include '../actions/connect.php';
-session_start();
+//session_start();
 error_reporting(0);
 if(isset($_SESSION['username'])){
     header("Location: index.php");
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form - online voting system</title>
     <link rel="stylesheet" href="dashboard/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
 
 </head>
 
