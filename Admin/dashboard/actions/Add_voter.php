@@ -1,5 +1,6 @@
 <?php
 include ('../../../actions/connect.php');
+session_start();
 
 $fullname = $_POST['fullname'];
 $idno = $_POST['idno'];
@@ -21,12 +22,11 @@ if($age<18){
 
     $result = mysqli_query($con, $sql);
     if ($result) {
-        echo '<script>
-        alert("Wooow! Registration Successfully");
-        window.location="../voters.php";
-        </script>';
+        $_SESSION['status'] = "Inserted Successfully";
+        header("Location: ../voters.php");
     } else {
-        die(mysqli_error($con));
+        $_SESSION['status'] = "Something Went wrong";
+        header("Location: ../voters.php.php");
     }
     
 }

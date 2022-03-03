@@ -1,5 +1,6 @@
 <?php
 include ('../../actions/connect.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,7 @@ include ('../../actions/connect.php');
 
     <!--Table-->
     <div class="container-fluid my-3">
-        <!-- Modal  For Adding New Candidates-->
+        <!-- Modal  For Adding New Voters-->
         <form action="actions/Add_voter.php" method="POST" enctype="multipart/form-data" lass="p-3">
             <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true">
@@ -108,22 +109,37 @@ include ('../../actions/connect.php');
 
             </div>
         </div>
-        <div class="card bg-info my-3">
+        <div class="card bg-info my-3 table-responsive">
             <div class="card-header fw-bold">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h3>Registered Voters</h3>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <!--Add New voters Button-->
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary my-3" data-toggle="modal"
-                                data-target="#addnew">
-                                <i class="bi bi-person-plus"></i> Add New
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <h3>Registered Voters</h3>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <!--Notification Message upon submission-->
+                        <?php
+                              if(isset($_SESSION['status']))
+                              {?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
                             </button>
                         </div>
+                        <?php
+                                unset($_SESSION['status']);
+                            }?>
+                        <!--Notification Message upon submission-->
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <!--Add New voters Button-->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#addnew">
+                            <i class="bi bi-person-plus"></i> Add New
+                        </button>
                     </div>
                 </div>
+            </div>
             <table class="table">
                 <thead>
                     <tr>

@@ -1,5 +1,7 @@
-<?php session_start();
-include ('../actions/connect.php');
+<?php 
+
+session_start();
+
 
  ?>
 <!DOCTYPE html>
@@ -13,8 +15,8 @@ include ('../actions/connect.php');
   <link rel="stylesheet" href="../Admin/dashboard/css/bootstrap.min.css">
 </head>
 
-<body class="bg-secondary">
-  <div class="container-fluid my-3">
+<body class="bg-dark">
+  <div class="container-fluid my-5">
     <!--Form Start-->
     <form action="actions/i_Vote.php" method="POST">
       <div class="card table-responsive ">
@@ -156,7 +158,7 @@ include ('../actions/connect.php');
         </table>
 
       </div>
-      <div class="form-group mb-3">
+      <div class="form-group  my-3">
         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>

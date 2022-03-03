@@ -135,48 +135,63 @@ include ('../../actions/connect.php');
                 </div>
             </div>
         </form>
-        <div class="table-responsive">
-            <div class="card bg-info my-3">
-                <div class="card-header fw-bold">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h3>Registered candidates</h3>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <!--Add New Candidates Button-->
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary my-3" data-toggle="modal"
-                                data-target="#addnew">
-                                <i class="bi bi-person-plus"></i> Add New
+
+        <div class="card bg-info my-3 table-responsive">
+            <div class="card-header fw-bold">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <h3>Registered candidates</h3>
+                    </div>
+                     <div class="col-md-4 text-center">
+                        <!--Notification Message upon submission-->
+                        <?php
+                              if(isset($_SESSION['status']))
+                              {?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
                             </button>
                         </div>
+                        <?php
+                                unset($_SESSION['status']);
+                            }?>
+                        <!--Notification Message upon submission-->
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <!--Add New Candidates Button-->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#addnew">
+                            <i class="bi bi-person-plus"></i> Add New
+                        </button>
                     </div>
                 </div>
-
-                <table class="table  table-sm">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Full Name</th>
-                            <th scope="col">Id No</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Phone</th>
-                            <th scope="col">Photo</th>
-                            <th scope="col">Position</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">Edit</th>
-                            <th scope="col">Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-               require_once('partials/i_candidates.php');
-                ?>
-                    </tbody>
-                </table>
             </div>
 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Id No</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+               require_once('partials/i_candidates.php');
+                ?>
+                </tbody>
+            </table>
         </div>
+
+
 
     </div>
 

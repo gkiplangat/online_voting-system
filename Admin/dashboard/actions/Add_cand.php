@@ -1,6 +1,6 @@
 <?php
 include ('../../../actions/connect.php');
-
+session_start();
 $fullname = $_POST['fullname'];
 $idno = $_POST['idno'];
 $email = $_POST['email'];
@@ -18,16 +18,14 @@ if($age<18){
 
 move_uploaded_file($tmp_name, "../partials/uploads/$image");
     $sql = "INSERT INTO candidates (fullname,idno,email,phone,photo,position,age)VALUES ('$fullname','$idno','$email','$phone','$image','$position','$age')";
-    $sql ="INSERT INTO demo(fullname, photo)VALUES('$fullname','$image')";
 
     $result = mysqli_query($con, $sql);
-    if ($result) {
-        echo '<script>
-        alert("Wooow! Registration Successfully");
-        window.location="../candidates.php";
-        </script>';
+     if ($result) {
+        $_SESSION['status'] = "Inserted Successfully";
+        header("Location: ../candidates.php");
     } else {
-        die(mysqli_error($con));
+        $_SESSION['status'] = "Something Went wrong";
+        header("Location: ../Candidates.php");
     }
     
 }
