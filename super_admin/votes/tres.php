@@ -1,5 +1,5 @@
 <?php
-include ('../../actions/connect.php');
+
 ?>
 
 <!DOCTYPE html>

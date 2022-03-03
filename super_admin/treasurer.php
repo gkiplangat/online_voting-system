@@ -1,6 +1,6 @@
 <?php
 //===Connection to the Database====================
-include ('../../actions/connect.php');
+include ('../actions/connect.php');
 //===============Session Start====================
 session_start();
 if(!isset($_SESSION['username'])){
@@ -17,14 +17,15 @@ if(!isset($_SESSION['username'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Admin-Dashboard</title>
-    <!--Styling the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,file-->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <!--Bootstrap files-->
+    <link rel="stylesheet" href="../Admin/dashboard/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Admin/dashboard/css/dataTables.bootstrap5.min.css" />
     <!-- font-awesome icon -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style.css" />
+    <!--Custom CSS File-->
+    <link rel="stylesheet" href="../Admin/dashboard/css/style.css" />
 
 </head>
 
@@ -96,7 +97,7 @@ if(!isset($_SESSION['username'])){
 
                     </li>
                     <li>
-                        <a href="index.php" class="nav-link px-3 active">
+                        <a href="admin-dashboard.php" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="bi bi-speedometer2"></i>
                             </span>
@@ -331,7 +332,7 @@ if(!isset($_SESSION['username'])){
             </div>
             </div>
 
-            <?php include '../positions/Tres.php';?>
+            <?php include 'positions/Tres.php';?>
 
 
         </div>
