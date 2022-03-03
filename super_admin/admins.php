@@ -30,7 +30,7 @@ if(!isset($_SESSION['username'])){
 </head>
 
 <body style="background:#7C6E7F;">
-<!--Navbar======= Start===========================================-->
+    <!--Navbar======= Start===========================================-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <!--offcanvas trigger-->
@@ -39,9 +39,9 @@ if(!isset($_SESSION['username'])){
                 <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
             </button>
             <!--offcanvas trigger-->
-<!---Logo------------------------->
- <img src="images/logo.png" alt="logo" width ="50" height="50">
-<!---Logo------------------------->
+            <!---Logo------------------------->
+            <img src="images/logo.png" alt="logo" width="50" height="50">
+            <!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -79,14 +79,14 @@ if(!isset($_SESSION['username'])){
             </div>
         </div>
     </nav>
-<!--Navbar======= Ends===========================================-->
-<!--Offcanvas==== Start===========================================-->
+    <!--Navbar======= Ends===========================================-->
+    <!--Offcanvas==== Start===========================================-->
 
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
-<!-----------------User Name-------------------->
- <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
-<!-----------------User Name-------------------->
+        <!-----------------User Name-------------------->
+        <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
+        <!-----------------User Name-------------------->
         <div class="offcanvas-body p-0 ">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
@@ -124,7 +124,7 @@ if(!isset($_SESSION['username'])){
                                 <i class="bi bi-chevron-down"></i>
                             </span>
                         </a>
-                          <!--===Dropdown Menu Start==-->
+                        <!--===Dropdown Menu Start==-->
                         <div class="collapse" id="groups">
                             <div>
                                 <ul class="navbar-nav ps-3">
@@ -149,7 +149,7 @@ if(!isset($_SESSION['username'])){
                                 </ul>
                             </div>
                         </div>
-                         <!--===Dropdown Menu Ends==-->
+                        <!--===Dropdown Menu Ends==-->
                     </li>
                     <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#positions" role="button"
@@ -186,13 +186,13 @@ if(!isset($_SESSION['username'])){
                                 </ul>
                             </div>
                         </div>
-                         <!--===Dropdown Menu Ends==-->
+                        <!--===Dropdown Menu Ends==-->
                     </li>
                     <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
                             <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
-                           
+
                             <span>Votes</span>
                             <span class="right-icon ms-auto">
                                 <i class="bi bi-chevron-down"></i>
@@ -230,19 +230,19 @@ if(!isset($_SESSION['username'])){
 
         </div>
     </div>
-<!--offcanvas======= Ends===========================================-->
-<!--Main============================================================-->
+    <!--offcanvas======= Ends===========================================-->
+    <!--Main============================================================-->
     <main class="mt-5 pt-3">
         <div class="container-fluid my-3">
             <div class="row">
                 <div class="col-md-12 fw-bold fs-3 text-light">Dashboard</div>
             </div>
-             <div class="row">
-                 <!--====Card 1- Total No of Admins Registered===-->
+            <div class="row">
+                <!--====Card 1- Total No of Admins Registered===-->
                 <div class="col-md-4 mb-3">
                     <div class="card bg-primary h-100 rounded">
                         <div class="card-header text-light fw-bold">
-                           Registered Admins
+                            Registered Admins
                         </div>
                         <div class="card-body bg-light text-primary">
                             <div class="row">
@@ -264,7 +264,7 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
-                 <!--====Card 1- Total No of Admins Registered===-->
+                <!--====Card 1- Total No of Admins Registered===-->
                 <!--====Card 2- Total No of Candidates Registered===-->
                 <div class="col-md-4 mb-3">
                     <div class="card  bg-info h-100 rounded">
@@ -314,13 +314,13 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
-                 <!--====Card 3- Total No of Voters Registered===-->
-                 
+                <!--====Card 3- Total No of Voters Registered===-->
+
             </div>
 
 
         </div>
-         <?php include 'groups/admins.php';?>
+        <?php include 'groups/admins.php';?>
     </main>
     <!--Main============================================================-->
     <!--adding js ...................................files-->

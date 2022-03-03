@@ -25,47 +25,33 @@
     <!--Table-->
     <div class="container-fluid">
         <!-- Modal  For Adding New Candidates-->
-        <form action="../actions/Add_cand.php" method="POST" enctype="multipart/form-data" lass="p-3">
+        <form action="actions/Add_admins.php" method="POST" enctype="multipart/form-data" lass="p-3">
             <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Add New Candidate</h5>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Add New Admins</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <input type="text" class="form-control w-80 m-auto" name="fullname"
-                                    placeholder="Full Name" required="required">
+                                <input type="text" class="form-control w-80 m-auto" name="username"
+                                    placeholder="User Name" required="required">
                             </div>
                             <div class="mb-3">
-                                <input type="number" class="form-control w-80 m-auto" name="idno" placeholder="ID No"
-                                    required="required" minlength="10" maxlength="10">
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control w-80 m-auto" name="email"
+                                <input type="text" class="form-control w-80 m-auto" name="email"
                                     placeholder="Email Address" required="required">
                             </div>
                             <div class="mb-3">
-                                <input type="tel" class="form-control w-80 m-auto" name="phone" placeholder="Phone No"
-                                    required="required">
+                                <input type="password" class="form-control w-80 m-auto" name="password"
+                                    placeholder="Password" required="required">
                             </div>
                             <div class="mb-3">
-                                <input type="file" class="form-control w-80 m-auto" name="photo">
-                            </div>
-                            <div class="mb-3">
-                                <select name="position" class="form-control w-80 m-auto">
-                                    <option value="President">President</option>
-                                    <option value="Secretary General">Secretary General</option>
-                                    <option value="Treasurer">Treasurer</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control w-80 m-auto" name="age" placeholder="Age"
-                                    required="required">
+                                <input type="password" class="form-control w-80 m-auto" name="password"
+                                    placeholder="Confirm Password" required="required">
                             </div>
                         </div>
                         <div class="modal-footer">
