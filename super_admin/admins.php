@@ -40,7 +40,7 @@ if(!isset($_SESSION['username'])){
             </button>
             <!--offcanvas trigger-->
             <!---Logo------------------------->
-            <img src="images/logo.png" alt="logo" width="50" height="50">
+            <img src="../Admin/dashboard/images/logo.png" alt="logo" width="60" height="60">
             <!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

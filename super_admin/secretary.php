@@ -17,7 +17,7 @@ if(!isset($_SESSION['username'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Admin-Dashboard</title>
-   <!--Bootstrap files-->
+    <!--Bootstrap files-->
     <link rel="stylesheet" href="../Admin/dashboard/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../Admin/dashboard/css/dataTables.bootstrap5.min.css" />
     <!-- font-awesome icon -->
@@ -39,7 +39,7 @@ if(!isset($_SESSION['username'])){
             </button>
             <!--offcanvas trigger-->
             <!---Logo------------------------->
-            <img src="images/logo.png" alt="logo" width="50" height="50">
+            <img src="../Admin/dashboard/images/logo.png" alt="logo" width="60" height="60">
             <!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -232,12 +232,12 @@ if(!isset($_SESSION['username'])){
             <div class="row">
                 <div class="col-md-12 fw-bold fs-3 text-light">Dashboard</div>
             </div>
-             <div class="row">
-                 <!--====Card 1- Total No of Admins Registered===-->
+            <div class="row">
+                <!--====Card 1- Total No of Admins Registered===-->
                 <div class="col-md-4 mb-3">
                     <div class="card bg-primary h-100 rounded">
                         <div class="card-header text-light fw-bold">
-                           Registered Admins
+                            Registered Admins
                         </div>
                         <div class="card-body bg-light text-primary">
                             <div class="row">
@@ -259,7 +259,7 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
-                 <!--====Card 1- Total No of Admins Registered===-->
+                <!--====Card 1- Total No of Admins Registered===-->
                 <!--====Card 2- Total No of Candidates Registered===-->
                 <div class="col-md-4 mb-3">
                     <div class="card  bg-info h-100 rounded">
@@ -309,8 +309,8 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
-                 <!--====Card 3- Total No of Voters Registered===-->
-                 
+                <!--====Card 3- Total No of Voters Registered===-->
+
             </div>
 
 
