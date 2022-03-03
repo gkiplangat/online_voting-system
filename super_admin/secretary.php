@@ -222,22 +222,49 @@ if(!isset($_SESSION['username'])){
     <!--offcanvas-->
 
     <main class="mt-5">
-        <div class="container-fluid">
-            <div class=" row">
-                <div class="col-md-12 fw-bold fs-3 p-3 text-light">Dashboard</div>
-            </div>
+        <div class="container-fluid my-3">
             <div class="row">
-                <!--====Card 1- Total No of Candidates Registered===-->
-                <div class="col-md-3 mb-3">
+                <div class="col-md-12 fw-bold fs-3 text-light">Dashboard</div>
+            </div>
+             <div class="row">
+                 <!--====Card 1- Total No of Admins Registered===-->
+                <div class="col-md-4 mb-3">
                     <div class="card bg-primary h-100 rounded">
                         <div class="card-header text-light fw-bold">
-                            Total No. of Candidates
+                           Registered Admins
                         </div>
                         <div class="card-body bg-light text-primary">
                             <div class="row">
                                 <div class="col-md-6">
                                     <span>
                                         <i class="bi bi-people" style="font-size: 2.5rem;"></i>
+                                    </span>
+                                </div>
+                                <div class="col-md-6">
+                                    <?php
+                                    $query ="SELECT  id FROM users ORDER BY id";
+                                    $query_run =mysqli_query($con, $query);
+                                    $row = mysqli_num_rows($query_run);
+                                    echo '<h2>'.$row.'</h2>';
+                                    ?>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                 <!--====Card 1- Total No of Admins Registered===-->
+                <!--====Card 2- Total No of Candidates Registered===-->
+                <div class="col-md-4 mb-3">
+                    <div class="card  bg-info h-100 rounded">
+                        <div class="card-header text-light fw-bold">
+                            Registered Candidates
+                        </div>
+                        <div class="card-body bg-light text-info">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <span>
+                                        <i class="bi bi-people-fill" style="font-size: 2.5rem;"></i>
                                     </span>
                                 </div>
                                 <div class="col-md-6">
@@ -249,22 +276,19 @@ if(!isset($_SESSION['username'])){
                                     ?>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <!--====Card 1- Total No of Candidates Registered===-->
-                <!--====Card 2- Total No of Voters Registered===-->
-                <div class="col-md-3 mb-3">
-                    <div class="card  bg-info h-100 rounded">
-                        <div class="card-header text-light fw-bold">
-                            Registered Voters
-                        </div>
-                        <div class="card-body bg-light text-info">
+                <!--====Card 2- Total No of Candidates Registered===-->
+                <!--====Card 3- Total No of Voters Registered===-->
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-success h-100 rounded">
+                        <div class="card-header text-light fw-bold">Registered Voters</div>
+                        <div class="card-body bg-light text-success">
                             <div class="row">
                                 <div class="col-md-6">
                                     <span>
-                                        <i class="bi bi-people-fill" style="font-size: 2.5rem;"></i>
+                                        <i class="fa fa-check-square-o" style="font-size: 2.5rem;"></i>
                                     </span>
                                 </div>
                                 <div class="col-md-6">
@@ -279,68 +303,21 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
-                <!--====Card 2- Total No of Voters Registered===-->
-                <!--====Card 3- Total No of Voters who Voted===-->
-                <div class="col-md-3 mb-3">
-                    <div class="card bg-success h-100 rounded">
-                        <div class="card-header text-light fw-bold">Voted</div>
-                        <div class="card-body bg-light text-success">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <span>
-                                        <i class="fa fa-check-square-o" style="font-size: 2.5rem;"></i>
-                                    </span>
-                                </div>
-                                <div class="col-md-6">
-                                    <?php
-                                    $query ="SELECT  id FROM voters WHERE status = '1' ORDER BY id";
-                                    $query_run =mysqli_query($con, $query);
-                                    $row = mysqli_num_rows($query_run);
-                                    echo '<h2>'.$row.'</h2>';
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--====Card 3- Total No of Voters who Voted===-->
-                <!--====Card 4- Total No of Voters who didn't Vote===-->
-                <div class="col-md-3 mb-3">
-                    <div class="card bg-danger h-100 rounded">
-                        <div class="card-header text-light fw-bold">Not Vote</div>
-                        <div class="card-body bg-light text-danger">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <span>
-                                        <i class="fa fa-times" style="font-size: 2.5rem;"></i>
-                                    </span>
-                                </div>
-                                <div class="col-md-6">
-                                    <?php
-                                    $query ="SELECT  id FROM voters WHERE status = '0' ORDER BY id";
-                                    $query_run =mysqli_query($con, $query);
-                                    $row = mysqli_num_rows($query_run);
-                                    echo '<h2>'.$row.'</h2>';
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--====Card 4- Total No of Voters who didn't Vote===-->
+                 <!--====Card 3- Total No of Voters Registered===-->
+                 
             </div>
-        </div>
+
 
         </div>
         <?php include 'positions/Sec.php';?>
     </main>
     <!--adding js ...................................files-->
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="../Admin/dashboard/js/bootstrap.bundle.min.js"></script>
+    <script src="../Admin/dashboard/js/jquery-3.5.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
-    <script src="./js/jquery.dataTables.min.js"></script>
-    <script src="./js/dataTables.bootstrap5.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="../Admin/dashboard/js/jquery.dataTables.min.js"></script>
+    <script src="../Admin/dashboard/js/dataTables.bootstrap5.min.js"></script>
+    <script src="../Admin/dashboard/js/script.js"></script>
 
 
 </body>
