@@ -1,9 +1,13 @@
-<?php 
-
+<?php
+//===Connection to the Database====================
+include ('actions/connect.php');
+//===============Session Start====================
 session_start();
-
-
- ?>
+if(!isset($_SESSION['username'])){
+ header("Location:index.php");
+}
+//===============Session Start====================
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +16,7 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>voting-Dashboard</title>
-  <link rel="stylesheet" href="../Admin/dashboard/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Admin/dashboard/css/bootstrap.min.css">
 </head>
 
 <body class="bg-dark">

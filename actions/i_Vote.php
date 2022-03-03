@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('../../actions/connect.php');
+include ('connect.php');
 
 if(isset($_POST['submit']))
 {
@@ -14,12 +14,12 @@ if(isset($_POST['submit']))
 
     if($query_run)
     {
-        $_SESSION['status'] = "Inserted Successfully";
-        header("Location: ../vote_here.php");
+        $_SESSION['status'] = "You Voted Successfully";
+        header("Location: ../home.php");
     }
     else{
-        $_SESSION['status'] = "Inserted Successfully";
-        header("Location: ../vote_here.php");
+        $_SESSION['status'] = "Something Went Wrong";
+        header("Location: ../home.php");
     }
 }
 ?>
