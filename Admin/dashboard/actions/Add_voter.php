@@ -8,17 +8,18 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $image = $_FILES['photo']['name'];
 $tmp_name = $_FILES['photo']['tmp_name'];
-$age = $_POST['age']; 
+$password = md5($_POST['password']); 
+$cpassword =md5($_POST['cpassword']); 
 $status=$_POST['status'];
-if($age<18){
+if($password!=$cpassword){
     echo '<script>
-    alert("The citizen is under_age");
+    alert("Passwords did not match");
     window.location="../voters.php"
     </script>';
 }else{
 
     move_uploaded_file($tmp_name, "../uploads/$image");
-    $sql = "INSERT INTO voters (fullname,idno,email,phone,photo,age,status)VALUES ('$fullname','$idno','$email','$phone','$image','$age',0)";
+    $sql = "INSERT INTO voters (fullname,idno,email,phone,photo,password,status)VALUES ('$fullname','$idno','$email','$phone','$image','$password',0)";
 
     $result = mysqli_query($con, $sql);
     if ($result) {

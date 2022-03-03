@@ -14,7 +14,7 @@
      <td>
          <img src="<?php echo"../uploads/". $row['photo'];?>" width="100px" class="img-circle" alt="image">
      </td>
-     <td><?php echo $row['age'];?></td>
+     <td><?php echo $row['password'];?></td>
      <td scope="col">
          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit">
              <i class="bi bi-pencil-square"></i> Edit

@@ -221,7 +221,7 @@ if(!isset($_SESSION['username'])){
     <!--offcanvas-->
 
     <main class="mt-5 pt-3">
-        <div class="container-fluid">
+        <div class="container-fluid my-3">
             <div class="row">
                 <div class="col-md-12 fw-bold fs-3 text-light">Dashboard</div>
             </div>

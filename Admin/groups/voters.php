@@ -61,7 +61,10 @@ include ('../../actions/connect.php');
                                 <input type="file" class="form-control w-80 m-auto" name="photo">
                             </div>
                             <div class="mb-3">
-                                <input type="number" class="form-control w-80 m-auto" name="age" placeholder="Age">
+                                <input type="password" class="form-control w-80 m-auto" name="password" placeholder="Password">
+                            </div>
+                             <div class="mb-3">
+                                <input type="password" class="form-control w-80 m-auto" name="cpassword" placeholder="Confirm Password">
                             </div>
                         </div>
                         <div class="modal-footer">

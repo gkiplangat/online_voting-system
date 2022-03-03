@@ -23,7 +23,7 @@ if(!isset($_SESSION['username'])){
   <div class="container-fluid my-5">
     <!--Form Start-->
     <form action="actions/i_Vote.php" method="POST">
-      <div class="card table-responsive ">
+      <div class="card table-responsive my-5 ">
         <div class="row card-header bg-dark">
           <div class="col-md-6 text-info">
             <h2>Vote Here</h2>
