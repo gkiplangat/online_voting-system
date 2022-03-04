@@ -3,16 +3,16 @@ include ('../../../actions/connect.php');
 session_start();
 $username = $_POST['username'];
 $email = $_POST['email'];
-$password = $_POST['password'];
-
-if($age<18){
+$password = md5($_POST['password']);
+$cpassword= md5($_POST['cpassword']);
+if($password!=$cpassword){
     echo '<script>
-    alert("The citizen is under_age");
+    alert("Passwords did not match");
     window.location="../admins.php"
     </script>';
 }else{
 
-move_uploaded_file($tmp_name, "../partials/uploads/$image");
+
     $sql = "INSERT INTO users (username,email,password)VALUES ('$username','$email','$password')";
 
     $result = mysqli_query($con, $sql);

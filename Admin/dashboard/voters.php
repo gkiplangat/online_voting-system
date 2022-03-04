@@ -65,7 +65,7 @@ if(!isset($_SESSION['username'])){
                             <i class="bi bi-person-fill"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="../logout.php">logout</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -96,7 +96,7 @@ if(!isset($_SESSION['username'])){
 
                     </li>
                     <li>
-                        <a href="index.php" class="nav-link px-3 active">
+                        <a href="main.php" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="bi bi-speedometer2"></i>
                             </span>

@@ -50,7 +50,7 @@
                                     placeholder="Password" required="required">
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="form-control w-80 m-auto" name="password"
+                                <input type="password" class="form-control w-80 m-auto" name="cpassword"
                                     placeholder="Confirm Password" required="required">
                             </div>
                         </div>
