@@ -2,10 +2,10 @@
 //===Connection to the Database====================
 include ('../../actions/connect.php');
 //===============Session Start====================
-//session_start();
-//if(!isset($_SESSION['username'])){
-//header("Location:main.php");
-//}
+session_start();
+if(!isset($_SESSION['username'])){
+header("Location:main.php");
+}
 //===============Session Start====================
 ?>
 <!DOCTYPE html>
