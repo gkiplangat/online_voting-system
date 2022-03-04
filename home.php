@@ -72,10 +72,147 @@ header("Location:index.php");
 
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
-        <!-----------------User Name-------------------->
-        <?php echo '<h3 class ="text-light my-3 p-3"> Welcome '. $_SESSION['fullname'].'</h3>';?>
-        <!-----------------User Name-------------------->
-        
+<!-----------------User Name-------------------->
+ <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['fullname'].'</h3>';?>
+<!-----------------User Name-------------------->
+        <div class="offcanvas-body p-0 ">
+            <nav class="navbar-dark">
+                <ul class="navbar-nav">
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3"> CORE
+
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="admin-dashboard.php" class="nav-link px-3 active">
+                            <span class="me-2">
+                                <i class="bi bi-speedometer2"></i>
+                            </span>
+                            <span>Dashboard</span>
+
+                        </a>
+
+                    </li>
+                    <li class="my">
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                        <div class="text-muted small fw-bold text-uppercase px-3"> interface
+
+                        </div>
+
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#groups" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <span class="me-2"><i class="fa fa-users"></i></span>
+                            <span>Groups</span>
+                            <span class="right-icon ms-auto">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="collapse" id="groups">
+                            <div>
+                                <ul class="navbar-nav ps-3">
+                                    <li>
+                                        <a href="admins.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-people"></i></span>
+                                            <span>Admins</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="candidates.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-people"></i></span>
+                                            <span>Candidates</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="voters.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-people-fill"></i></span>
+                                            <span>Voters</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#positions" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <span class="me-2"><i class="fa fa-user-plus" aria-hidden="true"></i></span>
+                            <i class="fa-solid fa-user-group-crown"></i>
+                            <span>Positions</span>
+                            <span class="right-icon ms-auto">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="collapse" id="positions">
+                            <div>
+                                <ul class="navbar-nav ps-3">
+                                    <li>
+                                        <a href="president.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span>President</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="secretary.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span>Secretary General</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="treasurer.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span>Treasurer</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                     <li>
+                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
+                           
+                            <span>Votes</span>
+                            <span class="right-icon ms-auto">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="collapse" id="votes">
+                            <div>
+                                <ul class="navbar-nav ps-3">
+                                    <li>
+                                        <a href="pres_votes.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span>President</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sec_votes.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span>Secretary General</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tres_votes.php" class="nav-link px-3">
+                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span>Treasurer</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+
+
+        </div>
     </div>
     <!--offcanvas======= Ends===========================================-->
     <!--Main============================================================-->
