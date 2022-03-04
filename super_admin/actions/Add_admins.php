@@ -6,10 +6,10 @@ $email = $_POST['email'];
 $password = md5($_POST['password']);
 $cpassword= md5($_POST['cpassword']);
 if($password!=$cpassword){
-    echo '<script>
-    alert("Passwords did not match");
-    window.location="../admins.php"
-    </script>';
+
+    $_SESSION['status'] = "Password did not Match, Kindly Repeat The Process";
+        header("Location: ../admins.php");
+   
 }else{
 
 

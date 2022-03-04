@@ -1,6 +1,6 @@
 <?php
 include '../actions/connect.php';
-//session_start();
+session_start();
 error_reporting(0);
 if(isset($_SESSION['username'])){
     header("Location: index.php");

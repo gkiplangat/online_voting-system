@@ -25,7 +25,7 @@
     <!--Table-->
     <div class="container-fluid">
         <!-- Modal  For Adding New Candidates-->
-        <form action="../actions/Add_cand.php" method="POST" enctype="multipart/form-data" lass="p-3">
+        <form action="actions/Add_cand.php" method="POST" enctype="multipart/form-data" lass="p-3">
             <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">

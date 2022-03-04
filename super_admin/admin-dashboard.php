@@ -56,8 +56,6 @@ header("Location:index.php");
                     </div>
                 </form>
                 <ul class="navbar-nav   mb-2 mb-lg-0">
-
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">

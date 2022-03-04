@@ -12,7 +12,7 @@ $age = $_POST['age'];
 if($age<18){
     echo '<script>
     alert("The citizen is under_age");
-    window.location="../candidates.php"
+    window.location="../candidates.php";
     </script>';
 }else{
 

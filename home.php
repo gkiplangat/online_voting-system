@@ -2,10 +2,10 @@
 //===Connection to the Database====================
 include ('actions/connect.php');
 //===============Session Start====================
-//session_start();
-//if(!isset($_SESSION['fullname'])){
-//header("Location:index.php");
-//}
+session_start();
+if(!isset($_SESSION['fullname'])){
+header("Location:index.php");
+}
 //===============Session Start====================
 ?>
 <!DOCTYPE html>
@@ -47,6 +47,24 @@ include ('actions/connect.php');
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="logout">
+                <ul class="navbar-nav   mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-fill"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a href="logout.php">Logout</a>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+            </div>
         </div>
     </nav>
     <!--Navbar======= Ends===========================================-->
@@ -55,7 +73,7 @@ include ('actions/connect.php');
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
         <!-----------------User Name-------------------->
-        <?php //echo '<h3 class ="text-info my-3 p-3"> Welcome '. $_SESSION['fullname'].'</h3>';?>
+        <?php echo '<h3 class ="text-info my-3 p-3"> Welcome '. $_SESSION['fullname'].'</h3>';?>
         <!-----------------User Name-------------------->
         
     </div>
