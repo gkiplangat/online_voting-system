@@ -4,7 +4,7 @@ include ('../../actions/connect.php');
 //===============Session Start====================
 session_start();
 if(!isset($_SESSION['username'])){
- header("Location:index.php");
+ header("Location:main.php");
 }
 //===============Session Start====================
 ?>

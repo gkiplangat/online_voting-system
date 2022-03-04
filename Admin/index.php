@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
     if($result-> num_rows >0){
         $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
-        header("Location:dashboard/index.php");
+        header("Location:dashboard/main.php");
     }else {
         echo "<script>alert('Woops! Email or password is wrong.')</script>";
     }
@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
 <body class="bg-dark">
     <div class="container text-center">
         <form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight:800;">Login</p>
+            <p class="login-text" style="font-size: 2rem; font-weight:800;"> Admin-Login</p>
             <div class="input-group">
                 <input type="email" placeholder="Email" name="email" value="<?php echo $_POST['email'];?>" required>
             </div>

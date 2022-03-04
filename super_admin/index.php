@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
 <body class="bg-dark">
     <div class="container text-center">
         <form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight:800;">Login</p>
+            <p class="login-text" style="font-size: 2rem; font-weight:800;">Super-Admin Login</p>
             <div class="input-group">
                 <input type="email" placeholder="Email" name="email" value="<?php echo $_POST['email'];?>" required>
             </div>

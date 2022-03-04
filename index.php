@@ -1,19 +1,19 @@
 <?php
 include 'actions/connect.php';
-//session_start();
+session_start();
 error_reporting(0);
-if(isset($_SESSION['username'])){
+if(isset($_SESSION['fullname'])){
     header("Location: index.php");
 }
 if(isset($_POST['submit'])){
     $email = $_POST['email'];
-    $password = md5($_POST['password']);
+    $password =md5($_POST['password']);
     $sql = "SELECT * FROM voters WHERE email ='$email' AND password='$password'";
     $result = mysqli_query($con, $sql);
     if($result-> num_rows >0){
         $row = mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['username'];
-        header("Location:Admin/dashboard/main.php");
+        $_SESSION['fullname'] = $row['fullnane'];
+        header("Location:home.php");
     }else {
         echo "<script>alert('Woops! Email or password is wrong.')</script>";
     }
@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
 <body class="bg-dark">
     <div class="container text-center">
         <form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight:800;">Login</p>
+            <p class="login-text" style="font-size: 2rem; font-weight:800;"> Voters-Login</p>
             <div class="input-group">
                 <input type="email" placeholder="Email" name="email" value="<?php echo $_POST['email'];?>" required>
             </div>

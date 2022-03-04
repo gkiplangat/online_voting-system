@@ -2,10 +2,10 @@
 //===Connection to the Database====================
 include ('actions/connect.php');
 //===============Session Start====================
-//session_start();
-//if(!isset($_SESSION['fullname'])){
- //header("Location:index.php");
-//}
+session_start();
+if(!isset($_SESSION['fullname'])){
+header("Location:index.php");
+}
 //===============Session Start====================
 ?>
 <!DOCTYPE html>
@@ -55,7 +55,7 @@ include ('actions/connect.php');
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
         <!-----------------User Name-------------------->
-        <?php //echo '<h3 class ="text-info my-3 p-3"> Welcome '. $_SESSION['fullname'].'</h3>';?>
+        <?php echo '<h3 class ="text-info my-3 p-3"> Welcome '. $_SESSION['fullname'].'</h3>';?>
         <!-----------------User Name-------------------->
         
     </div>
