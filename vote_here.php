@@ -3,9 +3,10 @@
 include ('actions/connect.php');
 //===============Session Start====================
 session_start();
-if(!isset($_SESSION['username'])){
+if(!isset($_SESSION['fullname'])){
  header("Location:index.php");
 }
+ 
 //===============Session Start====================
 ?>
 <!DOCTYPE html>
@@ -152,6 +153,7 @@ if(!isset($_SESSION['username'])){
                   <input class="disable" type="radio" name="treasurer"
                     value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
                 </div>
+              
               </td>
             </tr>
             <?php
