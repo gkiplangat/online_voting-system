@@ -21,7 +21,7 @@ include ('actions/connect.php');
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid mt-5">
     <!--Form Start-->
     <form action="actions/i_Vote.php" method="POST">
       <div class="card table-responsive my-5 ">
@@ -62,7 +62,7 @@ include ('actions/connect.php');
           <tbody class="text-dark bg-light">
             <!--SQL QUERY START HERE-->
             <?php
-                                 $sql ="SELECT  id, photo, fullname FROM candidates WHERE position='president' ";
+                                 $sql ="SELECT  id, photo, fullname FROM candidates WHERE position='president'";
                                  $query =$con->query($sql);
                                  WHILE($row=$query->fetch_assoc())
                                  {
@@ -75,7 +75,7 @@ include ('actions/connect.php');
               <td><?php echo $row['fullname'];?></td>
               <td scope=" col">
                 <div class="form-group mb-3">
-                  <input class="disable" type="radio" name="president" 
+                  <input class="disable" type="radio" name="president"
                     value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
                 </div>
               </td>
@@ -113,7 +113,7 @@ include ('actions/connect.php');
               <td><?php echo $row['fullname'];?></td>
               <td scope=" col">
                 <div class="form-group mb-3">
-                  <input class="disable" type="radio" name="secretary" 
+                  <input class="disable" type="radio" name="secretary"
                     value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
                 </div>
               </td>
@@ -149,11 +149,11 @@ include ('actions/connect.php');
               </td>
               <td><?php echo $row['fullname'];?></td>
               <td scope=" col">
-                <div class="form-group mb-3" >
-                  <input class="disable" type="radio" name="treasurer" 
+                <div class="form-group mb-3">
+                  <input class="disable" type="radio" name="treasurer"
                     value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
                 </div>
-              
+
               </td>
             </tr>
             <?php
