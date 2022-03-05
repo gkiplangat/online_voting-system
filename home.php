@@ -1,36 +1,34 @@
 <?php
 //===Connection to the Database====================
 include ('actions/connect.php');
-//Session Start====================
+//===============Session Start====================
 session_start();
-if(!isset($_SESSION['fullname'])){
+if(!isset($_SESSION['username'])){
 header("Location:index.php");
 }
-//Session Start====================
+//===============Session Start====================
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Voting-Dashboard</title>
-    <!--Bootstrap files-->
+    <!--Styling the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,file-->
     <link rel="stylesheet" href="Admin/dashboard/css/bootstrap.min.css" />
     <link rel="stylesheet" href="Admin/dashboard/css/dataTables.bootstrap5.min.css" />
     <!-- font-awesome icon -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <!--Custom CSS File-->
     <link rel="stylesheet" href="Admin/dashboard/css/style.css" />
 
 </head>
 
-<body>
-    <!--Navbar======= Start===========================================-->
+<body class="bg-secondary">
+    <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <!--offcanvas trigger-->
@@ -40,191 +38,31 @@ header("Location:index.php");
             </button>
             <!--offcanvas trigger-->
             <!---Logo------------------------->
-            <img src="Admin/dashboard/images/logo.png" alt="logo" width="50" height="50">
+            <img src="Admin/dashboard/images/logo.png" alt="logo" width="60" height="60">
             <!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="logout">
-                <ul class="navbar-nav   mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-fill"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a href="logout.php">Logout</a>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex ms-auto">
+                    <!-----------------User Name-------------------->
+                    <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
+                    <!-----------------User Name-------------------->
+                </div>
 
+                <ul class="navbar-nav   mb-2 mb-lg-0">
+                        <button class="btn btn-info text-light fw-bold" href="logout.php"> <i class="bi bi-person-fill "></i>LOGOUT</button>
+                </ul>
             </div>
         </div>
     </nav>
-    <!--Navbar======= Ends===========================================-->
-    <!--Offcanvas==== Start===========================================-->
-
-    <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel">
-<!-----------------User Name-------------------->
- <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['fullname'].'</h3>';?>
-<!-----------------User Name-------------------->
-        <div class="offcanvas-body p-0 ">
-            <nav class="navbar-dark">
-                <ul class="navbar-nav">
-                    <li>
-                        <div class="text-muted small fw-bold text-uppercase px-3"> CORE
-
-                        </div>
-
-                    </li>
-                    <li>
-                        <a href="admin-dashboard.php" class="nav-link px-3 active">
-                            <span class="me-2">
-                                <i class="bi bi-speedometer2"></i>
-                            </span>
-                            <span>Dashboard</span>
-
-                        </a>
-
-                    </li>
-                    <li class="my">
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                        <div class="text-muted small fw-bold text-uppercase px-3"> interface
-
-                        </div>
-
-                    </li>
-                    <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#groups" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            <span class="me-2"><i class="fa fa-users"></i></span>
-                            <span>Groups</span>
-                            <span class="right-icon ms-auto">
-                                <i class="bi bi-chevron-down"></i>
-                            </span>
-                        </a>
-                        <div class="collapse" id="groups">
-                            <div>
-                                <ul class="navbar-nav ps-3">
-                                    <li>
-                                        <a href="admins.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-people"></i></span>
-                                            <span>Admins</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="candidates.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-people"></i></span>
-                                            <span>Candidates</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="voters.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-people-fill"></i></span>
-                                            <span>Voters</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#positions" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            <span class="me-2"><i class="fa fa-user-plus" aria-hidden="true"></i></span>
-                            <i class="fa-solid fa-user-group-crown"></i>
-                            <span>Positions</span>
-                            <span class="right-icon ms-auto">
-                                <i class="bi bi-chevron-down"></i>
-                            </span>
-                        </a>
-                        <div class="collapse" id="positions">
-                            <div>
-                                <ul class="navbar-nav ps-3">
-                                    <li>
-                                        <a href="president.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>President</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="secretary.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>Secretary General</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="treasurer.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>Treasurer</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                     <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
-                           
-                            <span>Votes</span>
-                            <span class="right-icon ms-auto">
-                                <i class="bi bi-chevron-down"></i>
-                            </span>
-                        </a>
-                        <div class="collapse" id="votes">
-                            <div>
-                                <ul class="navbar-nav ps-3">
-                                    <li>
-                                        <a href="pres_votes.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>President</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="sec_votes.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>Secretary General</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="tres_votes.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>Treasurer</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-            </nav>
-
-
-        </div>
-    </div>
-    <!--offcanvas======= Ends===========================================-->
-    <!--Main============================================================-->
-    <main>
-       
-        <div class="my-3">
-             <br>
-        <br>
-           <?php include 'vote_here.php';?>
-        </div>
+    <!--navbar-->
+   
+    <main class="mt-5 pt-3">
+        <?php include 'vote_here.php';?>
     </main>
-    <!--Main============================================================-->
     <!--adding js ...................................files-->
     <script src="Admin/dashboard/js/bootstrap.bundle.min.js"></script>
     <script src="Admin/dashboard/js/jquery-3.5.1.js"></script>

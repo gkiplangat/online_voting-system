@@ -2,10 +2,10 @@
 //===Connection to the Database====================
 include ('actions/connect.php');
 //===============Session Start====================
-session_start();
-if(!isset($_SESSION['fullname'])){
- header("Location:index.php");
-}
+//session_start();
+//if(!isset($_SESSION['fullname'])){
+ //header("Location:index.php");
+//}
  
 //===============Session Start====================
 ?>
@@ -20,8 +20,8 @@ if(!isset($_SESSION['fullname'])){
   <link rel="stylesheet" href="Admin/dashboard/css/bootstrap.min.css">
 </head>
 
-<body class="bg-dark">
-  <div class="container-fluid my-5">
+<body>
+  <div class="container-fluid">
     <!--Form Start-->
     <form action="actions/i_Vote.php" method="POST">
       <div class="card table-responsive my-5 ">
@@ -75,7 +75,7 @@ if(!isset($_SESSION['fullname'])){
               <td><?php echo $row['fullname'];?></td>
               <td scope=" col">
                 <div class="form-group mb-3">
-                  <input class="disable" type="radio" name="president"
+                  <input class="disable" type="radio" name="president" 
                     value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
                 </div>
               </td>
@@ -113,7 +113,7 @@ if(!isset($_SESSION['fullname'])){
               <td><?php echo $row['fullname'];?></td>
               <td scope=" col">
                 <div class="form-group mb-3">
-                  <input class="disable" type="radio" name="secretary"
+                  <input class="disable" type="radio" name="secretary" 
                     value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
                 </div>
               </td>
@@ -149,8 +149,8 @@ if(!isset($_SESSION['fullname'])){
               </td>
               <td><?php echo $row['fullname'];?></td>
               <td scope=" col">
-                <div class="form-group mb-3">
-                  <input class="disable" type="radio" name="treasurer"
+                <div class="form-group mb-3" >
+                  <input class="disable" type="radio" name="treasurer" 
                     value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
                 </div>
               
@@ -169,9 +169,9 @@ if(!isset($_SESSION['fullname'])){
       </div>
     </form>
   </div>
-  <!--============Js Files====================-->
-  <script src="../Admin/dashboard/js/bootstrap.bundle.min.js"></script>
-  <script src="../Admin/dashboard/js/jquery-3.5.1.js"></script>
+
+
+
 </body>
 
 </html>
