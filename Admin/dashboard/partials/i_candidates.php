@@ -1,6 +1,7 @@
 <!--SQL QUERY START HERE-->
 <?php
-                $sql ="SELECT *FROM candidates";
+                $sql ="SELECT *FROM candidates
+                ORDER BY id";
                 $query =$con->query($sql);
                 WHILE($row=$query->fetch_assoc())
                 {
