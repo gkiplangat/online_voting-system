@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2022 at 09:53 AM
+-- Generation Time: Mar 08, 2022 at 06:36 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -44,20 +44,12 @@ CREATE TABLE `candidates` (
 
 INSERT INTO `candidates` (`id`, `fullname`, `idno`, `email`, `phone`, `photo`, `position`, `age`) VALUES
 (6, 'Gideon Kiplangat', '34427138', 'gideonkiplangat4@gmail.com', 716352482, 'Gideon.jpeg', 'President', 24),
-(14, 'test5', '32516235', 'test5@gmail.com', 113251425, 'cmuito.jpg', 'Secretary General', 26),
-(15, 'Brian Khavalaji', '32513562', 'brian@gmail.com', 792125321, 'Gideon.jpeg', 'President', 40),
-(18, 'Trevurs Mbuthia', '35261845', 'trevs@gmail.com', 716352482, 'first.jpeg', 'President', 40),
 (19, 'Emmanuel Kiptoo', '32519265', 'emmanuel@gmail.com', 702488953, 'Gideon.jpeg', 'Treasurer', 35),
-(20, 'test1', '25352686', 'test@gmail.com', 216352482, 'cathrene.jpeg', 'Treasurer', 28),
-(22, 'test1', '21453652', 'test@gmail.com', 112365296, 'cmuito.jpg', 'Treasurer', 24),
 (23, 'Beatrice Jepleting', '35416235', 'beatrice@gmail.com', 708526351, 'cmuito.jpg', 'Secretary General', 25),
-(24, 'Dennis Deno', '25135268', 'deno@gmail.com', 789325625, 'dog.jfif', 'President', 31),
-(25, 'John Mabangu', '35124628', 'john@gmail.com', 712453628, 'first.jpeg', 'Secretary General', 25),
 (27, 'Gideon Kiplangat', '32513520', 'giddy@gmail.com', 113251425, 'Gideon.jpeg', 'Treasurer', 30),
 (28, 'Wairimu Mbuthia', '32156235', 'wairimu@gmail.com', 716352482, 'cmuito.jpg', 'Secretary General', 28),
-(29, 'test12', '25361489', 'test@gmail.com', 716352482, 'Gideon Restaurant.png', 'Secretary General', 30),
-(30, 'test14', '25316458', 'test@gmail.com', 216352482, 'Gideon Restaurant.png', 'Secretary General', 28),
-(31, 'tes19', '12365478', 'test@gmail.com', 716352482, '5g.jpeg', 'Secretary General', 24);
+(32, 'Chris Wanyonyi', '25143632', 'chris@gmail.com', 712457896, 'president1.png', 'President', 25),
+(33, 'Suleiman Mkaha', '34427135', 'gideonkiplangat4@gmail.com', 702499324, 'sec2.png', 'Secretary General', 22);
 
 -- --------------------------------------------------------
 
@@ -134,8 +126,7 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 (2, 'musa', 'musa@gmail.com', '202cb962ac59075b964b07152d234b70'),
 (3, 'Blessed', 'giddy@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
 (7, 'Trevurs', 'trevs@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(8, 'Andrew Simiyu', 'andrew@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
-(9, 'Muthoni', 'test@gmail.com', '202cb962ac59075b964b07152d234b70');
+(8, 'Andrew Simiyu', 'andrew@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055');
 
 -- --------------------------------------------------------
 
@@ -159,19 +150,11 @@ CREATE TABLE `voters` (
 --
 
 INSERT INTO `voters` (`id`, `fullname`, `idno`, `email`, `phone`, `photo`, `password`, `status`) VALUES
-(1, 'Lillian Otiego', '32514869', 'lillian@gmail.com', 715258361, 'cmuito.jpg', '0', 1),
-(2, 'Hudson Saitoti', '36251478', 'hudson@gmail.com', 716352156, 'cmuito.jpg', '0', 0),
-(3, 'test1', '34427638', 'test@gmail.com', 716352482, 'cmuito.jpg', '24', 0),
-(4, 'test1', '32516235', 'test@gmail.com', 716352482, 'cmuito.jpg', '30', 0),
-(5, 'test1', '32516235', 'test@gmail.com', 716352482, 'cmuito.jpg', '30', 0),
-(6, 'test1', '34427138', 'test@gmail.com', 716352482, 'cmuito.jpg', '24', 0),
-(7, 'test10', '25356214', 'test@gmail.com', 216352482, 'Gideon Restaurant (3).png', '35', 0),
-(8, 'test15', '12345678', 'test@gmail.com', 112365296, 'Gideon Restaurant (3).png', '30', 0),
-(9, 'test0', '12354678', 'test@gmail.com', 716352482, 'Gideon Restaurant.png', '35', 0),
-(10, 'Gideon Kiplangat', '25142536', 'gideonkiplangat4@gmail.com', 216352482, 'Gideon Restaurant (3).png', '25', 0),
-(11, 'Gideon Kiplangat', '34427138', 'gideonkiplangat4@gmail.com', 112365296, 'cmuito.jpg', '202', 0),
-(12, 'Sammy kioko', '253526125', 'sammykioko@gmail.com', 113251425, 'cmuito.jpg', '202cb962ac59075b964b07152d234b70', 0),
-(13, 'Gideon Kiplangat', '34427138', 'gideonkiplangat4@gmail.com', 113251425, 'cmuito.jpg', '202cb962ac59075b964b07152d234b70', 0);
+(13, 'Gideon Kiplangat', '34427138', 'gideonkiplangat4@gmail.com', 113251425, 'cmuito.jpg', '202cb962ac59075b964b07152d234b70', 0),
+(14, 'Sammy', '34427895', 'sammy@gmail.com', 712536985, '3.jpeg', '3def184ad8f4755ff269862ea77393dd', 0),
+(15, 'Gideon Kiplangat', '25143665', 'giddykip@gmail.com', 702499324, 'cmuito.jpg', '202cb962ac59075b964b07152d234b70', 0),
+(16, 'Voter1', '32651478', 'giddy@gmail.com', 715246351, 'cmuito.jpg', '202cb962ac59075b964b07152d234b70', 0),
+(17, 'Voter2', '34427138', 'giddy@gmail.com', 715246351, '5g.jpeg', '81dc9bdb52d04dc20036dbd8313ed055', 0);
 
 -- --------------------------------------------------------
 
@@ -183,36 +166,25 @@ CREATE TABLE `votes` (
   `id` int(11) NOT NULL,
   `president` varchar(255) NOT NULL,
   `secretary` varchar(255) NOT NULL,
-  `treasurer` varchar(255) NOT NULL
+  `treasurer` varchar(255) NOT NULL,
+  `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `votes`
 --
 
-INSERT INTO `votes` (`id`, `president`, `secretary`, `treasurer`) VALUES
-(1, 'Brian Khavalaji', 'Gideon Kiplangat', 'Beatrice Jepleting'),
-(2, 'Gideon Kiplangat', 'Emmanuel Kiptoo', 'John Mabangu'),
-(3, 'Gideon Kiplangat', 'Gideon Kiplangat', 'Beatrice Jepleting'),
-(4, 'Brian Khavalaji', 'Emmanuel Kiptoo', 'John Mabangu'),
-(5, 'Brian Khavalaji', 'Gideon Kiplangat', 'Beatrice Jepleting'),
-(6, 'Gideon Kiplangat', 'Emmanuel Kiptoo', 'Beatrice Jepleting'),
-(7, 'Gideon Kiplangat', 'Emmanuel Kiptoo', 'Beatrice Jepleting'),
-(8, 'Dennis Deno', 'Gideon Kiplangat', 'Wairimu Mbuthia'),
-(9, 'Dennis Deno', 'Emmanuel Kiptoo', 'Wairimu Mbuthia'),
-(10, 'Dennis Deno', 'Emmanuel Kiptoo', 'Wairimu Mbuthia'),
-(11, 'Dennis Deno', 'Wairimu Mbuthia', 'Emmanuel Kiptoo'),
-(12, 'Dennis Deno', 'Wairimu Mbuthia', 'Emmanuel Kiptoo'),
-(13, 'Dennis Deno', 'Wairimu Mbuthia', 'Emmanuel Kiptoo'),
-(14, 'Dennis Deno', 'John Mabangu', 'Gideon Kiplangat'),
-(15, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Gideon Kiplangat'),
-(16, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo'),
-(17, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo'),
-(18, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo'),
-(19, 'Trevurs Mbuthia', 'Wairimu Mbuthia', 'Gideon Kiplangat'),
-(20, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo'),
-(21, 'Brian Khavalaji', 'Beatrice Jepleting', 'Emmanuel Kiptoo'),
-(22, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo');
+INSERT INTO `votes` (`id`, `president`, `secretary`, `treasurer`, `status`) VALUES
+(31, 'Trevurs Mbuthia', 'Beatrice Jepleting', 'Emmanuel Kiptoo', 1),
+(33, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo', 1),
+(34, 'Brian Khavalaji', 'Wairimu Mbuthia', 'Emmanuel Kiptoo', 1),
+(35, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo', 1),
+(36, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo', 1),
+(38, 'Gideon Kiplangat', 'Wairimu Mbuthia', 'Emmanuel Kiptoo', 1),
+(39, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo', 1),
+(41, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo', 1),
+(42, 'Trevurs Mbuthia', 'John Mabangu', 'Gideon Kiplangat', 1),
+(43, 'Gideon Kiplangat', 'Beatrice Jepleting', 'Emmanuel Kiptoo', 1);
 
 --
 -- Indexes for dumped tables
@@ -257,7 +229,7 @@ ALTER TABLE `votes`
 -- AUTO_INCREMENT for table `candidates`
 --
 ALTER TABLE `candidates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `userdata`
@@ -275,13 +247,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `voters`
 --
 ALTER TABLE `voters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `votes`
 --
 ALTER TABLE `votes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
