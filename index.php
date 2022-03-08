@@ -11,8 +11,8 @@ include 'actions/connect.php';
     $sql = "SELECT * FROM voters WHERE email ='$email' AND password='$password'";
     $result = mysqli_query($con, $sql);
     if($result-> num_rows >0){
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['fullname'] = $row['fullname'];
+        $data = mysqli_fetch_assoc($result);
+        $_SESSION['fullname'] = $data['fullname'];
         header("Location:home.php");
    }else {
        echo "<script>alert('Woops! Email or password is wrong.')</script>";

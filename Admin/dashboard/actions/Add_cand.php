@@ -16,7 +16,7 @@ if($age<18){
     </script>';
 }else{
 
-move_uploaded_file($tmp_name, "../partials/uploads/$image");
+move_uploaded_file($tmp_name, "../../../uploads/$image");
     $sql = "INSERT INTO candidates (fullname,idno,email,phone,photo,position,age)VALUES ('$fullname','$idno','$email','$phone','$image','$position','$age')";
 
     $result = mysqli_query($con, $sql);

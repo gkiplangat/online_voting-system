@@ -57,6 +57,7 @@ include ('actions/connect.php');
               <th scope="col">Photo</th>
               <th scope="col">Full Name</th>
               <th scope="col">Select</th>
+              <th scope="col">Select</th>
             </tr>
           </thead>
           <tbody class="text-dark bg-light">
@@ -77,6 +78,12 @@ include ('actions/connect.php');
                 <div class="form-group mb-3">
                   <input class="disable" type="radio" name="president"
                     value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
+                </div>
+              </td>
+               <td scope=" col">
+                <div class="form-group mb-3">
+                  <input type="radio" name="president"
+                    value="<?php echo $data['fullname'];?>" /><?php echo $data['fullname'];?>
                 </div>
               </td>
             </tr>

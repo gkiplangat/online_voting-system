@@ -4,6 +4,7 @@ include ('actions/connect.php');
 //===============Session Start====================
 session_start();
 if(!isset($_SESSION['fullname'])){
+   
 header("Location:index.php");
 }
 //===============Session Start====================
@@ -78,17 +79,17 @@ header("Location:index.php");
                            <div class="col-md-6">
                                <!--Notification Message upon submission-->
                                <?php
-            if(isset($_SESSION['status']))
-            {?>
+                                if(isset($_SESSION['status']))
+                                {?>
                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                    <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                                    </button>
                                </div>
                                <?php
-            unset($_SESSION['status']);
-                    }
-                    ?>
+                               unset($_SESSION['status']);
+                            }
+                            ?>
                                <!--Notification Message upon submission-->
                            </div>
                        </div>
@@ -102,20 +103,23 @@ header("Location:index.php");
                                    <th scope="col">Photo</th>
                                    <th scope="col">Full Name</th>
                                    <th scope="col">Select</th>
+                                   <th scope="col">Select</th>
                                </tr>
                            </thead>
                            <tbody class="text-dark bg-light">
                                <!--SQL QUERY START HERE-->
                                <?php
+                                $data=$_SESSION['fullname'];
                                  $sql ="SELECT  id, photo, fullname FROM candidates WHERE position='president'";
                                  $query =$con->query($sql);
                                  WHILE($row=$query->fetch_assoc())
                                  {
                                       ?>
+                                      
                                <tr>
                                    <td><?php echo $row['id'];?></td>
                                    <td>
-                                       <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
+                                       <img src="uploads/<?php echo $row['photo'];?>" width="100px" alt="image" class="circle">
                                    </td>
                                    <td><?php echo $row['fullname'];?></td>
                                    <td scope=" col">
@@ -123,6 +127,10 @@ header("Location:index.php");
                                            <input class="disable" type="radio" name="president"
                                                value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
                                        </div>
+                                   </td>
+                                    <td scope=" col">
+                                      <?php echo $data['fullname'];?>
+                                      
                                    </td>
                                </tr>
                                <?php

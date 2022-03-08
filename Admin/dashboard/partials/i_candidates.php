@@ -13,7 +13,7 @@
     <td><?php echo $row['email'];?></td>
     <td><?php echo $row['phone'];?></td>
     <td>
-        <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
+        <img src="../../../uploads/<?php echo $row['photo'];?>" width="100px" alt="image">
     </td>
     <td><?php echo $row['position'];?></td>
     <td><?php echo $row['age'];?></td>
