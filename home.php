@@ -109,7 +109,7 @@ header("Location:index.php");
                            <tbody class="text-dark bg-light">
                                <!--SQL QUERY START HERE-->
                                <?php
-                                $data=$_SESSION['fullname'];
+                                
                                  $sql ="SELECT  id, photo, fullname FROM candidates WHERE position='president'";
                                  $query =$con->query($sql);
                                  WHILE($row=$query->fetch_assoc())
@@ -128,10 +128,7 @@ header("Location:index.php");
                                                value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
                                        </div>
                                    </td>
-                                    <td scope=" col">
-                                      <?php echo $data['fullname'];?>
-                                      
-                                   </td>
+                                     
                                </tr>
                                <?php
              }
