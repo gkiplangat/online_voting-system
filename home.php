@@ -99,10 +99,9 @@ header("Location:index.php");
                            <h3 class="bg-info text-light text-center">President</h3>
                            <thead class="text-info bg-dark">
                                <tr>
-                                   <th scope="col">S/NO</th>
+                                  
                                    <th scope="col">Photo</th>
                                    <th scope="col">Full Name</th>
-                                   <th scope="col">Select</th>
                                    <th scope="col">Select</th>
                                </tr>
                            </thead>
@@ -110,14 +109,14 @@ header("Location:index.php");
                                <!--SQL QUERY START HERE-->
                                <?php
                                 
-                                 $sql ="SELECT  id, photo, fullname FROM candidates WHERE position='president'";
+                                 $sql ="SELECT  photo, fullname FROM candidates WHERE position='president'";
                                  $query =$con->query($sql);
                                  WHILE($row=$query->fetch_assoc())
                                  {
                                       ?>
                                       
                                <tr>
-                                   <td><?php echo $row['id'];?></td>
+                                  
                                    <td>
                                        <img src="uploads/<?php echo $row['photo'];?>" width="100px" alt="image" class="circle">
                                    </td>
@@ -141,7 +140,7 @@ header("Location:index.php");
                            <h3 class="bg-info text-light text-center">Secretary General</h3>
                            <thead class="text-info bg-dark">
                                <tr>
-                                   <th scope="col">S/NO</th>
+                                  
                                    <th scope="col">Photo</th>
                                    <th scope="col">Full Name</th>
                                    <th scope="col">Select</th>
@@ -150,13 +149,13 @@ header("Location:index.php");
                            <tbody class="text-dark bg-light">
                                <!--SQL QUERY START HERE-->
                                <?php
-                                 $sql ="SELECT  id, photo, fullname FROM candidates WHERE position='Secretary General' ";
+                                 $sql ="SELECT  photo, fullname FROM candidates WHERE position='Secretary General' ";
                                  $query =$con->query($sql);
                                  WHILE($row=$query->fetch_assoc())
                                  {
                                       ?>
                                <tr>
-                                   <td><?php echo $row['id'];?></td>
+                                   
                                    <td>
                                        <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
                                    </td>
@@ -178,7 +177,7 @@ header("Location:index.php");
                            <h3 class="bg-info text-light text-center">Treasurer</h3>
                            <thead class="text-info bg-dark">
                                <tr>
-                                   <th scope="col">S/NO</th>
+                                  
                                    <th scope="col">Photo</th>
                                    <th scope="col">Full Name</th>
                                    <th scope="col">Select</th>
@@ -187,13 +186,13 @@ header("Location:index.php");
                            <tbody class="text-dark bg-light">
                                <!--SQL QUERY START HERE-->
                                <?php
-                                 $sql ="SELECT  id, photo, fullname FROM candidates WHERE position='Treasurer' ";
+                                 $sql ="SELECT  photo, fullname FROM candidates WHERE position='Treasurer' ";
                                  $query =$con->query($sql);
                                  WHILE($row=$query->fetch_assoc())
                                  {
                                       ?>
                                <tr>
-                                   <td><?php echo $row['id'];?></td>
+                                  
                                    <td>
                                        <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
                                    </td>

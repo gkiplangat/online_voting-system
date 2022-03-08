@@ -46,34 +46,10 @@ if(!isset($_SESSION['username'])){
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <form class="d-flex ms-auto">
-                    <div class="input-group my-3 my-lg-0">
-                        <input type="text" class="form-control" placeholder="Recipient's username"
-                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <button class="btn btn-primary" type="button" id="button-addon2"><i
-                                class="bi bi-search"></i></button>
-                    </div>
-                </form>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav   mb-2 mb-lg-0">
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-fill"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-
+                    <a href="../logout.php" role="button" class="btn btn-Info text-light fw-bold"> <i
+                            class="bi bi-person-fill "></i>LOGOUT</a>
                 </ul>
             </div>
         </div>
