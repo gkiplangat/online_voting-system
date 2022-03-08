@@ -6,7 +6,7 @@
                 WHILE($row=$query->fetch_assoc())
                 {
                 ?>
-<tr>
+<tr>8 y 
     <td><?php echo $row['id'];?></td>
     <td><?php echo $row['fullname'];?></td>
     <td><?php echo $row['idno'];?></td>
