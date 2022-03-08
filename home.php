@@ -99,7 +99,7 @@ header("Location:index.php");
                            <h3 class="bg-info text-light text-center">President</h3>
                            <thead class="text-info bg-dark">
                                <tr>
-                                  
+                                   <th scope="col">Voter</th>
                                    <th scope="col">Photo</th>
                                    <th scope="col">Full Name</th>
                                    <th scope="col">Select</th>
@@ -116,7 +116,9 @@ header("Location:index.php");
                                       ?>
                                       
                                <tr>
-                                  
+                                  <td>
+                                       <?php echo  $_SESSION['fullname'];?>
+                                  </td>
                                    <td>
                                        <img src="uploads/<?php echo $row['photo'];?>" width="100px" alt="image" class="circle">
                                    </td>
@@ -140,7 +142,7 @@ header("Location:index.php");
                            <h3 class="bg-info text-light text-center">Secretary General</h3>
                            <thead class="text-info bg-dark">
                                <tr>
-                                  
+                                   <th scope="col">Voter</th>
                                    <th scope="col">Photo</th>
                                    <th scope="col">Full Name</th>
                                    <th scope="col">Select</th>
@@ -155,7 +157,9 @@ header("Location:index.php");
                                  {
                                       ?>
                                <tr>
-                                   
+                                   <td>
+                                       <?php echo  $_SESSION['fullname'];?>
+                                  </td>
                                    <td>
                                        <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
                                    </td>
@@ -177,7 +181,7 @@ header("Location:index.php");
                            <h3 class="bg-info text-light text-center">Treasurer</h3>
                            <thead class="text-info bg-dark">
                                <tr>
-                                  
+                                   <th scope="col">Voter</th>
                                    <th scope="col">Photo</th>
                                    <th scope="col">Full Name</th>
                                    <th scope="col">Select</th>
@@ -192,7 +196,9 @@ header("Location:index.php");
                                  {
                                       ?>
                                <tr>
-                                  
+                                  <td>
+                                       <?php echo  $_SESSION['fullname'];?>
+                                  </td>
                                    <td>
                                        <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
                                    </td>
