@@ -62,76 +62,63 @@ if(!isset($_SESSION['username'])){
         </div>
     </nav>
     <!--navbar-->
-    <!--offcanvas-->
-
+   <!--offcanvas-->
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
         <!-----------------User Name-------------------->
-        <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
+        <?php echo '<h3 class ="text-info text-uppercase my-3 p-3">'. $_SESSION['username'].'</h3>';?>
         <!-----------------User Name-------------------->
         <div class="offcanvas-body p-0 ">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
                     <li>
-                        <div class="text-muted small fw-bold text-uppercase px-3"> CORE
-
-                        </div>
-
-                    </li>
-                    <li>
                         <a href="index.php" class="nav-link px-3 active">
-                            <span class="me-2">
+                            <span class="text-info me-2">
                                 <i class="bi bi-speedometer2"></i>
                             </span>
                             <span>Dashboard</span>
-
                         </a>
-
                     </li>
                     <li class="my">
-                        <hr class="dropdown-divider" />
+                        <hr class=" text-info fw-bold dropdown-divider" />
                     </li>
-                    <li>
-                        <div class="text-muted small fw-bold text-uppercase px-3"> interface
-
-                        </div>
-
-                    </li>
+                    <!--Groups-->
                     <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#groups" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
-                            <span class="me-2"><i class="fa fa-users"></i></span>
-                            <span>Groups</span>
-                            <span class="right-icon ms-auto">
+                            <span class=" text-info me-2"><i class="fa fa-users"></i></span>
+                            <span class="text-light">Groups</span>
+                            <span class="text-info right-icon ms-auto">
                                 <i class="bi bi-chevron-down"></i>
                             </span>
                         </a>
                         <div class="collapse" id="groups">
                             <div>
-                                <ul class="navbar-nav ps-3">
+                                <ul class="  navbar-nav ps-3">
                                     <li>
                                         <a href="candidates.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-people"></i></span>
-                                            <span>Candidates</span>
+                                            <span class=" text-light me-2"><i class="bi bi-people"></i></span>
+                                            <span class="text-info">Candidates</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="voters.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-people-fill"></i></span>
-                                            <span>Voters</span>
+                                            <span class=" text-light me-2"><i class="bi bi-people-fill"></i></span>
+                                            <span class="text-info">Voters</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
+                     <!--Positions-->
                     <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#positions" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
-                            <span class="me-2"><i class="fa fa-user-plus" aria-hidden="true"></i></span>
+                            <span class=" text-info me-2"><i class="fa fa-user-plus" aria-hidden="true"></i></span>
                             <i class="fa-solid fa-user-group-crown"></i>
-                            <span>Positions</span>
-                            <span class="right-icon ms-auto">
+                            <span  class="text-light">Positions</span>
+                            <span class=" text-info right-icon ms-auto">
                                 <i class="bi bi-chevron-down"></i>
                             </span>
                         </a>
@@ -140,35 +127,32 @@ if(!isset($_SESSION['username'])){
                                 <ul class="navbar-nav ps-3">
                                     <li>
                                         <a href="president.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>President</span>
+                                            <span class=" text-light me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span class="text-info">President</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="secretary.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>Secretary General</span>
+                                            <span class=" text-light me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span class="text-info">Secretary General</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="treasurer.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>Treasurer</span>
+                                            <span class="text-light me-2"><i class="bi bi-person-check-fill"></i></span>
+                                            <span class="text-info">Treasurer</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
-                     
                 </ul>
-
             </nav>
-
-
         </div>
     </div>
     <!--offcanvas-->
+
 
     <main class="mt-5">
         <div class="container-fluid">
