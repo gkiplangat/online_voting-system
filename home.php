@@ -125,7 +125,7 @@ header("Location:index.php");
                                    <td><?php echo $row['fullname'];?></td>
                                    <td scope=" col">
                                        <div class="form-group mb-3">
-                                           <input class="disable" type="radio" name="president"
+                                           <input type="radio" name="president"
                                                value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
                                        </div>
                                    </td>
