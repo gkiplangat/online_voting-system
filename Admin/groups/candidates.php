@@ -74,8 +74,12 @@ include ('../../actions/connect.php');
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="submit" name="submit" class="btn btn-primary">Save changes</button>
                         </div>
+                        <div class="mb-3">
+                                <input type="text" class="form-control w-80 m-auto" name="admin" value ="<?php echo  $_SESSION['username'];?>"
+                                    required="required">
+                            </div>
                     </div>
                 </div>
             </div>

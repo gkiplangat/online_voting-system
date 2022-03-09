@@ -1,32 +1,34 @@
 <?php
 include ('../../../actions/connect.php');
 session_start();
-$fullname = $_POST['fullname'];
-$idno = $_POST['idno'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$image = $_FILES['photo']['name'];
-$tmp_name = $_FILES['photo']['tmp_name'];
-$position = $_POST['position']; 
-$age = $_POST['age']; 
-if($age<18){
-    echo '<script>
-    alert("The citizen is under_age");
-    window.location="../candidates.php"
-    </script>';
-}else{
 
-move_uploaded_file($tmp_name, "../../../uploads/$image");
-    $sql = "INSERT INTO candidates (fullname,idno,email,phone,photo,position,age)VALUES ('$fullname','$idno','$email','$phone','$image','$position','$age')";
+    $admin = $_POST['admin'];
+    $fullname = $_POST['fullname'];
+    $idno = $_POST['idno'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $image = $_FILES['photo']['name'];
+    $tmp_name = $_FILES['photo']['tmp_name'];
+    $position = $_POST['position']; 
+    $age = $_POST['age']; 
+   
 
-    $result = mysqli_query($con, $sql);
-     if ($result) {
-        $_SESSION['status'] = "Inserted Successfully";
-        header("Location: ../candidates.php");
-    } else {
-        $_SESSION['status'] = "Something Went wrong";
+
+    $check_id = mysqli_query($con, "SELECT id FROM candidates WHERE idno='$idno'");
+    if ($check_id > 0) {
+        $_SESSION['status'] = "The ID you entered is  Already taken";
         header("Location: ../Candidates.php");
+    }else{
+        move_uploaded_file($tmp_name, "../../../uploads/$image");
+        $sql = "INSERT INTO candidates (admin,fullname,idno,email,phone,photo,position,age)VALUES ('$admin','$fullname','$idno','$email','$phone','$image','$position','$age')";
+        $result = mysqli_query($con, $sql);
+        if ($result) {
+            $_SESSION['status'] = "Inserted Successfully";
+            header("Location: ../candidates.php");
+        }else {
+            $_SESSION['status'] = "Something Went wrong";
+            header("Location: ../Candidates.php");
+        }
     }
-    
-}
+
 ?>
