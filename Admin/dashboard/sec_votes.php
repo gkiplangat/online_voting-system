@@ -44,15 +44,15 @@ if(!isset($_SESSION['username'])){
                 <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
             </button>
             <!--offcanvas trigger-->
-<!---Logo------------------------->
- <img src="images/logo.png" alt="logo" width ="50" height="50">
-<!---Logo------------------------->
+            <!---Logo------------------------->
+            <img src="images/logo.png" alt="logo" width="50" height="50">
+            <!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav   mb-2 mb-lg-0">
                     <a href="../logout.php" role="button" class="btn btn-Info text-light fw-bold"> <i
                             class="bi bi-person-fill "></i>LOGOUT</a>
@@ -65,9 +65,9 @@ if(!isset($_SESSION['username'])){
 
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
-<!-----------------User Name-------------------->
- <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
-<!-----------------User Name-------------------->
+        <!-----------------User Name-------------------->
+        <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
+        <!-----------------User Name-------------------->
         <div class="offcanvas-body p-0 ">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
@@ -158,11 +158,11 @@ if(!isset($_SESSION['username'])){
                                 </ul>
                             </div>
                         </div>
-                          <li>
+                    <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
                             <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
-                           
+
                             <span>Votes</span>
                             <span class="right-icon ms-auto">
                                 <i class="bi bi-chevron-down"></i>
@@ -209,7 +209,7 @@ if(!isset($_SESSION['username'])){
                 <div class="col-md-12 fw-bold fs-3 p-3 text-light">Dashboard</div>
             </div>
             <div class="row">
-                 <!--====Card 1- Total No of Candidates Registered===-->
+                <!--====Card 1- Total No of Candidates Registered===-->
                 <div class="col-md-3 mb-3">
                     <div class="card bg-primary h-100 rounded">
                         <div class="card-header text-light fw-bold">
@@ -235,7 +235,7 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
-                 <!--====Card 1- Total No of Candidates Registered===-->
+                <!--====Card 1- Total No of Candidates Registered===-->
                 <!--====Card 2- Total No of Voters Registered===-->
                 <div class="col-md-3 mb-3">
                     <div class="card  bg-info h-100 rounded">
@@ -285,7 +285,7 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
-                 <!--====Card 3- Total No of Voters who Voted===-->
+                <!--====Card 3- Total No of Voters who Voted===-->
                 <!--====Card 4- Total No of Voters who didn't Vote===-->
                 <div class="col-md-3 mb-3">
                     <div class="card bg-danger h-100 rounded">
