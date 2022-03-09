@@ -39,12 +39,9 @@ include ('../../actions/connect.php');
                     <tr>
                         <th scope="col">Full Name</th>
                         <th scope="col">Id No</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Photo</th>
                         <th scope="col">Position</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,27 +55,19 @@ include ('../../actions/connect.php');
                     <tr>
                         <td><?php echo $row['fullname'];?></td>
                         <td><?php echo $row['idno'];?></td>
-                        <td><?php echo $row['email'];?></td>
-                        <td><?php echo $row['phone'];?></td>
-                        <td>
-                            <img src="<?php echo"../uploads/". $row['photo'];?>" width="100px" class="img-circle"
-                                alt="image">
-                        </td>
                         <td><?php echo $row['position'];?></td>
-                        <td><?php echo $row['age'];?></td>
                         <td scope=" col">
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit">
                                 <i class="bi bi-pencil-square"></i> Edit
                             </button>
-
-                            <a href="../actions/cand_delete.php"><button type="button" class="btn btn-danger"> <i
-                                        class="bi bi-trash"></i>Delete</button></a>
+                        </td>
+                        <td> 
+                            <a href="../actions/cand_delete.php"><button type="button" class="btn btn-danger"> <i class="bi bi-trash"></i>Delete</button></a>
                         </td>
                     </tr>
                     <?php
                 }
                 ?>
-
                 </tbody>
             </table>
         </div>

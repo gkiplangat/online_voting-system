@@ -160,41 +160,7 @@ if(!isset($_SESSION['username'])){
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
-
-                            <span>Votes</span>
-                            <span class="right-icon ms-auto">
-                                <i class="bi bi-chevron-down"></i>
-                            </span>
-                        </a>
-                        <div class="collapse" id="votes">
-                            <div>
-                                <ul class="navbar-nav ps-3">
-                                    <li>
-                                        <a href="pres_votes.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>President</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="sec_votes.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>Secretary General</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="tres_votes.php" class="nav-link px-3">
-                                            <span class="me-2"><i class="bi bi-person-check-fill"></i></span>
-                                            <span>Treasurer</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+                     
                 </ul>
 
             </nav>
