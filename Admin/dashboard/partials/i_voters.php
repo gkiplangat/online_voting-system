@@ -13,10 +13,10 @@
              <i class="bi bi-pencil-square"></i> Edit
          </button>
      </td>
-     <td>
-         <a href="../actions/cand_delete.php"><button type="button" class="btn btn-danger"> <i
-                     class="bi bi-trash"></i>Delete</button></a>
-     </td>
+     <form action="partials/delete_voter.php" Method="POST">
+        <input type="hidden" name="id" value="<?php echo $row['id']?>">
+        <th ><input type="submit" name="delete" class="btn btn-danger" value="DELETE" ></th>
+    </form>
  </tr>
  <?php
                 }
