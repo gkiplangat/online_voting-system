@@ -18,7 +18,7 @@
     <td><?php echo $row['position'];?></td>
     <td><?php echo $row['age'];?></td>
     <td scope=" col">
-        <button type="button" class="btn btn-info editbtn" data-toggle="modal" data-target="#editmodal">
+        <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#editmodal">
             <i class="bi bi-pencil-square"></i> Edit
         </button>
     </td>

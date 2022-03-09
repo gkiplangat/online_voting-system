@@ -67,7 +67,7 @@ include ('../../actions/connect.php');
                         <td><?php echo $row['position'];?></td>
                         <td><?php echo $row['age'];?></td>
                         <td scope=" col">
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit">
                                 <i class="bi bi-pencil-square"></i> Edit
                             </button>
 
