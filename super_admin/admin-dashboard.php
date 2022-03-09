@@ -37,9 +37,9 @@ header("Location:index.php");
                 <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
             </button>
             <!--offcanvas trigger-->
-<!---Logo------------------------->
- <img src="../Admin/dashboard/images/logo.png" alt="logo" width ="60" height="60">
-<!---Logo------------------------->
+            <!---Logo------------------------->
+            <img src="../Admin/dashboard/images/logo.png" alt="logo" width="60" height="60">
+            <!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -80,9 +80,9 @@ header("Location:index.php");
 
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
-<!-----------------User Name-------------------->
- <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
-<!-----------------User Name-------------------->
+        <!-----------------User Name-------------------->
+        <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
+        <!-----------------User Name-------------------->
         <div class="offcanvas-body p-0 ">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
@@ -180,11 +180,11 @@ header("Location:index.php");
                             </div>
                         </div>
                     </li>
-                     <li>
+                    <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
                             <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
-                           
+
                             <span>Votes</span>
                             <span class="right-icon ms-auto">
                                 <i class="bi bi-chevron-down"></i>
@@ -229,12 +229,12 @@ header("Location:index.php");
             <div class="row">
                 <div class="col-md-12 fw-bold fs-3 text-light">Dashboard</div>
             </div>
-             <div class="row">
-                 <!--====Card 1- Total No of Admins Registered===-->
+            <div class="row">
+                <!--====Card 1- Total No of Admins Registered===-->
                 <div class="col-md-4 mb-3">
                     <div class="card bg-primary h-100 rounded">
                         <div class="card-header text-light fw-bold">
-                           Registered Admins
+                            Registered Admins
                         </div>
                         <div class="card-body bg-light text-primary">
                             <div class="row">
@@ -256,7 +256,7 @@ header("Location:index.php");
                         </div>
                     </div>
                 </div>
-                 <!--====Card 1- Total No of Admins Registered===-->
+                <!--====Card 1- Total No of Admins Registered===-->
                 <!--====Card 2- Total No of Candidates Registered===-->
                 <div class="col-md-4 mb-3">
                     <div class="card  bg-info h-100 rounded">
@@ -291,7 +291,7 @@ header("Location:index.php");
                             <div class="row">
                                 <div class="col-md-6">
                                     <span>
-                                        <i class="fa fa-check-square-o" style="font-size: 2.5rem;"></i>
+                                        <i class="bi bi-people-fill" style="font-size: 2.5rem;"></i>
                                     </span>
                                 </div>
                                 <div class="col-md-6">
@@ -306,8 +306,59 @@ header("Location:index.php");
                         </div>
                     </div>
                 </div>
-                 <!--====Card 3- Total No of Voters Registered===-->
-                 
+                <!--====Card 3- Total No of Voters Registered===-->
+                <!--====Card 4- Total No of Voters who voted===-->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-success h-100 rounded">
+                            <div class="card-header text-light fw-bold">Voted</div>
+                            <div class="card-body bg-light text-success">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span>
+                                            <i class="fa fa-check-square-o" style="font-size: 2.5rem;"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <?php
+                                    $query ="SELECT  id FROM votes ORDER BY id";
+                                    $query_run =mysqli_query($con, $query);
+                                    $row = mysqli_num_rows($query_run);
+                                    echo '<h2>'.$row.'</h2>';
+                                    ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--====Card 4- Total No of Voters who voted===-->
+                    <!--====Card 5- Total No of Voters who didn't vote===-->
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-danger h-100 rounded">
+                            <div class="card-header text-light fw-bold">Not Voted</div>
+                            <div class="card-body bg-light text-danger">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span>
+                                            <i class="fa fa-times" style="font-size: 2.5rem;"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <?php
+                                        $query ="SELECT fullname FROM voters WHERE EXISTS (SELECT * FROM votes WHERE voters.fullname = votes.voter)ORDER BY id";
+                                        $query_run =mysqli_query($con, $query);
+                                        $row = mysqli_num_rows($query_run);
+                                        echo '<h2>'.$row.'</h2>';
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--====Card 5- Total No of Voters who didn't vote===-->
+                </div>
+
+
             </div>
 
 

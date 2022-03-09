@@ -16,19 +16,26 @@ if($password!=$cpassword){
     alert("Passwords did not match");
     window.location="../voters.php"
     </script>';
-}else{
-
-    move_uploaded_file($tmp_name, "../uploads/$image");
-    $sql = "INSERT INTO voters (admin,fullname,idno,email,phone,photo,password,status)VALUES ('$admin','$fullname','$idno','$email','$phone','$image','$password',0)";
-
-    $result = mysqli_query($con, $sql);
-    if ($result) {
-        $_SESSION['status'] = "Inserted Successfully";
-        header("Location: ../voters.php");
-    } else {
-        $_SESSION['status'] = "Something Went wrong";
-        header("Location: ../voters.php.php");
-    }
     
+    
+}else{
+     //Check if the Voter ID No Already Exist
+     $check_id = mysqli_num_rows(mysqli_query($con, "SELECT idno FROM voters WHERE  idno='$idno'"));
+     if ($check_id > 0) {
+        $_SESSION['status'] = "The ID you entered is  Already taken";
+        header("Location: ../voters.php");
+     }else{
+            move_uploaded_file($tmp_name, "../uploads/$image");
+            $sql = "INSERT INTO voters (admin,fullname,idno,email,phone,photo,password,status)VALUES ('$admin','$fullname','$idno','$email','$phone','$image','$password',0)";
+            $result = mysqli_query($con, $sql);
+            //Check if the Voter is Registered Successfully
+            if ($result) {
+                $_SESSION['status'] = "Inserted Successfully";
+                 header("Location: ../voters.php");
+                } else {
+                    $_SESSION['status'] = "Something Went wrong";
+                    header("Location: ../voters.php.php");
+                }
+            }
 }
 ?>

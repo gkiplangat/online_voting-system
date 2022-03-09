@@ -294,7 +294,7 @@ if(!isset($_SESSION['username'])){
                             <div class="row">
                                 <div class="col-md-6">
                                     <span>
-                                        <i class="fa fa-check-square-o" style="font-size: 2.5rem;"></i>
+                                        <i class="bi bi-people-fill" style="font-size: 2.5rem;"></i>
                                     </span>
                                 </div>
                                 <div class="col-md-6">
@@ -310,9 +310,59 @@ if(!isset($_SESSION['username'])){
                     </div>
                 </div>
                 <!--====Card 3- Total No of Voters Registered===-->
+                <!--====Card 4- Total No of Voters who voted===-->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-success h-100 rounded">
+                            <div class="card-header text-light fw-bold">Voted</div>
+                            <div class="card-body bg-light text-success">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span>
+                                            <i class="fa fa-check-square-o" style="font-size: 2.5rem;"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <?php
+                                    $query ="SELECT  id FROM votes ORDER BY id";
+                                    $query_run =mysqli_query($con, $query);
+                                    $row = mysqli_num_rows($query_run);
+                                    echo '<h2>'.$row.'</h2>';
+                                    ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--====Card 4- Total No of Voters who voted===-->
+                    <!--====Card 5- Total No of Voters who didn't vote===-->
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-danger h-100 rounded">
+                            <div class="card-header text-light fw-bold">Not Voted</div>
+                            <div class="card-body bg-light text-danger">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span>
+                                            <i class="fa fa-times" style="font-size: 2.5rem;"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <?php
+                                        $query ="SELECT fullname FROM voters WHERE EXISTS (SELECT * FROM votes WHERE voters.fullname = votes.voter)ORDER BY id";
+                                        $query_run =mysqli_query($con, $query);
+                                        $row = mysqli_num_rows($query_run);
+                                        echo '<h2>'.$row.'</h2>';
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--====Card 5- Total No of Voters who didn't vote===-->
+                </div>
+
 
             </div>
-
 
         </div>
         <?php include 'positions/Sec.php';?>

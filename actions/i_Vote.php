@@ -9,10 +9,11 @@ if(isset($_POST['submit']))
     $secretary  = $_POST['secretary'];
     $treasurer  = $_POST['treasurer'];
     $status  = $_POST['status'];
-     $check_voter = mysqli_query($con, "SELECT id FROM votes WHERE voter='$voter' AND status=1");
+    //Check if the Voter Already Voted
+     $check_voter = mysqli_num_rows(mysqli_query($con, "SELECT voter FROM votes WHERE voter='$voter' AND status=1"));
      if ($check_voter > 0) {
          $_SESSION['status'] = "You Already Voted";
-          header("Location: ../home.php");
+         header("Location: ../home.php");
         }else{
             $query = "INSERT INTO votes (voter,president,secretary,treasurer,status) VALUES ('$voter','$president','$secretary','$treasurer',1)";
             $query_run = mysqli_query($con, $query);
