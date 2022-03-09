@@ -61,17 +61,24 @@ include ('../../actions/connect.php');
                                 <input type="file" class="form-control w-80 m-auto" name="photo">
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="form-control w-80 m-auto" name="password" placeholder="Password">
+                                <input type="password" class="form-control w-80 m-auto" name="password"
+                                    placeholder="Password">
                             </div>
-                             <div class="mb-3">
-                                <input type="password" class="form-control w-80 m-auto" name="cpassword" placeholder="Confirm Password">
+                            <div class="mb-3">
+                                <input type="password" class="form-control w-80 m-auto" name="cpassword"
+                                    placeholder="Confirm Password">
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control w-80 m-auto" name="admin"
+                                value="<?php echo  $_SESSION['username'];?>" required="required">
+                        </div>
                     </div>
+
                 </div>
             </div>
         </form>
@@ -146,14 +153,11 @@ include ('../../actions/connect.php');
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
+                      
                         <th scope="col">Full Name</th>
                         <th scope="col">ID NO</th>
-                        <th scope="col">Email Address</th>
-                        <th scope="col">Phone No</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
                     </tr>
                 </thead>
                 <tbody>

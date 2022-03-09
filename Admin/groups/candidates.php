@@ -79,7 +79,7 @@ include ('../../actions/connect.php');
                         <div class="mb-3">
                                 <input type="text" class="form-control w-80 m-auto" name="admin" value ="<?php echo  $_SESSION['username'];?>"
                                     required="required">
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -175,14 +175,10 @@ include ('../../actions/connect.php');
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
+                        
                         <th scope="col">Full Name</th>
                         <th scope="col">Id No</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Photo</th>
                         <th scope="col">Position</th>
-                        <th scope="col">Age</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                     </tr>

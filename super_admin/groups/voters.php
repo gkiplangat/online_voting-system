@@ -147,12 +147,13 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
+                        <th scope="col">Admin</th>
                         <th scope="col">Full Name</th>
                         <th scope="col">ID NO</th>
                         <th scope="col">Email Address</th>
                         <th scope="col">Phone No</th>
                         <th scope="col">Photo</th>
-                        <th scope="col">Age</th>
+                        <th scope="col">Password</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>

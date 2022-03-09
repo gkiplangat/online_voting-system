@@ -1,7 +1,7 @@
 <?php
 include ('../../../actions/connect.php');
 session_start();
-
+$admin = $_POST['admin'];
 $fullname = $_POST['fullname'];
 $idno = $_POST['idno'];
 $email = $_POST['email'];
@@ -19,7 +19,7 @@ if($password!=$cpassword){
 }else{
 
     move_uploaded_file($tmp_name, "../uploads/$image");
-    $sql = "INSERT INTO voters (fullname,idno,email,phone,photo,password,status)VALUES ('$fullname','$idno','$email','$phone','$image','$password',0)";
+    $sql = "INSERT INTO voters (admin,fullname,idno,email,phone,photo,password,status)VALUES ('$admin','$fullname','$idno','$email','$phone','$image','$password',0)";
 
     $result = mysqli_query($con, $sql);
     if ($result) {
