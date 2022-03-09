@@ -7,6 +7,7 @@
                 ?>
 <tr>
     <td><?php echo $row['id'];?></td>
+    <td><?php echo $row['admin'];?></td>
     <td><?php echo $row['fullname'];?></td>
     <td><?php echo $row['idno'];?></td>
     <td><?php echo $row['email'];?></td>

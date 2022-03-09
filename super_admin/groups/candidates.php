@@ -168,6 +168,7 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
+                        <th scope="col">Admin</th>
                         <th scope="col">Full Name</th>
                         <th scope="col">Id No</th>
                         <th scope="col">Email</th>
