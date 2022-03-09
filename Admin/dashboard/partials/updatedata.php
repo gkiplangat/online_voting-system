@@ -39,13 +39,17 @@ include ('../../../actions/connect.php');
         while($row = mysqli_fetch_array($query_run))
         {
             ?>
-    <div class="container text-center">
-        <div class="jumbotron">
-            <h2>Update Data</h2>
+    <div class="container text-center my-5">
+        <div class="jumbotron d-flex justify-content-center bg-light">
+            <h4 class="text-center">Update Data</h4>
             <hr>
             <!-- Modal  For Adding New Candidates-->
-            <form  class ="bg-secondary"action="" method="POST" enctype="multipart/form-data" lass="p-3" style="width:400px;">
+            <form  class="my-5"action="" method="POST" enctype="multipart/form-data" lass="p-3" style="width:400px;">
                 <input type="hidden" name="id" value="<?php echo $row['id']?>">
+                <div class="mb-3" style="width:400px;">
+                    <input type="hidden" class="form-control w-80 m-auto" name="admin"
+                        value="<?php echo  $_SESSION['username'];?>" required="required">
+                </div>
                 <div class="mb-3">
                     <input type="text" class="form-control w-80 m-auto" name="fullname"
                         value="<?php echo $row['fullname']?>" placeholder="Full Name" required="required">
@@ -76,15 +80,15 @@ include ('../../../actions/connect.php');
                     <input type="text" class="form-control w-80 m-auto" name="age" value="<?php echo $row['age']?>"
                         placeholder="Age" required="required">
                 </div>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <button type="submit" name="update" class="btn btn-primary">Save changes</button>
+                </div>
         </div>
 
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-        <button type="submit" name="update" class="btn btn-primary">Save changes</button>
 
-        <div class="mb-3">
-            <input type="text" class="form-control w-80 m-auto" name="admin"
-                value="<?php echo  $_SESSION['username'];?>" required="required">
-        </div>
+
+
 
 
 
