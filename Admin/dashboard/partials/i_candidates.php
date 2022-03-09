@@ -12,14 +12,13 @@
     <td><?php echo $row['idno'];?></td>
     <td><?php echo $row['position'];?></td>
    
-    <td scope=" col">
-        <button type="button" class="btn btn-primary editbtn" data-toggle="modal" data-target="#editmodal">
-            <i class="bi bi-pencil-square"></i> Edit
-        </button>
-    </td>
-    <form action="partials/delete_cand.php" Method="POST">
+    <form action="partials/updatedata.php" Method="POST">
         <input type="hidden" name="id" value="<?php echo $row['id']?>">
-        <th ><input type="submit" name="delete" class="btn btn-danger" value="DELETE" ></th>
+        <th ><input type="submit" name="edit" class="btn btn-success" data-target="#addnew" value="Edit" ></th>
+    </form>
+    <form action="partials/delete.php" Method="POST">
+        <input type="hidden" name="id" value="<?php echo $row['id']?>">
+        <th ><input type="submit" name="delete" class="btn btn-danger" value="Delete" ></th>
     </form>
 </tr>
 <?php
