@@ -55,7 +55,7 @@ if(!isset($_SESSION['username'])){
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav   mb-2 mb-lg-0">
-                    <a href="../logout.php" role="button" class="btn btn-Info text-light fw-bold"> <i
+                    <a href="../logout.php" role="button" class="btn btn-Info text-info fw-bold"> <i
                             class="bi bi-person-fill "></i>LOGOUT</a>
                 </ul>
             </div>
