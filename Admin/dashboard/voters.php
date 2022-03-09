@@ -72,7 +72,7 @@ if(!isset($_SESSION['username'])){
 
                     </li>
                     <li>
-                        <a href="main.php" class="nav-link px-3 active">
+                        <a href="index.php" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="bi bi-speedometer2"></i>
                             </span>
@@ -269,7 +269,7 @@ if(!isset($_SESSION['username'])){
                                 </div>
                                 <div class="col-md-6">
                                     <?php
-                                    $query ="SELECT  id FROM voters WHERE status = '1' ORDER BY id";
+                                    $query ="SELECT  id FROM votes ORDER BY id";
                                     $query_run =mysqli_query($con, $query);
                                     $row = mysqli_num_rows($query_run);
                                     echo '<h2>'.$row.'</h2>';

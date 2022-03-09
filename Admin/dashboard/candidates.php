@@ -12,11 +12,17 @@ if(!isset($_SESSION['username'])){
 <html lang="en">
 
 <head>
+    <!--Title-->
+    <title>Admin-Dashboard</title>
+    <!--Meta Info-->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Admin-Dashboard</title>
+    <meta name="author" content="Gideon Kiplangat">
+    <!-- description -->
+    <meta name="description" content="Online voting system.">
+    <!-- keywords -->
+    <meta name="keywords" content="Voters, votes, voting">
     <!--Bootstrap files-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
@@ -26,11 +32,10 @@ if(!isset($_SESSION['username'])){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!--Custom CSS File-->
     <link rel="stylesheet" href="css/style.css" />
-
 </head>
 
 <body style="background:#7C6E7F;">
-<!--Navbar======= Start===========================================-->
+    <!--Navbar======= Start===========================================-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <!--offcanvas trigger-->
@@ -39,9 +44,9 @@ if(!isset($_SESSION['username'])){
                 <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
             </button>
             <!--offcanvas trigger-->
-<!---Logo------------------------->
- <img src="images/logo.png" alt="logo" width ="50" height="50">
-<!---Logo------------------------->
+            <!---Logo------------------------->
+            <img src="images/logo.png" alt="logo" width="50" height="50">
+            <!---Logo------------------------->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -55,32 +60,24 @@ if(!isset($_SESSION['username'])){
             </div>
         </div>
     </nav>
-<!--Navbar======= Ends===========================================-->
-<!--Offcanvas==== Start===========================================-->
+    <!--Navbar======= Ends===========================================-->
+    <!--Offcanvas==== Start===========================================-->
 
     <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel">
-<!-----------------User Name-------------------->
- <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
-<!-----------------User Name-------------------->
+        <!-----------------User Name-------------------->
+        <?php echo '<h3 class ="text-light my-3 p-3">'. $_SESSION['username'].'</h3>';?>
+        <!-----------------User Name-------------------->
         <div class="offcanvas-body p-0 ">
             <nav class="navbar-dark">
                 <ul class="navbar-nav">
-                    <li>
-                        <div class="text-muted small fw-bold text-uppercase px-3"> CORE
-
-                        </div>
-
-                    </li>
                     <li>
                         <a href="index.php" class="nav-link px-3 active">
                             <span class="me-2">
                                 <i class="bi bi-speedometer2"></i>
                             </span>
                             <span>Dashboard</span>
-
                         </a>
-
                     </li>
                     <li class="my">
                         <hr class="dropdown-divider" />
@@ -89,7 +86,6 @@ if(!isset($_SESSION['username'])){
                         <div class="text-muted small fw-bold text-uppercase px-3"> interface
 
                         </div>
-
                     </li>
                     <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#groups" role="button"
@@ -100,7 +96,7 @@ if(!isset($_SESSION['username'])){
                                 <i class="bi bi-chevron-down"></i>
                             </span>
                         </a>
-                          <!--===Dropdown Menu Start==-->
+                        <!--===Dropdown Menu Start==-->
                         <div class="collapse" id="groups">
                             <div>
                                 <ul class="navbar-nav ps-3">
@@ -119,7 +115,7 @@ if(!isset($_SESSION['username'])){
                                 </ul>
                             </div>
                         </div>
-                         <!--===Dropdown Menu Ends==-->
+                        <!--===Dropdown Menu Ends==-->
                     </li>
                     <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#positions" role="button"
@@ -156,13 +152,13 @@ if(!isset($_SESSION['username'])){
                                 </ul>
                             </div>
                         </div>
-                         <!--===Dropdown Menu Ends==-->
+                        <!--===Dropdown Menu Ends==-->
                     </li>
                     <li>
                         <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#votes" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
                             <span class="me-2"><i class="fa fa-archive" aria-hidden="true"></i></span>
-                           
+
                             <span>Votes</span>
                             <span class="right-icon ms-auto">
                                 <i class="bi bi-chevron-down"></i>
@@ -194,22 +190,19 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </li>
                 </ul>
-
             </nav>
-
-
         </div>
     </div>
-<!--offcanvas======= Ends===========================================-->
-<!--Main============================================================-->
+    <!--offcanvas======= Ends===========================================-->
+    <!--Main============================================================-->
     <main class="mt-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 fw-bold fs-3 p-3 text-light">Dashboard</div>
             </div>
-           
+
             <div class="row">
-                 <!--====Card 1- Total No of Candidates Registered===-->
+                <!--====Card 1- Total No of Candidates Registered===-->
                 <div class="col-md-3 mb-3">
                     <div class="card bg-primary h-100 rounded">
                         <div class="card-header text-light fw-bold">
@@ -235,7 +228,7 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
-                 <!--====Card 1- Total No of Candidates Registered===-->
+                <!--====Card 1- Total No of Candidates Registered===-->
                 <!--====Card 2- Total No of Voters Registered===-->
                 <div class="col-md-3 mb-3">
                     <div class="card  bg-info h-100 rounded">
@@ -275,7 +268,7 @@ if(!isset($_SESSION['username'])){
                                 </div>
                                 <div class="col-md-6">
                                     <?php
-                                    $query ="SELECT  id FROM voters WHERE status = '1' ORDER BY id";
+                                    $query ="SELECT  id FROM votes ORDER BY id";
                                     $query_run =mysqli_query($con, $query);
                                     $row = mysqli_num_rows($query_run);
                                     echo '<h2>'.$row.'</h2>';
@@ -285,7 +278,7 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
-                 <!--====Card 3- Total No of Voters who Voted===-->
+                <!--====Card 3- Total No of Voters who Voted===-->
                 <!--====Card 4- Total No of Voters who didn't Vote===-->
                 <div class="col-md-3 mb-3">
                     <div class="card bg-danger h-100 rounded">
@@ -311,9 +304,9 @@ if(!isset($_SESSION['username'])){
                 </div>
                 <!--====Card 4- Total No of Voters who didn't Vote===-->
             </div>
-           
+
         </div>
-         <?php include '../groups/candidates.php';?>
+        <?php include '../groups/candidates.php';?>
     </main>
     <!--Main============================================================-->
     <!--adding js ...................................files-->

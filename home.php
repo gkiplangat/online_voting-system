@@ -67,163 +67,167 @@ header("Location:index.php");
 
     <main class="mt-5 pt-5">
         <!---Table with the Candidates to be voted for-->
-           <div class="container-fluid my-5">
-               <!--Form Start-->
-               <form action="actions/i_Vote.php" method="POST">
-                   <div class="card table-responsive my-5 ">
-                       <div class="row card-header bg-dark">
-                           <div class="col-md-6 text-info">
-                               <h2>Vote Here</h2>
-                               <h6 class="font-italic text-light">Your Vote Your Voice</h6>
-                           </div>
-                           <div class="col-md-6">
-                               <!--Notification Message upon submission-->
-                               <?php
+        <div class="container-fluid my-5">
+            <!--Form Start-->
+            <form action="actions/i_Vote.php" method="POST">
+                <div class="card table-responsive my-5 ">
+                    <div class="row card-header bg-dark">
+                        <div class="col-md-6 text-info">
+                            <h2>Vote Here</h2>
+                            <h6 class="font-italic text-light">Your Vote Your Voice</h6>
+                        </div>
+                        <div class="col-md-6">
+                            <!--Notification Message upon submission-->
+                            <?php
                                 if(isset($_SESSION['status']))
                                 {?>
-                               <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                   <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
-                                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                                   </button>
-                               </div>
-                               <?php
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                </button>
+                            </div>
+                            <?php
                                unset($_SESSION['status']);
                             }
                             ?>
-                               <!--Notification Message upon submission-->
-                           </div>
-                       </div>
+                            <!--Notification Message upon submission-->
+                        </div>
+                    </div>
 
 
-                       <table class="table table-bordered ">
-                           <h3 class="bg-info text-light text-center">President</h3>
-                           <thead class="text-info bg-dark">
-                               <tr>
-                                   <th scope="col">Voter</th>
-                                   <th scope="col">Photo</th>
-                                   <th scope="col">Full Name</th>
-                                   <th scope="col">Select</th>
-                               </tr>
-                           </thead>
-                           <tbody class="text-dark bg-light">
-                               <!--SQL QUERY START HERE-->
-                               <?php
+                    <table class="table table-bordered ">
+                        <h3 class="bg-info text-light text-center">President</h3>
+                        <thead class="text-info bg-dark">
+                            <tr>
+                                <th scope="col">Voter</th>
+                                <th scope="col">Photo</th>
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Select</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-dark bg-light">
+                            <!--SQL QUERY START HERE-->
+                            <?php
                                 
                                  $sql ="SELECT  photo, fullname FROM candidates WHERE position='president'";
                                  $query =$con->query($sql);
                                  WHILE($row=$query->fetch_assoc())
                                  {
                                       ?>
-                                      
-                               <tr>
-                                  <td>
-                                       <?php echo  $_SESSION['fullname'];?>
-                                  </td>
-                                   <td>
-                                       <img src="uploads/<?php echo $row['photo'];?>" width="100px" alt="image" class="circle">
-                                   </td>
-                                   <td><?php echo $row['fullname'];?></td>
-                                   <td scope=" col">
-                                       <div class="form-group mb-3">
-                                           <input type="radio" name="president"
-                                               value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
-                                       </div>
-                                   </td>
-                                     
-                               </tr>
-                               <?php
+
+                            <tr>
+                                <td>
+                                    <?php echo  $_SESSION['fullname'];?>
+                                </td>
+                                <td>
+                                    <img src="uploads/<?php echo $row['photo'];?>" width="100px" alt="image"
+                                        class="circle">
+                                </td>
+                                <td><?php echo $row['fullname'];?></td>
+                                <td scope=" col">
+                                    <div class="form-group mb-3">
+                                        <input type="radio" name="president"
+                                            value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <?php
              }
              ?>
-                           </tbody>
-                       </table>
+                        </tbody>
+                    </table>
 
 
-                       <table class="table table-bordered">
-                           <h3 class="bg-info text-light text-center">Secretary General</h3>
-                           <thead class="text-info bg-dark">
-                               <tr>
-                                   <th scope="col">Voter</th>
-                                   <th scope="col">Photo</th>
-                                   <th scope="col">Full Name</th>
-                                   <th scope="col">Select</th>
-                               </tr>
-                           </thead>
-                           <tbody class="text-dark bg-light">
-                               <!--SQL QUERY START HERE-->
-                               <?php
+                    <table class="table table-bordered">
+                        <h3 class="bg-info text-light text-center">Secretary General</h3>
+                        <thead class="text-info bg-dark">
+                            <tr>
+                                <th scope="col">Voter</th>
+                                <th scope="col">Photo</th>
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Select</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-dark bg-light">
+                            <!--SQL QUERY START HERE-->
+                            <?php
                                  $sql ="SELECT  photo, fullname FROM candidates WHERE position='Secretary General' ";
                                  $query =$con->query($sql);
                                  WHILE($row=$query->fetch_assoc())
                                  {
                                       ?>
-                               <tr>
-                                   <td>
-                                       <?php echo  $_SESSION['fullname'];?>
-                                  </td>
-                                   <td>
-                                       <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
-                                   </td>
-                                   <td><?php echo $row['fullname'];?></td>
-                                   <td scope=" col">
-                                       <div class="form-group mb-3">
-                                           <input class="disable" type="radio" name="secretary"
-                                               value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
-                                       </div>
-                                   </td>
-                               </tr>
-                               <?php
+                            <tr>
+                                <td>
+                                    <?php echo  $_SESSION['fullname'];?>
+                                </td>
+                                <td>
+                                    <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
+                                </td>
+                                <td><?php echo $row['fullname'];?></td>
+                                <td scope=" col">
+                                    <div class="form-group mb-3">
+                                        <input class="disable" type="radio" name="secretary"
+                                            value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php
              }
              ?>
-                           </tbody>
-                       </table>
+                        </tbody>
+                    </table>
 
-                       <table class="table table-bordered">
-                           <h3 class="bg-info text-light text-center">Treasurer</h3>
-                           <thead class="text-info bg-dark">
-                               <tr>
-                                   <th scope="col">Voter</th>
-                                   <th scope="col">Photo</th>
-                                   <th scope="col">Full Name</th>
-                                   <th scope="col">Select</th>
-                               </tr>
-                           </thead>
-                           <tbody class="text-dark bg-light">
-                               <!--SQL QUERY START HERE-->
-                               <?php
+                    <table class="table table-bordered">
+                        <h3 class="bg-info text-light text-center">Treasurer</h3>
+                        <thead class="text-info bg-dark">
+                            <tr>
+                                <th scope="col">Voter</th>
+                                <th scope="col">Photo</th>
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Select</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-dark bg-light">
+                            <!--SQL QUERY START HERE-->
+                            <?php
                                  $sql ="SELECT  photo, fullname FROM candidates WHERE position='Treasurer' ";
                                  $query =$con->query($sql);
                                  WHILE($row=$query->fetch_assoc())
                                  {
                                       ?>
-                               <tr>
-                                  <td>
-                                       <?php echo  $_SESSION['fullname'];?>
-                                  </td>
-                                   <td>
-                                       <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
-                                   </td>
-                                   <td><?php echo $row['fullname'];?></td>
-                                   <td scope=" col">
-                                       <div class="form-group mb-3">
-                                           <input class="disable" type="radio" name="treasurer"
-                                               value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
-                                       </div>
-
-                                   </td>
-                               </tr>
-                               <?php
+                            <tr>
+                                <td>
+                                    <?php echo  $_SESSION['fullname'];?>
+                                </td>
+                                <td>
+                                    <img src="<?php echo "uploads/".$row['photo'];?>" width="100px" alt="image">
+                                </td>
+                                <td><?php echo $row['fullname'];?></td>
+                                <td scope=" col">
+                                    <div class="form-group mb-3">
+                                        <input type="radio" name="treasurer"
+                                            value="<?php echo $row['fullname'];?>" /><?php echo $row['fullname'];?>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php
                                         }
                                 
                                         ?>
-                           </tbody>
-                       </table>
+                        </tbody>
+                    </table>
+                    <div class="form-group mb-3 text-center">
+                        <input  class ="hidden" type="text" name="voter"
+                            value="<?php echo  $_SESSION['fullname'];?>" />
+                    </div>
 
-                   </div>
-                   <div class="form-group  my-3">
-                       <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-                   </div>
-               </form>
-           </div>
+                </div>
+                <div class="form-group my-3 text-center">
+                    <button type="submit" name="submit" class="btn btn-primary">Submit Your Selection</button>
+                </div>
+            </form>
+        </div>
         <!---Table with the Candidates to be voted for-->
 
 
