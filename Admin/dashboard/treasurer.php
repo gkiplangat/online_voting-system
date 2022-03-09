@@ -12,18 +12,25 @@ if(!isset($_SESSION['username'])){
 <html lang="en">
 
 <head>
+    <!--Title-->
+    <title>Admin-Dashboard</title>
+    <!--Meta Info-->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Admin-Dashboard</title>
-    <!--Styling the ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,file-->
+    <meta name="author" content="Gideon Kiplangat">
+    <!-- description -->
+    <meta name="description" content="Online voting system.">
+    <!-- keywords -->
+    <meta name="keywords" content="Voters, votes, voting">
+    <!--Bootstrap files-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
     <!-- font-awesome icon -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--Custom CSS File-->
     <link rel="stylesheet" href="css/style.css" />
 
 </head>
