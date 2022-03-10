@@ -32,8 +32,8 @@ include 'actions/connect.php';
 
 </head>
 
-<body class="bg-dark">
-    <div class="container text-center">
+<body class="bg-secondary">
+    <div class="container text-center text-info">
         <form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight:800;">Voter-Login</p>
             <div class="input-group">
@@ -43,8 +43,8 @@ include 'actions/connect.php';
                 <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password'];?>"
                     required>
             </div>
-            <div class="input-group">
-                <button name="submit" class="btn btn-primary">Login</button>
+            <div class="input-group d-flex justify-content-center">
+                <button name="submit" class="btn btn-info">Login</button>
             </div>
         </form>
     </div>

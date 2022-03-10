@@ -24,7 +24,7 @@ header("Location:index.php");
     <!-- font-awesome icon -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="Admin/dashboard/css/style.css" />
+    <link rel="stylesheet" href="Admin/dashboard/css/" />
 
 </head>
 
@@ -67,7 +67,7 @@ header("Location:index.php");
 
     <main class="mt-5 pt-5">
         <!---Table with the Candidates to be voted for-->
-        <div class="container-fluid my-5">
+        <div class="container my-5">
             <!--Form Start-->
             <form action="actions/i_Vote.php" method="POST">
                 <div class="card table-responsive my-5 ">

@@ -6,12 +6,18 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
+    background: url(../assets/bg.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat; 
+    background-size: cover;
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
 .container{
     width: 400px;
     height:100%;

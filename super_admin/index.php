@@ -32,8 +32,8 @@ if(isset($_POST['submit'])){
 
 </head>
 
-<body class="bg-dark">
-    <div class="container text-center">
+<body>
+    <div class="container text-center text-info">
         <form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight:800;">Super-Admin Login</p>
             <div class="input-group">
@@ -43,8 +43,8 @@ if(isset($_POST['submit'])){
                 <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password'];?>"
                     required>
             </div>
-            <div class="input-group">
-                <button name="submit" class="btn">Login</button>
+            <div class="input-group d-flex justify-content-center">
+                <button name="submit" class="btn btn-info">Login</button>
             </div>
         </form>
     </div>
