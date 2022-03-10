@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 
 </head>
 
-<body>
+<body class="bg-secondary">
     <div class="container text-center text-info">
         <form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight:800;">Super-Admin Login</p>
