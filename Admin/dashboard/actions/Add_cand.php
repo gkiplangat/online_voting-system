@@ -12,7 +12,7 @@ session_start();
     $position = $_POST['position']; 
     $age = $_POST['age']; 
    
-     //Check if the Voter Already Voted
+     //Check if the candidate ID Already Exist
      $check_id = mysqli_num_rows(mysqli_query($con, "SELECT idno FROM candidates WHERE  idno='$idno'"));
      if ($check_id > 0) {
         $_SESSION['status'] = "The ID you entered is  Already taken";

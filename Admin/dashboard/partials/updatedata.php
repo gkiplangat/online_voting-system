@@ -39,12 +39,13 @@ include ('../../../actions/connect.php');
         while($row = mysqli_fetch_array($query_run))
         {
             ?>
-    <div class="container text-center my-5">
-        <div class="jumbotron d-flex justify-content-center bg-light">
-            <h4 class="text-center">Update Data</h4>
+    <div class="container text-center my-5 d-flex justify-content-center">
+        <div class="jumbotron d-flex justify-content-center bg-light rounded" style="width:500px;">
+
             <hr>
             <!-- Modal  For Adding New Candidates-->
-            <form  class="my-5"action="" method="POST" enctype="multipart/form-data" lass="p-3" style="width:400px;">
+            <form class="my-5" action="" method="POST" enctype="multipart/form-data" lass="p-3" style="width:400px;">
+                <h4 class="text-center">Update Data</h4>
                 <input type="hidden" name="id" value="<?php echo $row['id']?>">
                 <div class="mb-3" style="width:400px;">
                     <input type="hidden" class="form-control w-80 m-auto" name="admin"
@@ -81,18 +82,44 @@ include ('../../../actions/connect.php');
                         placeholder="Age" required="required">
                 </div>
                 <div class="mb-3">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <a href="../candidates.php" class="btn btn-danger">Cancel</a>
                     <button type="submit" name="update" class="btn btn-primary">Save changes</button>
                 </div>
         </div>
-
-
-
-
-
-
-
         </form>
+        <?php
+        if(isset($_POST['update']))
+        {
+             $admin = $_POST['admin'];
+             $fullname = $_POST['fullname'];
+             $idno = $_POST['idno'];
+             $email = $_POST['email'];
+             $phone = $_POST['phone'];
+             $image = $_FILES['photo']['name'];
+             $tmp_name = $_FILES['photo']['tmp_name'];
+             $position = $_POST['position']; 
+             $age = $_POST['age']; 
+
+             move_uploaded_file($tmp_name, "../../../uploads/$image");
+             $query ="UPDATE candidates SET 
+             admin=' $admin', 
+             fullname='$fullname',
+             idno=' $idno', 
+             email='$email', 
+             phone=' $phone',
+             photo='$image',
+             position='$position',
+             age='$age' WHERE id='$id'";
+              $query_run = mysqli_query($con, $query);
+               if($query_run){
+                   $_SESSION['status'] = "Updated Successfully";
+                   header("Location: ../candidates.php");
+                }else{
+                    $_SESSION['status'] = "There was an error, Try Again";
+                    header("Location: ../candidates.php");
+                }
+        }
+        ?>
     </div>
     </div>
     <?php
