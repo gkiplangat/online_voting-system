@@ -10,7 +10,6 @@ $image = $_FILES['photo']['name'];
 $tmp_name = $_FILES['photo']['tmp_name'];
 $password = md5($_POST['password']); 
 $cpassword =md5($_POST['cpassword']); 
-$status=$_POST['status'];
 if($password!=$cpassword){
     echo '<script>
     alert("Passwords did not match");
@@ -26,7 +25,7 @@ if($password!=$cpassword){
         header("Location: ../voters.php");
      }else{
             move_uploaded_file($tmp_name, "../uploads/$image");
-            $sql = "INSERT INTO voters (admin,fullname,idno,email,phone,photo,password,status)VALUES ('$admin','$fullname','$idno','$email','$phone','$image','$password',0)";
+            $sql = "INSERT INTO voters (admin,fullname,idno,email,phone,photo,password)VALUES ('$admin','$fullname','$idno','$email','$phone','$image','$password')";
             $result = mysqli_query($con, $sql);
             //Check if the Voter is Registered Successfully
             if ($result) {
