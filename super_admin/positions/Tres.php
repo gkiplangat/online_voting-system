@@ -44,7 +44,7 @@
                         <th scope="col">Photo</th>
                         <th scope="col">Position</th>
                         <th scope="col">Age</th>
-                        <th scope="col">Action</th>
+                         
                     </tr>
                 </thead>
                 <tbody>
@@ -66,14 +66,7 @@
                         </td>
                         <td><?php echo $row['position'];?></td>
                         <td><?php echo $row['age'];?></td>
-                        <td scope=" col">
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit">
-                                <i class="bi bi-pencil-square"></i> Edit
-                            </button>
-
-                            <a href="../actions/cand_delete.php"><button type="button" class="btn btn-danger"> <i
-                                        class="bi bi-trash"></i>Delete</button></a>
-                        </td>
+                         
                     </tr>
                     <?php
                 }

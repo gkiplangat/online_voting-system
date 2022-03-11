@@ -40,8 +40,7 @@ include ('../../actions/connect.php');
                         <th scope="col">Full Name</th>
                         <th scope="col">Id No</th>
                         <th scope="col">Position</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
+                         
                     </tr>
                 </thead>
                 <tbody>
@@ -56,14 +55,7 @@ include ('../../actions/connect.php');
                         <td><?php echo $row['fullname'];?></td>
                         <td><?php echo $row['idno'];?></td>
                         <td><?php echo $row['position'];?></td>
-                        <td scope=" col">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit">
-                                <i class="bi bi-pencil-square"></i> Edit
-                            </button>
-                        </td>
-                        <td> 
-                            <a href="../actions/cand_delete.php"><button type="button" class="btn btn-danger"> <i class="bi bi-trash"></i>Delete</button></a>
-                        </td>
+                           
                     </tr>
                     <?php
                 }
