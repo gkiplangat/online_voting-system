@@ -324,7 +324,7 @@ if(!isset($_SESSION['username'])){
                                     </div>
                                     <div class="col-md-6">
                                         <?php
-                                        $query ="SELECT fullname FROM voters WHERE EXISTS (SELECT * FROM votes WHERE voters.fullname = votes.voter)ORDER BY id";
+                                        $query ="SELECT fullname FROM voters WHERE NOT EXISTS (SELECT * FROM votes WHERE voters.fullname = votes.voter)ORDER BY id";
                                         $query_run =mysqli_query($con, $query);
                                         $row = mysqli_num_rows($query_run);
                                         echo '<h2>'.$row.'</h2>';

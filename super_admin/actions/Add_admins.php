@@ -1,5 +1,5 @@
 <?php
-include ('../../../actions/connect.php');
+include ('../../actions/connect.php');
 session_start();
 $username = $_POST['username'];
 $email = $_POST['email'];
