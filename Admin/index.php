@@ -2,19 +2,19 @@
 include '../actions/connect.php';
 session_start();
 error_reporting(0);
-if(isset($_SESSION['username'])){
+if (isset($_SESSION['username'])) {
     header("Location: index.php");
 }
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = md5($_POST['password']);
     $sql = "SELECT * FROM users WHERE email ='$email' AND password='$password'";
     $result = mysqli_query($con, $sql);
-    if($result-> num_rows >0){
+    if ($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
         header("Location:dashboard/index.php");
-    }else {
+    } else {
         echo "<script>alert('Woops! Email or password is wrong.')</script>";
     }
 }
@@ -33,23 +33,22 @@ if(isset($_POST['submit'])){
 </head>
 
 <body class="bg-secondary">
-     <div class="container text-center text-info">
+    <div class="container text-center text-info">
         <form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight:800;"> Admin-Login</p>
             <div class="input-group">
-                <input type="email" placeholder="Email" name="email" value="<?php echo $_POST['email'];?>" required>
+                <input type="email" placeholder="Email" name="email" value="<?php echo $_POST['email']; ?>" required>
             </div>
             <div class="input-group">
-                <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password'];?>"
-                    required>
+                <input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
             </div>
             <div class="input-group d-flex justify-content-center">
                 <button name="submit" class="btn btn-info">Login</button>
             </div>
         </form>
-   
+
     </div>
-    
+
 </body>
 
 </html>

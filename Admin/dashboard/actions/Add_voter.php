@@ -33,8 +33,7 @@ if($password!=$cpassword){
                  header("Location: ../voters.php");
                 } else {
                     $_SESSION['status'] = "Something Went wrong";
-                    header("Location: ../voters.php.php");
+                    header("Location: ../voters.php");
                 }
             }
 }
-?>
